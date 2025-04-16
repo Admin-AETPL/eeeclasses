@@ -1,0 +1,67 @@
+*{margin: 0;padding: 0;}
+a{text-decoration: none;}
+
+
+.bg-coral{background-color: #f88379 !important}
+.text-coral{color: #f88379 !important}
+.border-coral{border:1px solid #f88379 !important;}
+#header-logo{height:100px}
+
+.nav-item .nav-link{color: white !important;}
+.nav-item .nav-link:hover{background: white;color:#f88379 !important}
+.welcome-to-eee{background:url("../img/logo/education-background.jpg") center no-repeat;background-size: cover;}
+.bg-small-screen-white{background: #212529 !important;}
+
+.program{border:1px solid #f88379;transition: background-color 0.2s linear;cursor:pointer}
+.program h3,p{color:black}
+.program:hover{background-color:black;border-color: #000;}
+.program:hover h3,p{color: #f88379;} 
+
+.online-class{background-color: #f0f8ff;}
+.viscol{position: relative;}
+.visimg{position: absolute;z-index: 20;top:50%;left:50%;transform: translate(-50%,-50%);}
+.visimg p{position: absolute;z-index: 21;top:50%;left:50%;transform: translate(-50%,-50%);}
+.visimg img{animation:rot 5s linear infinite;filter: drop-shadow(5px 5px 5px #000);}
+.mission{background:url("../img/background/bg-mission.jpg") center no-repeat;background-size: cover;}
+
+.footer li{margin: 0 auto;}
+
+.classno{border-right: 1px solid #dee2e6;}
+
+.carousel-control-prev{left:-60px !important}
+.carousel-control-next{right:-60px !important}
+.gallery{background: url("../img/background/dark-bg.jpg") center no-repeat;background-size: cover;}
+
+.subjects{background: #0d6efd;color:white;padding:5px 10px;border-radius:20px;display: inline-block;margin: 0 2px;}
+
+.subj{transition:box-shadow 0.3s linear}
+.subj:hover{box-shadow: 5px 5px 7px #000;}
+
+.comp-exams{transition:border 0.3s linear}
+.comp-exams:hover{border: 1px solid gray;}
+.techcar{height: 175px;background-color: white;position: relative;overflow: hidden;}
+.bgtext{font-size: 275px;float:left;line-height:150px;left:-30px;position: absolute;top: -5px;opacity: 0.3;}
+.smtext{position:absolute;top:50%;transform:translate(0, -50%);left:2px;font-weight: bold;color:#212529;font-size:16pt}
+html{scroll-behavior:smooth !important;overflow-x: hidden;}
+
+@keyframes rot {
+    0%{transform: rotate(0deg);}
+    100%{transform: rotate(360deg);}
+}
+
+.dropdown-toggle.active-dropdown::after {
+    transform: rotate(-90deg);
+}
+
+.slidetext{position:relative !important}
+.slideimg{position: absolute;top:50%;left:50%;transform:translate(-50%,-50%)}
+
+@media screen and (max-width:768px)
+{
+    .bg-small-screen-white{background: white !important;}
+    .carousel-control-prev,.carousel-control-next{display: none !important;}
+    .slidetext{position:static !important}
+.slideimg{position: static;top:0;left:0;transform: none;}
+.classno{border-right: none}
+
+}

@@ -1,0 +1,30 @@
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mpeck\/Projects\/ncr\/cms\/public\/stylesheets\/sass\/print\.scss}line{font-family:\000032}}
+#header #top-nav, #header #search, #header #main-nav {
+  display: none; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mpeck\/Projects\/ncr\/cms\/public\/stylesheets\/sass\/print\.scss}line{font-family:\000036}}
+#header #logo {
+  display: list-item;
+  height: 33px;
+  width: 302px;
+  list-style-image: url(/images/logo.gif);
+  list-style-position: inside;
+  padding-top: 0;
+  overflow: hidden; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mpeck\/Projects\/ncr\/cms\/public\/stylesheets\/sass\/print\.scss}line{font-family:\0000318}}
+#main .banner, #main .breadcrumb {
+  display: none; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mpeck\/Projects\/ncr\/cms\/public\/stylesheets\/sass\/print\.scss}line{font-family:\0000323}}
+#main #content .side-a, #main #content .side-b .page-opts {
+  display: none; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mpeck\/Projects\/ncr\/cms\/public\/stylesheets\/sass\/print\.scss}line{font-family:\0000327}}
+#main #content .side-b {
+  float: left;
+  width: auto; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mpeck\/Projects\/ncr\/cms\/public\/stylesheets\/sass\/print\.scss}line{font-family:\0000333}}
+#main #sidebar {
+  display: none; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mpeck\/Projects\/ncr\/cms\/public\/stylesheets\/sass\/print\.scss}line{font-family:\0000338}}
+#footer {
+  display: none; }

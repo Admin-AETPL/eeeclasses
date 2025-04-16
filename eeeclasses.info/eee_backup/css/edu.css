@@ -1,0 +1,436 @@
+.body,td,div,font,span 
+{ 
+font-family: arial, sans-serif;  
+font-size: 12px;
+
+}
+
+.alink
+{ 
+font-family:arial, sans-serif; 
+font-size: 12px; 
+font-weight: bold; 
+text-decoration:none;  
+color:#333333; 
+}
+.alink:hover
+{ 
+font-family: arial, sans-serif; 
+font-size: 12px; 
+font-weight: bold; 
+text-decoration:none;  
+color:#DDEEFF; 
+}
+
+p.cont
+{ 
+padding: 10px 20px 5px 20px; 
+font-family: arial, sans-serif; 
+font-size: 12px;
+text-align:justify; 
+color: #080844; 
+}
+
+a#lnkftr
+{ 
+font-family: arial, sans-serif; 
+font-size: 10px; 
+text-align:justify;
+text-decoration:none; 
+color:#FFFFFF; 
+}
+
+a#lnkftr:hover
+{ 
+font-family: arial, sans-serif; 
+font-size: 10px; 
+text-align:justify;
+text-decoration:none; 
+color:#dddddd;
+}
+
+.mhcol
+{
+font-size:13px; 
+color:#1199aa;
+margin-left: 70px; 
+}
+.mdcol
+{
+font-size:12px; 
+color:#FF9933;
+margin-left: 120px; 
+}
+
+a#smap
+{ 
+margin-left: 120px; 
+font-family: arial, sans-serif; 
+font-size:12px;
+text-align:justify; 
+text-decoration:none; 
+color:#FF9933;
+
+}
+
+a#smap:hover
+{ 
+margin-left: 120px; 
+font-family: arial, sans-serif; 
+font-size: 12px;
+
+text-align:justify; 
+text-decoration:none;  
+color:#a44961;
+}
+tr.ftr
+{ 
+background-color:#a080aa; 
+font-family: arial, sans-serif;
+border-width:3px 3px 3px 3px;
+
+}
+
+#topmnu
+{ 
+font-family: arial, sans-serif; 
+font-size: 12px; 
+color: #080844; 
+text-align: center; 
+text-decoration:none; 
+}
+
+#topmnu:hover
+{
+font-size: 12px;  
+color: #aa1166;
+text-align:center; 
+text-decoration:none;   
+}
+
+font.cont
+{ 
+padding: 10px 20px 5px 5px; 
+font-family: arial, sans-serif; 
+font-size: 12px;
+text-align:justify; 
+color: #0000CC; 
+}
+
+font.con
+{ 
+padding: 10px 20px 5px 5px; 
+font-family: arial, sans-serif; 
+font-size: 12px;
+text-align:justify; 
+color: #FF9933; 
+}
+
+.heading
+{ 
+padding: 10px 20px 5px 10px; 
+color:#1199aa; 
+font-family:arial, sans-serif;
+font-size:13px;
+}
+
+img.loc
+{ 
+padding:0px 0px 0px 10px; 
+margin: 0px 0px 0px 10px; }
+
+t
+{
+font-size:12px; 
+font-family: arial, sans-serif;
+color:#330066;
+}
+
+h
+{
+font-size:11px; 
+font-family: arial, sans-serif;
+color:#0066FF;
+}
+
+td.tdContent 
+{ 
+width:100%; 
+border:1px solid #E7E7E7; 
+padding:0px 10px 0px 10px; 
+}
+
+p.Content 
+{
+valign:top;
+margin-left: 10px; 
+margin-right: 10px; 
+}
+
+/*td.tdLeftItem { padding:0px 0px 0px 10px; background-image:url(../img/bkgLeftMenu.gif); background-position:top left; background-repeat:repeat-x; height:24px; background-color:#DEE0E0;text-align:center }*/
+td.tdtopItemSelected
+{ 
+padding:1px 5px 1px 5px;
+background-color:#C9DDEA; 
+font-family: arial, sans-serif;
+}
+
+
+
+/* To change the main menu item */
+a#leftmnu
+{	
+
+font-size: 13px; 
+font-weight: bold; 
+color: black;
+text-align: center; 
+text-decoration:none; 
+padding:0px 0px 0px 6px ;   /* For padding style of main menu so that letter will not dance */
+font-family:80%, arial, sans-serif; 
+display:inline;
+
+
+}
+/*To change the main menu item when cursor is over there */
+a#leftmnu:hover
+{
+font-size: 13px; 
+font-weight: bold; 
+color: #5061DA;
+text-align: center; 
+text-decoration:none; 
+padding:0px 0px 0px 6px;  /* For padding style of main menu when we put cursor over there,so that letter will not dance */
+font-family: arial, sans-serif;
+display:inline;
+
+}
+
+/* It is used to change , after clicking the main menuitem */
+a#leftmnuSelected
+{	
+font-size: 13px; 
+font-weight: bold; 
+color: black;  
+text-align: center; 
+text-decoration:none; 
+padding: 0px 0px 0px 6px;  /* For padding style of main menu after clicking on the particular field,so that  letter will not dance */
+background-color: #DDEEFF;
+font-family: arial, sans-serif; 
+
+}
+
+td.tdLeftItem 
+{ 
+height: 20px;
+background-color:#DDEEFF; 
+font-family: arial, sans-serif; 
+}
+
+td.tdLeftItemSelected 
+{ 
+height: 21px; 
+background-color:#282864;
+font-family:  arial, sans-serif; 
+}
+
+/*#C9DDEA #880000 AA1166 td.tdLeftItemSelected A { text-decoration:none; font-weight:bold; color:#545C62; display:block; width:100%; font-family:arial, sans-serif;}*/
+
+td.tdRightCorner 
+{ 
+background-image:url(image/bkgLeftMenu.gif); 
+background-position:top left; 
+background-repeat:repeat-x; 
+height:24px; 
+text-align:right; 
+background-color:#DEE0E0;
+}
+
+td#top
+{
+background-image:url(image/bkgLeftMenuSelected.gif); }
+
+td.bottom
+{ 
+background-image:url(image/bkgLeftMenuSelected.gif); }
+
+td.tdItem
+{ 
+padding:5px 15px 1px 15px; 
+font-family: arial, sans-serif; 
+font-size:11px;
+}
+
+td.tdItemhead
+{ 
+padding:1px 15px 1px 15px; 
+font-family: arial, sans-serif; 
+font-size:12px;
+}
+.ultext
+{
+	font-family: arial, sans-serif;
+	font-size: 12px;
+	color: #003366;
+	padding: 0px 15px 2px 15px;
+	vertical-align: middle;
+	text-decoration: none;
+}
+.ultext:hover
+{
+	text-decoration: underline;
+}
+/**********************add   code *******************/
+
+
+<style type="text/css" media="screen">
+body 
+{
+font: verdana,  arial, sans-serif;
+font-size: 10px;
+color: black;
+margin: 0;
+padding: 0;
+background: #DDEEFF;
+	
+}
+
+/*P
+{
+padding-top:20px;
+margin: 2px o;;
+
+}*/
+
+/*H1
+{
+font-size: 12px;
+font-weight: bold;
+padding-top: 15px;
+margin: 3px 0;;
+
+}*/
+
+/*To change in main menu */
+table.navbar
+{
+
+font-size: 13px;
+color: #006699;
+margin: 0px;
+text-align: center;
+font-weight: bold;
+
+}
+
+table.menu
+{
+cursor:pointer;  /* only for submenu and sub submenu */
+font-size: 13px;
+color:black;
+margin: 0;
+padding: 0px;    
+font-weight: bold;
+border:0px solid gray;
+/*background: #DDEEFF ;*/
+
+}
+
+/*It is used for main menu item */
+td.menuNormal
+{
+/*cursor : pointer; */
+margin: 0;
+height: 20px;
+line-height: 20px;
+text-align: left;
+font-weight: bold;
+font-size:13px;
+border: 1px solid gray;
+background: #DDEEFF ;
+
+}
+
+/* It is used when cursor will be over the main menu */
+
+td.menuHover
+{
+cursor:pointer;  /* It's only for main menu item */
+padding: 3px;    /* Change the padding of menu and submenu item. */
+margin: 0;
+color: #5061DA ;
+font-weight: bold;
+font-size:13px;
+vertical-align: top;
+background: #DDEEFF;
+border: 1px solid #5061DA;
+
+}
+
+
+/*This is for menu and submenu item to change */
+div.menuNormal
+{
+font-size: 13px;
+background: BLACK;
+display: none;
+border:0px solid gray;
+
+
+}
+
+/*This is also for menu item to change */
+div.menuHover
+{
+font-size:13px;
+/* background: #DDEEFF; */
+display: inline;
+position: absolute; /* Increase/decrease the distance between main menutable  and submenu table */ 
+left:160px;
+border:0px solid gray;
+
+}
+
+a.menuitem:link
+{
+text-decoration: none;
+color: black;
+font-size: 10px;
+/*background: #DDEEFF ;*/
+display: block;
+
+
+}
+
+a.menuitem:visited
+{
+text-decoration: none;
+color: BLACK;
+font-size: 10px;
+/*background: #DDEEFF ;*/
+
+}
+
+a.menuitem:hover
+{
+text-decoration: none;
+color: #5061DA;
+font-size: 10px;
+/*background: #DDEEFF;*/
+display: block;
+
+
+}
+
+a.menuitem:active
+{
+text-decoration: none;
+color: black;
+font-size: 10px;
+/*background: #DDEEFF;*/
+display: block;
+
+}
+
+
+

@@ -1,0 +1,120 @@
+/* Allow admin header to bump down page content in a reasoanble way. */
+body {
+  background-image: none;
+}
+#container {
+  background: url("/images/topline.gif") repeat-x scroll 0 0 #FFFFFF;
+}
+#document_container.page-opts {
+  float:right;
+  width:340px;
+  display: block;
+  margin-top: 15px;
+}
+.document_container_header h1#logo {
+  float:left;
+}
+
+#document_container.page-opts .last {
+  padding-right: 0px;
+}
+
+.document_container {
+  border: 1px #ccc solid;
+}
+#document_container_horizontal_rule {
+  height: 3px;
+  width: 100%;
+  padding: 0 1px;
+  margin: 2px 0;
+  background: url("/images/topline.gif") repeat-x scroll 0 0 #FFFFFF;
+}
+#admin_header {
+  display: block;
+  background: yellow;
+  color: gray;
+  padding: 0.5em;
+  text-align: right;
+}
+#admin_header a {
+  color: blue;
+}
+
+#admin_header .user-bit {
+  float: left;
+}
+
+
+/* Boxes tile without columns */
+/*.industries .col { float: left; display: inline; width: 223px; margin-right: 12px; }*/
+div.industries {
+  padding-top: 10px;
+  width: 705px;
+}
+
+div.industries .box {
+  width: 210px;
+  height: 270px;
+  overflow: hidden;
+  position: relative;
+  float: left;
+  margin-right: 10px;
+}
+
+div.industries .box .exp-link {
+  position: absolute;
+  bottom: 0;
+  left: 7px;
+}
+
+div.industries .box .exp-content ul li:last-child {
+  border-bottom: none;
+}
+
+#breadcrumb {
+  margin-bottom: 6px;
+}
+
+#main-nav:hover a.currentPage {
+  background: rgb(84,185,72);
+  background: rgba(84,185,72,0.3);
+  color: #54b948;
+  z-index: -1;
+}
+#main-nav li:hover > a.currentPage {
+    background: rgb(84,185,72);
+    color: #fff;
+  }
+
+div.industries .featured {
+  padding: 0;
+}
+
+div.industries#quilt {
+  width: 705px;
+}
+
+div.industries#quilt .box {
+  height: auto;
+  overflow: visible;
+  display: block;
+  float: left;
+  margin-right: 10px;
+}
+
+div#bottom {
+  padding-top: 1em;
+}
+
+div.hidden-view-hint {
+  display: none;
+}
+
+form#search .field {
+  height: 100%;
+}
+
+div.inset {
+  float: right;
+  padding: .5em 0 .5em 1.5em
+}

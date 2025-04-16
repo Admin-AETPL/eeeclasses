@@ -1,0 +1,51 @@
+#ticker {
+	width:auto; 
+	height:200px; 	
+	overflow: auto;
+	margin:0;
+	padding:0;
+	
+}
+
+#ticker dt {
+	font: 12px Arial, Helvetica, sans-serif normal;
+	padding: 0px;
+	border-bottom: none;
+	border-right: none;
+	position: relative;
+}
+
+#ticker dd {
+	margin-left: 0px;
+	font: 12px Arial, Helvetica, sans-serif normal;
+	padding: 0px;	
+	border-left: 1px solid #ffffff;
+	position: relative;
+	
+}
+
+#ticker dd a {
+	margin-left: 0px;
+	font: 12px Arial, Helvetica, sans-serif normal;
+	color:#5b99c4;
+	padding: 0px;	
+	border-left: 1px solid #ffffff;
+	position: relative;
+}
+
+#ticker dd a p {
+	margin-left: 0px;
+	margin:0px;
+	font: 12px Arial, Helvetica, sans-serif normal;
+	color:#5b99c4;
+	padding: 0px;	
+	line-height: 20px;
+	
+	/* border-left: 1px solid #ffffff;
+	position: relative;  */
+}
+
+#ticker dd.last {
+	border-bottom: 1px solid #ffffff;
+}
+
