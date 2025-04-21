@@ -45,7 +45,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-6 col-sm-6">
-                    <a href="<?php echo $home; ?>"><img src="<?php echo $home; ?>img/logo/eee-logo.png" alt="" id="header-logo" class="img-fluid"> <span class="text-dark fw-bold fs-4 d-none d-lg-inline-block">e-Edge Education Centre</span></a>
+                    <a href="<?php echo $home; ?>"><img src="<?php echo $home; ?>img/logo/logo-rbg.png" alt="" id="header-logo" class="img-fluid"> <span class="text-dark fw-bold fs-4 d-none d-lg-inline-block">e-Edge Education Centre</span></a>
                 </div>
                 <div class="col-6 col-sm-6">
                     <div class="text-end my-4 dropdown">

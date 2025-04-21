@@ -5,7 +5,7 @@
     <div class="container">
         <div class="row">
             <?php
-            for($i=1;$i<6;$i++)
+            for($i=1;$i<8;$i++)
             {
             ?>
             <div class="col-12 col-sm-3 my-3 notice">
