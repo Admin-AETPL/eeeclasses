@@ -81,6 +81,28 @@
                     </div>
                 </div>
             </div>
+              <!-- add two-images of Teachers-->
+            <div class="col-12 col-sm-6 col-lg-4 my-1" style="margin-left: 70px;">
+                <div class="card bg-light mx-auto">
+                    <img src="<?php echo $home; ?>img/teacher/img-rbg.png" alt="" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title text-dark">Nidhi Thakral</h5>
+                        <p class="card-subtitle mb-2 text-muted">B.Ed, B.Tech in Electronic and Communication, Experience-5 Yr.+ </p>
+                        
+                    </div>
+                </div>
+            </div>
+           
+            <div class="col-12 col-sm-6 col-lg-4 my-1" style="margin-left: -70px;">
+                <div class="card bg-light mx-auto">
+                    <img src="<?php echo $home; ?>img/teacher/poonam.png" alt="Pooja Mam" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title text-dark">Mrs. Poonam Verma</h5>
+                        <p class="card-subtitle mb-2 text-muted">B.A., B.Ed with maths, Experience-10 Yr.+</p>
+                    </div>
+                </div>
+            </div>
+            
         </div>
     </div>
 </div>
