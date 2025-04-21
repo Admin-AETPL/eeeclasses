@@ -3,14 +3,14 @@ session_start();
 class Controller
 {
     // protected $homeurl="https://eeeclasses.info/";
-    protected $homeurl="http://localhost/eeeclasses.info/";
+    protected $homeurl="http://localhost/eeeclasses/eeeclasses.info/";
     protected function model($model)
     {
         require_once("../app/model/".$model.".php");
         return new $model;
     }
     // protected function view($view, $title=[], $data=[], $extra=[], $more=[], $home="https://eeeclasses.info/")
-    protected function view($view, $title=[], $data=[], $extra=[], $more=[], $home="http://localhost/eeeclasses.info/")
+    protected function view($view, $title=[], $data=[], $extra=[], $more=[], $home="http://localhost/eeeclasses/eeeclasses.info/")
     {
         require_once("../app/views/".$view.".php");
     }
