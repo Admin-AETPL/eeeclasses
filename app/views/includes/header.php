@@ -203,7 +203,7 @@
                         <a class="nav-link fw-bold" href="<?php echo $home ?>notice_board">Notice Board<img src="<?php echo $home ?>img/logo/new-gif.gif" class="img-fluid" style="height:25px" alt=""></a>
                     </li>
                    <li class="nav-item">
-                        <a class="nav-link fw-bold" href="<?php echo $home?>online ">Online Class  <img src="<?php echo $home ?>img/logo/new-gif.gif" style="height:25px"</a>
+                        <a class="nav-link fw-bold" href="<?php echo $home?>online ">Online Class  <img src="<?php echo $home ?>img/logo/new-gif.gif" style="height:25px"></a>
                     </li> 
                 </ul>
             </div>
