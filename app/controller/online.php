@@ -27,7 +27,7 @@
 }
    .para{
        font-weight:bold;
-       font-size:20;
+       font-size: 20px;
    }
    @media (max-width: 500px){
        .image-para {
@@ -171,7 +171,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active fw-bold" href="<?php echo $home?> home ">Home</a>
+                        <a class="nav-link active fw-bold" href="<?php echo $home; ?>home">Home</a>
                     </li>
                     <li class="nav-item dropdown position-relative">
                         <a class="nav-link fw-bold dropdown-toggle" href="javascript:void(0)" id="navbardropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Courses</a>
