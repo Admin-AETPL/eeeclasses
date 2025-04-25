@@ -1,39 +1,16 @@
 <div class="bg-white py-3">
     <div class="container">
         <div class="row">
-        <div class="col-12 col-sm-12 text-center my-2">
-            <div id="comment">
-                <?php
-                if(!empty($data))
-                {
-                    
-                foreach ($data as $det) {
-                ?>
-                    <div class="comment border border-1 rounded p-2">
-                        <p class="text-start text-dark m-0 fw-bold fs-5"><?php echo $det["feedname"] ?></p>
-                        <p class="text-start fs-6 m-0 text-dark"><?php echo $det["feedback"] ?></p>
-                    </div>
-                <?php
-                }
-                }
-                else{}
-                ?>
-            </div>
-            <?php
-            if(!empty($data))
-            {
-            ?>
-                <input type="hidden" value="5" id="rows">
+            <div class="col-12 col-sm-12 text-center my-2">
+                <div id="comment">
+                    <!-- Feedback will be loaded here via AJAX -->
+                </div>
                 <button class="btn btn-primary mx-auto my-2" id="loadmore">Load More</button>
-                <?php 
-            }
-            else
-            {}
-                ?>
             </div>
         </div>
     </div>
 </div>
+
 <div class="bg-light py-3">
     <div class="container">
         <div class="row">
@@ -67,24 +44,34 @@
 </div>
 
 <script>
-    $(document).ready(function(){
-        $("#loadmore").click(function(){
-            var rows=$("#rows").val();
-            rows=Number(rows)+5;
-            $("#rows").attr("value",rows);
-            $.ajax({
-                url:"https://eeeclasses.info/comments/index",
-                method:"post",
-                data:"rows="+rows,
-                success:function(result)
-                {
-                    $("#comment").html(result);
-                },
-                error:function(xhr)
-                {
-                    alert(xhr.status+" "+xhr.statusText);
+let page = 0;
+$(document).ready(function () {
+    loadFeedback(); // Load the first batch
+
+    $("#loadmore").click(function () {
+        loadFeedback();
+    });
+
+    function loadFeedback() {
+        $.ajax({
+            url: "comments/index",
+            method: "POST",
+            data: { page: page },
+            success: function (result) {
+                if (result.trim() === "" || result.includes("No more feedback")) {
+                    $("#loadmore").hide();
+                    if (!$("#comment").html().includes("No more feedback")) {
+                        $("#comment").append("<p class='text-muted text-center'>No more feedback available</p>");
+                    }
+                } else {
+                    $("#comment").append(result);
+                    page++;
                 }
-            })
-        })
-    })
+            },
+            error: function (xhr) {
+                alert(xhr.status + " " + xhr.statusText);
+            }
+        });
+    }
+});
 </script>
