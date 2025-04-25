@@ -113,7 +113,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-6 col-sm-6">
-                    <a href="<?php echo $home; ?>"><img src="<?php echo $home; ?>img/logo/eee-logo.png" alt="" id="header-logo" class="img-fluid"> <span class="text-dark fw-bold fs-4 d-none d-lg-inline-block">e-Edge Education Centre</span></a>
+                    <!-- <a href="<?php echo $home; ?>"><img src="<?php echo $home; ?>img/logo/eee-logo.png" alt="" id="header-logo" class="img-fluid"> <span class="text-dark fw-bold fs-4 d-none d-lg-inline-block">e-Edge Education Centre</span></a> -->
+                    <a href="<?php echo $home; ?>"><img src="<?php echo $home; ?>/img/logo/logo.png" alt="" id="header-logo" class="img-fluid"> <span class="text-dark fw-bold fs-4 d-none d-lg-inline-block">e-Edge Education Centre</span></a>
                 </div>
                 <div class="col-6 col-sm-6">
                     <div class="text-end my-4 dropdown">
@@ -164,7 +165,8 @@
     </header>
     <nav class="navbar navbar-expand-lg navbar-dark bg-coral sticky-top">
         <div class="container py-0">
-            <a href="<?php echo $home; ?>" class="navbar-brand d-block d-lg-none"><img src="<?php echo $home; ?>img/logo/eee-logo.png" alt="" style="filter:drop-shadow(5px 5px 3px #000)" id="header-logo" class="img-fluid"></a>
+            <!-- <a href="<?php echo $home; ?>" class="navbar-brand d-block d-lg-none"><img src="<?php echo $home; ?>img/logo/eee-logo.png" alt="" style="filter:drop-shadow(5px 5px 3px #000)" id="header-logo" class="img-fluid"></a> -->
+            <a href="<?php echo $home; ?>" class="navbar-brand d-block d-lg-none"><img src="<?php echo $home; ?>/img/logo/logo.png" alt="" style="filter:drop-shadow(5px 5px 3px #000)" id="header-logo" class="img-fluid"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -271,7 +273,7 @@
                         <a class="nav-link fw-bold" href="<?php echo $home ?>notice_board">Notice Board<img src="<?php echo $home ?>img/logo/new-gif.gif" class="img-fluid" style="height:25px" alt=""></a>
                     </li>
                    <li class="nav-item">
-                        <a class="nav-link fw-bold" href="<?php echo $home?>online ">Online Class  <img src="<?php echo $home ?>img/logo/new-gif.gif" style="height:25px"</a>
+                        <a class="nav-link fw-bold" href="<?php echo $home?>online ">Online Class  <img src="<?php echo $home ?>img/logo/new-gif.gif" style="height:25px"></a>
                     </li> 
                 </ul>
             </div>

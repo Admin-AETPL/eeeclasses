@@ -12,7 +12,7 @@
                 <p class="text-center text-white m-0 py-1">Copyright <i class="far fa-copyright"></i> www.eeeclasses.info</p>
             </div>
             <div class="col-12 col-lg-3">
-                <p class="text-center text-white m-0">Design by <img src="<?php echo $home ?>img/logo/aura-logo.png" class="img-fluid" style="height:35px;" alt=""></p>
+                <p class="text-center text-white m-0">Design by <img src="<?php echo $home ?>img/logo/black-logo-hd.png" class="img-fluid" style="height:35px;" alt=""></p>
             </div>
         </div>
     </div>

@@ -96,7 +96,8 @@
     </header>
     <nav class="navbar navbar-expand-lg navbar-dark bg-coral sticky-top">
         <div class="container py-0">
-            <a href="<?php echo $home; ?>" class="navbar-brand d-block d-lg-none"><img src="<?php echo $home; ?>img/logo/eee-logo.png" alt="" style="filter:drop-shadow(5px 5px 3px #000)" id="header-logo" class="img-fluid"></a>
+            <!-- <a href="<?php echo $home; ?>" class="navbar-brand d-block d-lg-none"><img src="<?php echo $home; ?>img/logo/eee-logo.png" alt="" style="filter:drop-shadow(5px 5px 3px #000)" id="header-logo" class="img-fluid"></a> -->
+            <a href="<?php echo $home; ?>" class="navbar-brand d-block d-lg-none"><img src="<?php echo $home; ?>/img/logo/logo.png" alt="" style="filter:drop-shadow(5px 5px 3px #000)" id="header-logo" class="img-fluid"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -124,7 +125,7 @@
                             <li><a href="<?php echo $home ?>course/neet" class="dropdown-item">NEET Preparation</a></li>
                             <li><a href="<?php echo $home; ?>course/ntse" class="dropdown-item">NTSE Preparation</a></li>
                             <li><a href="<?php echo $home; ?>course/kvpy" class="dropdown-item">Kishor Vaigyanik Protsahan Yojana</a></li>
-                            <li><a href="#" class="dropdown-item dropdown-toggle" id="navbardropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Subject Specefic Classes</a>
+                            <li><a href="#" class="dropdown-item dropdown-toggle" id="navbardropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Subject Specific Classes</a>
                                 <ul class="dropdown-menu" aria-labelledby="navbardropdown">
                                     <li><a href="" class="dropdown-item dropdown-toggle" id="navbardropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Class 12<sup>th</sup></a>
                                         <ul class="dropdown-menu" aria-labelledby="navbardropdown">
