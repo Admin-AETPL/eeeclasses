@@ -28,7 +28,8 @@
         <div class="container-fluid">
              <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
         <div class="container-fluid py-0">
-            <a href="<?php echo $home; ?>" class="navbar-brand"><img src="<?php echo $home; ?>img/logo/eee-logo.png" alt="" id="header-logo" class="img-fluid"> <span class="text-dark fw-bold fs-4 d-none d-lg-inline-block">e-Edge Education Centre</span></a>
+            <!-- <a href="<?php echo $home; ?>" class="navbar-brand"><img src="<?php echo $home; ?>img/logo/eee-logo.png" alt="" id="header-logo" class="img-fluid"> <span class="text-dark fw-bold fs-4 d-none d-lg-inline-block">e-Edge Education Centre</span></a> -->
+            <a href="<?php echo $home; ?>" class="navbar-brand"><img src="<?php echo $home; ?>/img/logo/logo.png" alt="" id="header-logo" class="img-fluid"> <span class="text-dark fw-bold fs-4 d-none d-lg-inline-block">e-Edge Education Centre</span></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
