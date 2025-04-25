@@ -40,12 +40,10 @@
             if($("#first").val().trim()=='')
             {
                 alert("Enter First Number");
-                return false;
             }
             if($("#second").val().trim()=='')
             {
                 alert("Enter Second Number");
-                num2=0;
             }
             var res=num1-num2;
             $("#result").attr("value",res);
