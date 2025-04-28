@@ -39,7 +39,7 @@
                     $files[] = $file;
                 }
             }
-
+      
             // Sort files by last modified date (newest first)
             usort($files, function($a, $b) {
                 return filemtime($b) - filemtime($a);
