@@ -40,7 +40,7 @@
                     <a class="nav-link" role="#flush-collapseTwo" href="#flush-headingTwo">Financial Aid</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link"  role="#flush-collapse4" href="#flush-heading4">Seletion Procedure</a>
+                    <a class="nav-link"  role="#flush-collapse4" href="#flush-heading4">Selection Procedure</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link"  role="#flush-collapse5" href="#flush-heading5">Eligibility</a>
