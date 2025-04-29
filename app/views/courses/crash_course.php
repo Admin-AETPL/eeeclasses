@@ -23,7 +23,7 @@
                         </style>
                         <ul style="list-style:none;margin:0;padding:0">
                             <li class="text-start text-dark fs-5 fw-bold my-2"><i class="fas fa-star"></i> Highly analysed study material</li>
-                            <li class="text-start text-dark fs-5 fw-bold my-2"><i class="fas fa-star"></i> Topic-specefic notes/assignments</li>
+                            <li class="text-start text-dark fs-5 fw-bold my-2"><i class="fas fa-star"></i> Topic-specific notes/assignments</li>
                             <li class="text-start text-dark fs-5 fw-bold my-2"><i class="fas fa-star"></i> Course Duration - 4 months</li>
                             <li class="text-start text-dark fs-5 fw-bold my-2"><i class="fas fa-star"></i> Success Assured Program</li>
                         </ul>

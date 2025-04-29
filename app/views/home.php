@@ -43,7 +43,7 @@
             <div class="col-12 col-lg-6 p-4">
                 <div class="border border-1 p-4 bg-small-screen-white shadow">
                     <h2 class="h2 text-coral text-uppercase">Welcome to e-Edge Education Centre</h2>
-                    <h6 class="h6 text-danger text-uppercase">A PREMIER INTITUTE FOR ENGINEERING AND MEDICAL ENTRANCE</h6>
+                    <h6 class="h6 text-danger text-uppercase">A PREMIER INSTITUTE FOR ENGINEERING AND MEDICAL ENTRANCE</h6>
                     <p class="text-start text-secondary">e-Edge Education Classes (eee c) is an institute for quality educations, dedication and devotion for the success in Board exams, Engineering and Medical competitive exams. The primary focus of the e-Edge Education Classes is to enable each student to achieve success in IIT / UPSEAT & NEET etc. entrance examinations and other reputed colleges for Engineering and Medical.</p>
                 </div>
             </div>
