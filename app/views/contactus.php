@@ -22,9 +22,9 @@
                     <p class="text-start text-dark fw-bold fs-2">Contact:</p>
                     <p class="text-start text-dark fs-5">Phone us at: <a href="tel:01204568775">0120-4568775</a>, <a href="tel:+917042280775">+917042280775</a>, <a href="tel:+919818949775">+919818949775</a></p>
                     <p class="text-start text-dark fw-bold fs-2">Queries:</p>
-                    <p class="text-start text-dark fs-5">Course related: <a href="mailto:courses@eeeclasses.info">courses<i class="fas fa-at"></i>eeelclasses.info</a></p>
-                    <p class="text-start text-dark fs-5">Admission: <a href="mailto:admission@eeeclasses.info">admission<i class="fas fa-at"></i>eeelclasses.info</a></p>
-                    <p class="text-start text-dark fs-5">Feedback: <a href="mailto:feedback@eeeclasses.info">feedback<i class="fas fa-at"></i>eeelclasses.info</a></p>
+                    <p class="text-start text-dark fs-5">Course related: <a href="https://mail.google.com/mail/?view=cm&fs=1&to=course.eeeclasses@gmail.com" target="_blank">course.eeeclasses@gmail.com</a></p>
+                    <p class="text-start text-dark fs-5">Admission:      <a href="https://mail.google.com/mail/?view=cm&fs=1&to=admission.eeeclasses@gmail.com" target="_blank">admission.eeeclasses@gmail.com</a></p>
+                    <p class="text-start text-dark fs-5">Feedback:       <a href="https://mail.google.com/mail/?view=cm&fs=1&to=feedback.eeeclasses@gmail.com" target="_blank">feedback.eeeclasses@gmail.com</a></p>
                 </div>
             </div>
         </div>
