@@ -4,7 +4,7 @@
             <div class="col-12 col-sm-6">
                 <div class="text-start">
                     <h3 class="h3 text-coral text-start">EEE Competitive Classes</h3>
-                    <p class="text-dark">e-Edge Education offers a comprehensive training programme to help students prepare for Competative exams of engineering (IIT-JEE, AIEEE, UPTECH), medical(NEET), govt. scholarship(NTSE, KVPY), etc.</p>
+                    <p class="text-dark">e-Edge Education offers a comprehensive training programme to help students prepare for Competitive exams of engineering (IIT-JEE, AIEEE, UPTECH), medical(NEET), govt. scholarship(NTSE, KVPY), etc.</p>
                 </div>
             </div>
             <div class="col-12 col-sm-6">
@@ -30,7 +30,7 @@
                 <div class="text-center">
                     <img src="<?php echo $home ?>img/background/medical.png" alt="" class="img-fluid w-50">
                     <h1 class="h1 text-center text-primary">NEET</h1>
-                    <a href="" class="btn btn-primary">View</a>
+                    <a href="<?php echo $home ?>course/neet" class="btn btn-primary">View</a>
                 </div>
             </div>
         </div>
