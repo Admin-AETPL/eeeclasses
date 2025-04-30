@@ -131,7 +131,7 @@
                                         <ul class="dropdown-menu" aria-labelledby="navbardropdown">
                                             <li><a href="<?php echo $home ?>course/class12/physics" class="dropdown-item">Physics</a></li>
                                             <li><a href="<?php echo $home ?>course/class12/chemistry" class="dropdown-item">Chemistry</a></li>
-                                            <li><a href="" class="dropdown-item">Mathematics</a></li>
+                                            <li><a href="<?php echo $home ?>course/class12/maths" class="dropdown-item">Mathematics</a></li>
                                             <li><a href="<?php echo $home ?>course/class12/biology" class="dropdown-item">Biology</a></li>
                                         </ul>
                                     </li>
@@ -139,7 +139,7 @@
                                         <ul class="dropdown-menu" aria-labelledby="navbardropdown">
                                             <li><a href="<?php echo $home ?>course/class11/physics" class="dropdown-item">Physics</a></li>
                                             <li><a href="<?php echo $home ?>course/class11/chemistry" class="dropdown-item">Chemistry</a></li>
-                                            <li><a href="" class="dropdown-item">Mathematics</a></li>
+                                            <li><a href="<?php echo $home ?>course/class11/maths" class="dropdown-item">Mathematics</a></li>
                                             <li><a href="<?php echo $home ?>course/class11/biology" class="dropdown-item">Biology</a></li>
                                         </ul>
                                     </li>
