@@ -1,3 +1,70 @@
+<style>
+    body{
+    background-color: #f0f8ff;
+}
+.card-1{
+    display:flex;
+    flex-direction: row;
+    text-align:center;
+    margin:45px 0px;
+  }
+   @media (max-width: 1000px){
+       .card-1{
+         flex-direction:column;
+       }
+   }
+ 
+  .image-para{
+       margin-top: 40px;
+       font-size:21px;
+       color:black; 
+   }
+  .image img {
+    vertical-align: middle;
+    border-radius: 200px;
+}
+   .para{
+       font-weight:bold;
+       font-size: 20px;
+   }
+   @media (max-width: 500px){
+       .image-para {
+        flex-wrap: wrap;
+        width: 394px;
+       }
+   }
+  .image-para h2{
+    color: cornflowerblue;
+    font-weight: bold;
+  }
+   .button{
+    margin-top: 40px;
+    
+ }
+ .button button{
+    border-radius: 50px;
+ }
+ button{
+    height: 35px;
+    background-color: aqua;                                            
+ }
+ button:hover{
+    background-color: black;
+    font-weight:bold;
+ }
+   .image-para a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    margin: -6px 13px;
+    padding-top: 0px;
+}
+   .home a {
+       text-decoration: none;
+       font-weight:bold;
+   }
+
+</style>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -41,11 +108,12 @@
 </head>
 
 <body>
-    <header class="bg-white py-2 d-none d-lg-block">
+    <!-- <header class="bg-white py-2 d-none d-lg-block">
         <div class="container">
             <div class="row">
                 <div class="col-6 col-sm-6">
-                    <a href="<?php echo $home; ?>"><img src="<?php echo $home; ?>img/logo/logo.png" alt="" id="header-logo" class="img-fluid"> <span class="text-dark fw-bold fs-4 d-none d-lg-inline-block">e-Edge Education Centre</span></a>
+                    <a href="<?php echo $home; ?>"><img src="<?php echo $home; ?>img/logo/eee-logo.png" alt="" id="header-logo" class="img-fluid"> <span class="text-dark fw-bold fs-4 d-none d-lg-inline-block">e-Edge Education Centre</span></a> 
+                    <a href="<?php echo $home; ?>"><img src="<?php echo $home; ?>/img/logo/logo.png" alt="" id="header-logo" class="img-fluid"> <span class="text-dark fw-bold fs-4 d-none d-lg-inline-block">e-Edge Education Centre</span></a>
                 </div>
                 <div class="col-6 col-sm-6">
                     <div class="text-end my-4 dropdown">
@@ -93,10 +161,11 @@
                 </div>
             </div>
         </div>
-    </header>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-coral sticky-top">
-        <div class="container py-0">
-            <!-- <a href="<?php echo $home; ?>" class="navbar-brand d-block d-lg-none"><img src="<?php echo $home; ?>img/logo/eee-logo.png" alt="" style="filter:drop-shadow(5px 5px 3px #000)" id="header-logo" class="img-fluid"></a> -->
+    </header> -->
+    <!-- <nav class="navbar navbar-expand-lg navbar-dark bg-coral sticky-top"> -->
+
+        <!-- <div class="container py-0">
+            <a href="<?php echo $home; ?>" class="navbar-brand d-block d-lg-none"><img src="<?php echo $home; ?>img/logo/eee-logo.png" alt="" style="filter:drop-shadow(5px 5px 3px #000)" id="header-logo" class="img-fluid"></a>
             <a href="<?php echo $home; ?>" class="navbar-brand d-block d-lg-none"><img src="<?php echo $home; ?>/img/logo/logo.png" alt="" style="filter:drop-shadow(5px 5px 3px #000)" id="header-logo" class="img-fluid"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -125,7 +194,7 @@
                             <li><a href="<?php echo $home ?>course/neet" class="dropdown-item">NEET Preparation</a></li>
                             <li><a href="<?php echo $home; ?>course/ntse" class="dropdown-item">NTSE Preparation</a></li>
                             <li><a href="<?php echo $home; ?>course/kvpy" class="dropdown-item">Kishor Vaigyanik Protsahan Yojana</a></li>
-                            <li><a href="#" class="dropdown-item dropdown-toggle" id="navbardropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Subject Specific Classes</a>
+                            <li><a href="#" class="dropdown-item dropdown-toggle" id="navbardropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Subject Specefic Classes</a>
                                 <ul class="dropdown-menu" aria-labelledby="navbardropdown">
                                     <li><a href="" class="dropdown-item dropdown-toggle" id="navbardropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Class 12<sup>th</sup></a>
                                         <ul class="dropdown-menu" aria-labelledby="navbardropdown">
@@ -195,7 +264,7 @@
                             <li class="nav-item"><a href="<?php echo $home ?>about/about_us" class="nav-link fw-bold">About Us</a></li>
                             <li class="nav-item"><a href="<?php echo $home ?>about/team" class="nav-link fw-bold">Our Team</a></li>
                     <li class="nav-item">
-                        <a class="nav-link fw-bold" href="<?php echo $home ?>about/contact_us">Contact Us</a>
+                        <a class="nav-link fw-bold" href="<?php echo $home ?>bout/contact_us">Contact Us</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link fw-bold" href="<?php echo $home ?>feedback">Feedback</a>
@@ -204,11 +273,67 @@
                         <a class="nav-link fw-bold" href="<?php echo $home ?>notice_board">Notice Board<img src="<?php echo $home ?>img/logo/new-gif.gif" class="img-fluid" style="height:25px" alt=""></a>
                     </li>
                    <li class="nav-item">
-
                         <a class="nav-link fw-bold" href="<?php echo $home?>online ">Online Class  <img src="<?php echo $home ?>img/logo/new-gif.gif" style="height:25px"></a>
-
                     </li> 
                 </ul>
             </div>
+        </div> 
+</nav> -->
+
+
+
+
+
+<div class="card-1">
+            <div class="image">
+                <img src="img/background/education-5600987__340.webp"  height="400px" width="400px">
+                
+            </div>
+            <div class="image-para">
+                <h2>e-Edge Education Online Class</h2>
+                   
+                           <div class="para">  "Online learning is an educational medium that allows students to participate in courses via the internet. They don’t need to visit lecture halls or classrooms, and they can choose to learn whatever they want from the comfort of  own homes. 
+
+                         <br>    Online learning is also a way for subject-matter experts to pass on their knowledge in a gratifying way."</div>
+                            <div class="button">
+                                <button><a href="https://meet.google.com/ekh-cnqy-beu">Watch Online Class</a> </button> </div>
+            </div>
         </div>
-    </nav>
+        <!-- <div class="footer bg-dark py-2">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-lg-4">
+                <div class="footer-menu text-center text-lg-start">
+                    <a href="<?php echo $home ?>" class="btn text-white bg-coral">Home</a>
+                    <a href="<?php echo $home ?>about/about_us" class="btn text-white bg-coral">About Us</a>
+                    <a href="<?php echo $home ?>about/contact_us" class="btn text-white bg-coral">Contact Us</a>
+                </div>
+            </div>
+            <div class="col-12 col-lg-5">
+                <p class="text-center text-white m-0 py-1">Copyright <i class="far fa-copyright"></i> www.eeeclasses.info</p>
+            </div>
+            <div class="col-12 col-lg-3">
+                <p class="text-center text-white m-0">Design by <img src="<?php echo $home ?>/img/logo/aura-logo-new.png" class="img-fluid" style="height:35px;" alt=""></p>
+            </div>
+        </div>
+    </div>
+</div> -->
+        </body>
+</html>
+
+
+<script>
+    $(document).ready(function() {
+        $("#rdbtn").click(function() {
+            if ($("#read-text").css("display") == "none") {
+                $("#readmore").css("display", "none");
+                $("#read-text").css("display", "block");
+                $("#rdbtn").text("Read Less");
+            } else if ($("#read-text").css("display") == "block") {
+                $("#readmore").css("display", "block");
+                $("#read-text").css("display", "none");
+                $("#rdbtn").text("Read More");
+            }
+        })
+    })
+</script>
