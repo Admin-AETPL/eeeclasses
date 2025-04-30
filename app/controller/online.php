@@ -6,4 +6,4 @@ class Online extends Controller
         $this->view('Online',$title='e-Edge Education');
         $this->view('includes/footer');
     }
-}
+}?>
