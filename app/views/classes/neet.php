@@ -92,7 +92,7 @@
             <div class="col-12 col-sm-6">
                 <div class="text-start text-primary">
                     <p class="text-start text-primary"><i class="fas fa-arrow-circle-right"></i> Highly analysed study material</p>
-                    <p class="text-start text-primary"><i class="fas fa-arrow-circle-right"></i> Topic-specefic notes/assignments</p>
+                    <p class="text-start text-primary"><i class="fas fa-arrow-circle-right"></i> Topic-specific notes/assignments</p>
                     <p class="text-start text-primary"><i class="fas fa-arrow-circle-right"></i> Videos Lectures for clarification of concepts</p>
                 </div>
             </div>
@@ -100,7 +100,7 @@
                 <div class="text-start text-primary">
                     <p class="text-start text-primary"><i class="fas fa-arrow-circle-right"></i> Doubt Solving Classes both online and offline</p>
                     <p class="text-start text-primary"><i class="fas fa-arrow-circle-right"></i> Test Series every fortnight</p>
-                    <p class="text-start text-primary"><i class="fas fa-arrow-circle-right"></i> Performane Analysis of every individual</p>
+                    <p class="text-start text-primary"><i class="fas fa-arrow-circle-right"></i> Performance Analysis of every individual</p>
                 </div>
             </div>
         </div>
