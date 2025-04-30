@@ -60,7 +60,7 @@
                     <p class="text-dark">e-Edge Education offers competative and academic programme aimed at students of the classes 7th, 8th, 9th and 10th and so on. This programme focuses on strengthening the student's conceptual clarity of the fundamentals in Mathematics, Physics and Chemistry.</p>
                 </div>
             </div>
-            <div class="col-12 col-sm-6 mx-auto">
+            <!-- <div class="col-12 col-sm-6 mx-auto">
                 <a href="<?php echo $home ?>course/competitive_classes">
                     <div class="program p-4 text-center shadow my-1">
                         <h3 class="h3 text-center">Competitive Classes</h3>
@@ -70,9 +70,34 @@
                         <a href="<?php echo $home ?>course/competitive_classes" class="btn bg-coral text-white">Know More</a>
                     </div>
                 </a>
-            </div>
+            </div> -->
+
+            <style>
+                .btn.bg-coral {
+                    background-color: #f88379;
+                    color: white;
+                    transition: all 0.3s ease;
+                }
+
+                .btn.bg-coral:hover {
+                    background-color: #e96b61; /* Slightly darker coral */
+                    color: #fff;
+                    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+                    transform: scale(1.05);
+                }
+            </style>
             <div class="col-12 col-sm-6 mx-auto">
-                <a href="<?php echo $home ?>course/academic_classes">
+                <div class="program p-4 text-center shadow my-1">
+                    <h3 class="h3 text-center">Competitive Classes</h3>
+                    <p class="text-start">
+                        e-Edge Education offers a comprehensive training programme to help students prepare for Competative exams of engineering (IIT-JEE, AIEEE, UPTECH), medical (NEET).....
+                    </p>
+                    <a href="<?php echo $home ?>course/competitive_classes" class="btn bg-coral text-white">Know More</a>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 mx-auto">
+                <!-- <a href="<?php echo $home ?>course/academic_classes"> -->
                     <div class="program p-4 text-center shadow my-1">
                         <h3 class="h3 text-center">Academic Classes</h3>
                         <p class="text-start">
