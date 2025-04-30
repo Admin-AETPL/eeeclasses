@@ -57,7 +57,7 @@
                             <li><a href="<?php echo $home ?>course/neet" class="dropdown-item">NEET Preparation</a></li>
                             <li><a href="<?php echo $home; ?>course/ntse" class="dropdown-item">NTSE Preparation</a></li>
                             <li><a href="<?php echo $home; ?>course/kvpy" class="dropdown-item">Kishor Vaigyanik Protsahan Yojana</a></li>
-                            <li><a href="#" class="dropdown-item dropdown-toggle" id="navbardropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Subject Specefic Classes</a>
+                            <li><a href="#" class="dropdown-item dropdown-toggle" id="navbardropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Subject Specific Classes</a>
                                 <ul class="dropdown-menu" aria-labelledby="navbardropdown">
                                     <li><a href="" class="dropdown-item dropdown-toggle" id="navbardropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Class 12<sup>th</sup></a>
                                         <ul class="dropdown-menu" aria-labelledby="navbardropdown">

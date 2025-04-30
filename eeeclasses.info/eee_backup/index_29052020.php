@@ -129,7 +129,7 @@
         <div class="main_wrap">
           <p><span class="welcome_text">Welcome</span><span class="web_text"> to e-Edge Education!</span><br />
             <br />
-            <span class="green_text">A Premier Intitute for ENGINEERING and MEDICAL Entrance</span><br />
+            <span class="green_text">A Premier Institute for ENGINEERING and MEDICAL Entrance</span><br />
             <br />
             <span style="line-height:18px;">e-Edge Education Classes (eee c) is an institute for quality educations, dedication and devotion for the success in Board exams, Engineering and Medical competitive exams. The primary focus of the e-Edge Education Classes is to enable each student to achieve success in IIT / AIEEE / DCE / UPSEAT & AIIMS / AIPMT / DPMT etc. entrance examinations and other reputed colleges for Engineering and Medical.</span><br />
             <br />

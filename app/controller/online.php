@@ -1,3 +1,4 @@
+
 <?php
 class Online extends Controller
 {
@@ -7,3 +8,4 @@ class Online extends Controller
         $this->view('includes/footer');
     }
 }?>
+
