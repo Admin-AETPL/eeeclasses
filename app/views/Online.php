@@ -108,11 +108,10 @@
 </head>
 
 <body>
-    <!-- <header class="bg-white py-2 d-none d-lg-block">
+    <header class="bg-white py-2 d-none d-lg-block">
         <div class="container">
             <div class="row">
                 <div class="col-6 col-sm-6">
-                    <a href="<?php echo $home; ?>"><img src="<?php echo $home; ?>img/logo/eee-logo.png" alt="" id="header-logo" class="img-fluid"> <span class="text-dark fw-bold fs-4 d-none d-lg-inline-block">e-Edge Education Centre</span></a> 
                     <a href="<?php echo $home; ?>"><img src="<?php echo $home; ?>/img/logo/logo.png" alt="" id="header-logo" class="img-fluid"> <span class="text-dark fw-bold fs-4 d-none d-lg-inline-block">e-Edge Education Centre</span></a>
                 </div>
                 <div class="col-6 col-sm-6">
@@ -161,11 +160,10 @@
                 </div>
             </div>
         </div>
-    </header> -->
-    <!-- <nav class="navbar navbar-expand-lg navbar-dark bg-coral sticky-top"> -->
+    </header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-coral sticky-top">
 
-        <!-- <div class="container py-0">
-            <a href="<?php echo $home; ?>" class="navbar-brand d-block d-lg-none"><img src="<?php echo $home; ?>img/logo/eee-logo.png" alt="" style="filter:drop-shadow(5px 5px 3px #000)" id="header-logo" class="img-fluid"></a>
+        <div class="container py-0">
             <a href="<?php echo $home; ?>" class="navbar-brand d-block d-lg-none"><img src="<?php echo $home; ?>/img/logo/logo.png" alt="" style="filter:drop-shadow(5px 5px 3px #000)" id="header-logo" class="img-fluid"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -278,11 +276,7 @@
                 </ul>
             </div>
         </div> 
-</nav> -->
-
-
-
-
+</nav>
 
 <div class="card-1">
             <div class="image">
@@ -299,25 +293,11 @@
                                 <button><a href="https://meet.google.com/ekh-cnqy-beu">Watch Online Class</a> </button> </div>
             </div>
         </div>
-        <!-- <div class="footer bg-dark py-2">
-    <div class="container">
-        <div class="row">
-            <div class="col-12 col-lg-4">
-                <div class="footer-menu text-center text-lg-start">
-                    <a href="<?php echo $home ?>" class="btn text-white bg-coral">Home</a>
-                    <a href="<?php echo $home ?>about/about_us" class="btn text-white bg-coral">About Us</a>
-                    <a href="<?php echo $home ?>about/contact_us" class="btn text-white bg-coral">Contact Us</a>
-                </div>
-            </div>
-            <div class="col-12 col-lg-5">
-                <p class="text-center text-white m-0 py-1">Copyright <i class="far fa-copyright"></i> www.eeeclasses.info</p>
-            </div>
-            <div class="col-12 col-lg-3">
-                <p class="text-center text-white m-0">Design by <img src="<?php echo $home ?>/img/logo/aura-logo-new.png" class="img-fluid" style="height:35px;" alt=""></p>
-            </div>
-        </div>
+
+    <!-- This is the actual footer  -->
+    <div class="footer bg-dark py-2">
+
     </div>
-</div> -->
         </body>
 </html>
 
