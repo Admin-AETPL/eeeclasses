@@ -26,7 +26,7 @@
                             <li>Test Series every fortnight</li>
                             <li>Performance Analysis of every individual</li>
                         </ul>
-                    </div>
+                    </div>      
                 </div>
             </div>
         </div>
