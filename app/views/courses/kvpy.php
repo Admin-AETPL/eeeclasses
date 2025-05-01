@@ -211,7 +211,7 @@
                         <div id="flush-collapse6" class="accordion-collapse collapse" aria-labelledby="flush-heading6" data-bs-parent="#accordionFlushExample">
                             <div class="accordion-body">
                                 <div class="text-start">
-                                    <p class="text-dark">Annual renewal of fellowships will depend on maintaining a good academic performance (I Class or 60% marks in aggregate) in each academic year in the chosen stream and satisfactory performance in the Summer Programs. Note that KVPY Fellows who opt out of the chosen stream (Basic Science or Medicine) at any stage will forfeit the Fellowship and Contingency Grant with immediate effect. The fellowship for the students selected under the stream SA will be continued after the 12thstandard (+2) only if they pursue an undergraduate course in Basic Science (B.Sc. /B.S. /Int. M.Sc.)</p>
+                                    <p class="text-dark">Annual renewal of fellowships will depend on maintaining a good academic performance (I Class or 60% marks in aggregate) in each academic year in the chosen stream and satisfactory performance in the Summer Programs. Note that KVPY Fellows who opt out of the chosen stream (Basic Science or Medicine) at any stage will forfeit the Fellowship and Contingency Grant with immediate effect. The fellowship for the students selected under the stream SA will be continued after the 12th standard (+2) only if they pursue an undergraduate course in Basic Science (B.Sc. /B.S. /Int. M.Sc.)</p>
 
                                 </div>
                             </div>
