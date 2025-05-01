@@ -83,29 +83,52 @@
         </div>
     </div>
 </div>
+<!-- //updated code for structuring -->
 <div class="feat py-2 bg-white">
     <div class="container">
         <div class="row">
             <div class="col-12 col-sm-12 my-2">
                 <h3 class="h3 text-dark text-center">Course Inclusions:</h3>
             </div>
-            <div class="col-12 col-sm-6">
-                <div class="text-start text-primary">
-                    <p class="text-start text-primary"><i class="fas fa-arrow-circle-right"></i> Highly analysed study material</p>
-                    <p class="text-start text-primary"><i class="fas fa-arrow-circle-right"></i> Topic-specefic notes/assignments</p>
-                    <p class="text-start text-primary"><i class="fas fa-arrow-circle-right"></i> Videos Lectures for clarification of concepts</p>
-                </div>
-            </div>
-            <div class="col-12 col-sm-6">
-                <div class="text-start text-primary">
-                    <p class="text-start text-primary"><i class="fas fa-arrow-circle-right"></i> Doubt Solving Classes both online and offline</p>
-                    <p class="text-start text-primary"><i class="fas fa-arrow-circle-right"></i> Test Series every fortnight</p>
-                    <p class="text-start text-primary"><i class="fas fa-arrow-circle-right"></i> Performane Analysis of every individual</p>
+            <div class="col-12">
+                <div class="d-flex justify-content-between">
+                    <!-- Left Column (Moved to the right a little) -->
+                    <div class="col-12 col-sm-6 pe-3" style="margin-right: 30px; margin-left: 130px;">
+                        <ul class="feature-list text-dark">
+                            <li>Highly analysed study material</li>
+                            <li>Topic-specific notes/assignments</li>
+                            <li>Video lectures for clarification of concepts</li>
+                        </ul>
+                    </div>
+
+                    <!-- Right Column (Unchanged) -->
+                    <div class="col-12 col-sm-6 ps-3">
+                        <ul class="feature-list text-dark">
+                            <li>Doubt Solving Classes both online and offline</li>
+                            <li>Test Series every fortnight</li>
+                            <li>Performance Analysis of every individual</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
+<style>
+    .feature-list {
+        list-style-type: disc;
+        padding-left: 1.5rem;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .feature-list li {
+        margin-bottom: 1rem;
+        font-size: 1.04rem;
+        font-weight: 500;
+    }
+</style>
 <div class="pcmb bg-light py-3">
     <div class="container">
         <div class="row">

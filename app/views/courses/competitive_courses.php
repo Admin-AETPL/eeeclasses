@@ -4,7 +4,7 @@
             <div class="col-12 col-sm-6">
                 <div class="text-start">
                     <h3 class="h3 text-coral text-start">EEE Competitive Classes</h3>
-                    <p class="text-dark">e-Edge Education offers a comprehensive training programme to help students prepare for Competitive exams of engineering (IIT-JEE, AIEEE, UPTECH), medical(NEET), govt. scholarship(NTSE, KVPY), etc.</p>
+                    <p class="text-dark">e-Edge Education offers a comprehensive training programme to help students prepare for Competitive exams of engineering (IIT-JEE, AIEEE, UPTECH), medical (NEET), govt. scholarship (NTSE, KVPY), etc.</p>
                 </div>
             </div>
             <div class="col-12 col-sm-6">
