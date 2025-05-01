@@ -179,8 +179,9 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="accordion-item">
+
+
+                    <div class="accordion-item">
                     <h2 class="accordion-header" id="flush-heading8">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse8" aria-expanded="false" aria-controls="flush-collapse8">
                             Unit-VIII - Chemical Kinetics
@@ -294,6 +295,8 @@
                         </div>
                     </div>
                 </div>
+                </div>
+                
             </div>
         </div>
     </div>
