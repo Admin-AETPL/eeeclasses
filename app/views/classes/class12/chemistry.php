@@ -42,17 +42,18 @@
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="flush-headingOne">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                                Unit-I - Solid State
+                                Unit-I - Solutions
                             </button>
                         </h2>
                         <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
                             <div class="accordion-body">
                                 <div class="text-start">
                                     <p class="text-dark">
-                                        Classification of solids based on different binding forces: molecular, ionic, covalent and
-                                        metallic solids, amorphous and crystalline solids (elementary idea). Unit cell in two dimensional and
-                                        three dimensional lattices, calculation of density of unit cell, packing in solids, packing efficiency,
-                                        voids, number of atoms per unit cell in a cubic unit cell, point defects.
+                                    Types of solutions, expression of concentration of solutions of solids in liquids, solubility
+                                    of gases in liquids, solid solutions, Raoult’s law, colligative properties - relative lowering
+                                    of vapor pressure, elevation of boiling point, depression of freezing point, osmotic
+                                    pressure, determination of molecular masses using colligative properties, abnormal
+                                    molecular mass, Van't Hoff factor
                                     </p>
                                 </div>
                             </div>
@@ -61,16 +62,19 @@
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="flush-headingTwo">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                                Unit-II - Solutions
+                                Unit-II - Electrochemistry
                             </button>
                         </h2>
                         <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
                             <div class="accordion-body">
                                 <div class="text-start">
-                                    <p class="text-dark">Types of solutions, expression of concentration of solutions of solids in liquids, solubility
-                                        of gases in liquids, solid solutions, Raoult's law, colligative properties - relative lowering of vapour
-                                        pressure, elevation of boiling point, depression of freezing point, osmotic pressure, determination of
-                                        molecular masses using colligative properties. </p>
+                                    <p class="text-dark">Redox reactions, EMF of a cell, standard electrode potential, Nernst equation and its
+                                    application to chemical cells, Relation between Gibbs energy change and EMF of a cell,
+                                    conductance in electrolytic solutions, specific and molar conductivity, variations of
+                                    conductivity with concentration, Kohlrausch's Law, electrolysis and law of electrolysis
+                                    (elementary idea), dry cell-electrolytic cells and Galvanic cells, lead accumulator, fuel
+                                    cells, corrosion.
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -78,25 +82,18 @@
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="flush-headingThree">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-                                Unit-III - p-Block Elements
+                                Unit-III - Chemical Kinetics
                             </button>
                         </h2>
                         <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
                             <div class="accordion-body">
                                 <div class="text-start">
-                                    <p class="text-dark">Group -15 Elements: General introduction, electronic configuration, occurrence,
-                                        oxidation states, trends in physical and chemical properties; Nitrogen preparation properties and
-                                        uses; compounds of Nitrogen: preparation and properties of Ammonia and Nitric Acid.<br>
-                                        Group 16 Elements: General introduction, electronic configuration, oxidation states, occurrence,
-                                        trends in physical and chemical properties, dioxygen: preparation, properties and uses, classification
-                                        of Oxides, Ozone, Sulphur -allotropic forms; compounds of Sulphur: preparation properties and uses
-                                        of Sulphur-dioxide, Sulphuric Acid: properties and uses; Oxoacids of Sulphur (Structures only).<br>
-                                        Group 17 Elements: General introduction, electronic configuration, oxidation states, occurrence,
-                                        trends in physical and chemical properties; compounds of halogens, Preparation, properties and
-                                        uses of Chlorine and Hydrochloric acid, interhalogen compounds, Oxoacids of halogens (structures
-                                        only).<br>
-                                        Group 18 Elements: General introduction, electronic configuration, occurrence, trends in physical
-                                        and chemical properties, uses. </p>
+                                    <p class="text-dark">Rate of a reaction (Average and instantaneous), factors affecting rate of reaction:
+                                        concentration, temperature, catalyst; order and molecularity of a reaction, rate law and
+                                        specific rate constant, integrated rate equations and half-life (only for zero and first order
+                                        10
+                                        reactions), concept of collision theory (elementary idea, no mathematical treatment),
+                                        activation energy, Arrhenius equation.</p>
                                 </div>
                             </div>
                         </div>
@@ -104,16 +101,20 @@
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="flush-heading4">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse4" aria-expanded="false" aria-controls="flush-collapse4">
-                                Unit-IV - Haloalkanes and Haloarenes
+                                Unit-IV - d and f Block Elements
                             </button>
                         </h2>
                         <div id="flush-collapse4" class="accordion-collapse collapse" aria-labelledby="flush-heading4" data-bs-parent="#accordionFlushExample">
                             <div class="accordion-body">
                                 <div class="text-start">
-                                    <p class="text-dark">Haloalkanes: Nomenclature, nature of C–X bond, physical and
-                                        chemical properties, optical rotation mechanism of substitution reactions.<br>
-                                        Haloarenes: Nature of C–X bond, substitution reactions (Directive influence of halogen in
-                                        monosubstituted compounds only).
+                                    <p class="text-dark">General introduction, electronic configuration, occurrence and characteristics of
+                                    transition metals, general trends in properties of the first row transition metals – metallic
+                                    character, ionization enthalpy, oxidation states, ionic radii, colour, catalytic property,
+                                    magnetic properties, interstitial compounds, alloy formation, preparation and properties
+                                    of K2Cr2O7 and KMnO4.
+                                    Lanthanides - Electronic configuration, oxidation states, chemical reactivity and
+                                    lanthanide contraction and its consequences.
+                                    Actinides - Electronic configuration, oxidation states and comparison with lanthanides
 
                                     </p>
                                 </div>
@@ -123,18 +124,18 @@
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="flush-heading5">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse5" aria-expanded="false" aria-controls="flush-collapse5">
-                                Unit-V - Alcohols, Phenols and Ethers
+                                Unit-V - Coordination Compounds
                             </button>
                         </h2>
                         <div id="flush-collapse5" class="accordion-collapse collapse" aria-labelledby="flush-heading5" data-bs-parent="#accordionFlushExample">
                             <div class="accordion-body">
                                 <div class="text-start">
-                                    <p class="text-dark">Alcohols: Nomenclature, methods of preparation, physical and
-                                        chemical properties (of primary alcohols only), identification of primary, secondary and tertiary
-                                        alcohols, mechanism of dehydration.<br>
-                                        Phenols: Nomenclature, methods of preparation, physical and chemical properties, acidic nature of
-                                        phenol, electrophillic substitution reactions, uses of phenols.<br>
-                                        Ethers: Nomenclature, methods of preparation, physical and chemical properties, uses.
+                                    <p class="text-dark">Coordination compounds - Introduction, ligands, coordination number, colour, magnetic
+                                        properties and shapes, IUPAC nomenclature of mononuclear coordination compounds.
+                                        Bonding, Werner's theory, VBT, and CFT; structure and stereoisomerism, importance
+                                        of coordination compounds (in qualitative analysis, extraction of metals and biological
+                                        system).
+
                                     </p>
                                 </div>
                             </div>
@@ -143,18 +144,19 @@
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="flush-heading6">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse6" aria-expanded="false" aria-controls="flush-collapse6">
-                                Unit-VI - Biomolecules
+                                Unit-VI - Haloalkanes and Haloarenes
                             </button>
                         </h2>
                         <div id="flush-collapse6" class="accordion-collapse collapse" aria-labelledby="flush-heading6" data-bs-parent="#accordionFlushExample">
                             <div class="accordion-body">
                                 <div class="text-start">
-                                    <p class="text-dark"> Carbohydrates - Classification (aldoses and ketoses), monosaccahrides (glucose and
-                                        fructose), D-L configuration<br>
-                                        Proteins -Elementary idea of - amino acids, peptide bond, polypeptides, proteins, structure of
-                                        proteins - primary, secondary, tertiary structure and quaternary structures (qualitative idea only),
-                                        denaturation of proteins.<br>
-                                        Nucleic Acids: DNA and RNA
+                                    <p class="text-dark"> Haloalkanes: Nomenclature, nature of C–X bond, physical and chemical properties,
+                                        optical rotation mechanism of substitution reactions.
+                                        Haloarenes: Nature of C–X bond, substitution reactions (Directive influence of halogen
+                                        in monosubstituted compounds only).
+                                        Uses and environmental effects of - dichloromethane, trichloromethane,
+                                        tetrachloromethane, iodoform, freons, DDT.
+
 
                                     </p>
                                 </div>
@@ -164,16 +166,18 @@
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="flush-heading7">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse7" aria-expanded="false" aria-controls="flush-collapse7">
-                                Unit-VII - Electrochemistry
+                                Unit-VII - Alcohols, Phenols and Ethers
                             </button>
                         </h2>
                         <div id="flush-collapse7" class="accordion-collapse collapse" aria-labelledby="flush-heading7" data-bs-parent="#accordionFlushExample">
                             <div class="accordion-body">
                                 <div class="text-start">
-                                    <p class="text-dark">Redox reactions, EMF of a cell, standard electrode potential, Nernst equation and
-                                        its application to chemical cells, Relation between Gibbs energy change and EMF of a cell,
-                                        conductance in electrolytic solutions, specific and molar conductivity, variations of conductivity with
-                                        concentration, Kohlrausch's Law, electrolysis.
+                                    <p class="text-dark">Alcohols: Nomenclature, methods of preparation, physical and chemical properties (of
+                                        primary alcohols only), identification of primary, secondary and tertiary alcohols,
+                                        mechanism of dehydration, uses with special reference to methanol and ethanol.
+                                        Phenols: Nomenclature, methods of preparation, physical and chemical properties,
+                                        acidic nature of phenol, electrophilic substitution reactions, uses of phenols.
+                                        Ethers: Nomenclature, methods of preparation, physical and chemical properties, uses
                                     </p>
                                 </div>
                             </div>
@@ -185,15 +189,18 @@
                     <div class="accordion-item">
                     <h2 class="accordion-header" id="flush-heading8">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse8" aria-expanded="false" aria-controls="flush-collapse8">
-                            Unit-VIII - Chemical Kinetics
+                            Unit-VIII - Aldehydes, Ketones and Carboxylic Acids
                         </button>
                     </h2>
                     <div id="flush-collapse8" class="accordion-collapse collapse" aria-labelledby="flush-heading8" data-bs-parent="#accordionFlushExample">
                         <div class="accordion-body">
                             <div class="text-start">
-                                <p class="text-dark"> Rate of a reaction (Average and instantaneous), factors affecting rate of reaction:
-                                    concentration, temperature, catalyst; order and molecularity of a reaction, rate law and specific rate
-                                    constant, integrated rate equations and half-life (only for zero and first order reactions).
+                                <p class="text-dark"> Aldehydes and Ketones: Nomenclature, nature of carbonyl group, methods of
+                                    preparation, physical and chemical properties, mechanism of nucleophilic addition,
+                                    reactivity of alpha hydrogen in aldehydes, uses.
+                                    11
+                                    Carboxylic Acids: Nomenclature, acidic nature, methods of preparation, physical and
+                                    chemical properties; uses.
 
                                 </p>
                             </div>
@@ -203,16 +210,16 @@
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="flush-heading9">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse9" aria-expanded="false" aria-controls="flush-collapse9">
-                            Unit-IX - Surface Chemistry
+                            Unit-IX - Amines
                         </button>
                     </h2>
                     <div id="flush-collapse9" class="accordion-collapse collapse" aria-labelledby="flush-heading9" data-bs-parent="#accordionFlushExample">
                         <div class="accordion-body">
                             <div class="text-start">
-                                <p class="text-dark">Adsorption - physisorption and chemisorption, factors affecting adsorption of
-                                    gases on solids, colloidal state: distinction between true solutions, colloids and suspension; lyophilic,
-                                    lyophobic, multi-molecular and macromolecular colloids; properties of colloids; Tyndall effect,
-                                    Brownian movement, electrophoresis, coagulation.
+                                <p class="text-dark">Amines: Nomenclature, classification, structure, methods of preparation, physical and
+                                    chemical properties, uses, identification of primary, secondary and tertiary amines.
+                                    Diazonium salts: Preparation, chemical reactions and importance in synthetic organic
+                                    chemistry
                                 </p>
                             </div>
                         </div>
@@ -221,18 +228,22 @@
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="flush-heading10">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse10" aria-expanded="false" aria-controls="flush-collapse10">
-                            Unit-X - d-and f-Block Elements
+                            Unit-X - Biomolecules
                         </button>
                     </h2>
                     <div id="flush-collapse10" class="accordion-collapse collapse" aria-labelledby="flush-heading10" data-bs-parent="#accordionFlushExample">
                         <div class="accordion-body">
                             <div class="text-start">
-                                <p class="text-dark">General introduction, electronic configuration, occurrence and
-                                    characteristics of transition metals, general trends in properties of the first row transition metals –
-                                    metallic character, ionization enthalpy, oxidation states, ionic radii, colour, catalytic property,
-                                    magnetic properties, interstitial compounds, alloy formation.
-                                    Lanthanoids - Electronic configuration, oxidation states and lanthanoid contraction and its
-                                    consequences.
+                                <p class="text-dark">Carbohydrates - Classification (aldoses and ketoses), monosaccahrides (glucose and
+                                    fructose), D-L configuration oligosaccharides (sucrose, lactose, maltose),
+                                    polysaccharides (starch, cellulose, glycogen); Importance of carbohydrates.
+                                    Proteins -Elementary idea of - amino acids, peptide bond, polypeptides, proteins,
+                                    structure of proteins - primary, secondary, tertiary structure and quaternary structures
+                                    (qualitative idea only), denaturation of proteins; enzymes. Hormones - Elementary idea
+                                    excluding structure.
+                                    Vitamins - Classification and functions.
+                                    Nucleic Acids: DNA and RNA.
+
 
 
                                 </p>
@@ -240,7 +251,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="accordion-item">
+                <!-- <div class="accordion-item">
                     <h2 class="accordion-header" id="flush-heading11">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse11" aria-expanded="false" aria-controls="flush-collapse11">
                             Unit-XI - Coordination Compounds
@@ -295,7 +306,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
                 </div>
                 
             </div>
