@@ -26,7 +26,7 @@ class Admin extends Controller
     public function login()
     {
         if (isset($_SESSION["admin"])) {
-            echo "<script>window.location.href='https://eeeclasses.info/admin/'</script>";
+            echo "<script>window.location.href='http://localhost/eeeclasses/eeeclasses.info/admin/'</script>";
         } else {
             $this->view("admin/header", $title = "EEE Class - Admin Portal");
             $this->view("admin/login");

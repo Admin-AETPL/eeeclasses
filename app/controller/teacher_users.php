@@ -10,19 +10,19 @@ class Teacher_users extends Controller
         $res = $db->sel($qry);
         if (empty($res)) {
             echo "<script>alert('Incorrect Username or Password! Please contact Admin')</script>";
-            echo "<script>window.location.href='https://eeeclasses.info/teacher/login'</script>";
+            echo "<script>window.location.href='http://localhost/eeeclasses/eeeclasses.info/teacher/login'</script>";
         } else {
             $_SESSION["teacher"] = $uid;
-            echo "<script>window.location.href='https://eeeclasses.info/teacher/'</script>";
+            echo "<script>window.location.href='http://localhost/eeeclasses/eeeclasses.info/teacher/'</script>";
         }
     }
     public function logout()
     {
         if (isset($_SESSION["teacher"])) {
             unset($_SESSION["teacher"]);
-            echo "<script>window.location.href='https://eeeclasses.info/teacher/login'</script>";
+            echo "<script>window.location.href='http://localhost/eeeclasses/eeeclasses.info/teacher/login'</script>";
         } else {
-            echo "<script>window.location.href='https://eeeclasses.info/teacher/'</script>";
+            echo "<script>window.location.href='http://localhost/eeeclasses/eeeclasses.info/teacher/'</script>";
         }
     }
     public function upload()
@@ -54,30 +54,30 @@ class Teacher_users extends Controller
                 $newname = "study_material/" . $classsel . "/" . $cat . "/" . $subj;
                 if (is_dir($newname)) {
                     $newfile = "Chapter" . $chapt . ".pdf";
-                    $n = $_SERVER["DOCUMENT_ROOT"] . "https://eeeclasses.info/" . $newname ."/". $newfile;
+                    $n = $_SERVER["DOCUMENT_ROOT"] . "http://localhost/eeeclasses/eeeclasses.info/" . $newname ."/". $newfile;
                     move_uploaded_file($o, $n);
                 } else {
                     $newfile = "/Chapter" . $chapt . ".pdf";
-                    $n = $_SERVER["DOCUMENT_ROOT"] . "https://eeeclasses.info/" . $newname ."/". $newfile;
+                    $n = $_SERVER["DOCUMENT_ROOT"] . "http://localhost/eeeclasses/eeeclasses.info/" . $newname ."/". $newfile;
                     mkdir($newname, 0777, true);
                     move_uploaded_file($o, $n);
                 }
             } else {
                 echo "<script>alert('Something Went Wrong! Try again')</script>";
-                echo "<script>window.location.href='https://eeeclasses.info/teacher/upload/'</script>";
+                echo "<script>window.location.href='http://localhost/eeeclasses/eeeclasses.info/teacher/upload/'</script>";
             }
             $db = $this->model("nonselect");
             $qry = "insert into eee_notes(class_no,subject,chapter_no,notes,category,uploaded_on,notes_path) values('" . $classsel . "','" . $subj . "','" . $chapt . "','" . $newfile . "','" . $cat . "','".date("Y-m-d")."','".$newname."/".$newfile."')";
             $result = $db->nonsel($qry);
             if ($result == 1) {
                 echo "<script>alert('Uploaded! Upload Another')</script>";
-                echo "<script>window.location.href='https://eeeclasses.info/teacher/upload/'</script>";
+                echo "<script>window.location.href='http://localhost/eeeclasses/eeeclasses.info/teacher/upload/'</script>";
             } else {
                 echo "<script>alert('Something Went Wrong! Try again')</script>";
-                echo "<script>window.location.href='https://eeeclasses.info/teacher/upload/'</script>";
+                echo "<script>window.location.href='http://localhost/eeeclasses/eeeclasses.info/teacher/upload/'</script>";
             }
         } else {
-            echo "<script>window.location.href='https://eeeclasses.info/teacher/'</script>";
+            echo "<script>window.location.href='http://localhost/eeeclasses/eeeclasses.info/teacher/'</script>";
         }
     }
 }

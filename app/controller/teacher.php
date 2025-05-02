@@ -21,7 +21,7 @@ class teacher extends Controller
     public function login()
     {
         if (isset($_SESSION["teacher"])) {
-            echo "<script>window.location.href='https://eeeclasses.info/teacher/'</script>";
+            echo "<script>window.location.href='http://localhost/eeeclasses/eeeclasses.info/teacher/'</script>";
         } else {
             $this->view("teacher/header", $title = "EEE Class - teacher Portal");
             $this->view("teacher/login");

@@ -10,12 +10,12 @@ class student_users extends Controller{
         if(empty($res))
         {
             echo "<script>alert('Incorrect Username or Password! Please contact Admin')</script>";
-            echo "<script>window.location.href='https://eeeclasses.info/student/login'</script>";
+            echo "<script>window.location.href='http://localhost/eeeclasses/eeeclasses.info/student/login'</script>";
         }
         else
         {
             $_SESSION["student"]=$uid;
-            echo "<script>window.location.href='https://eeeclasses.info/student/'</script>";
+            echo "<script>window.location.href='http://localhost/eeeclasses/eeeclasses.info/student/'</script>";
         }
     }
     public function logout()
@@ -23,11 +23,11 @@ class student_users extends Controller{
         if(isset($_SESSION["student"]))
         {
             unset($_SESSION["student"]);
-            echo "<script>window.location.href='https://eeeclasses.info/student/login'</script>";
+            echo "<script>window.location.href='http://localhost/eeeclasses/eeeclasses.info/student/login'</script>";
         }
         else
         {
-            echo "<script>window.location.href='https://eeeclasses.info/student/'</script>";
+            echo "<script>window.location.href='http://localhost/eeeclasses/eeeclasses.info/student/'</script>";
         }
     }
 }
