@@ -2,7 +2,7 @@
 session_start();
 class Controller
 {
-    protected $homeurl = "https://eeeclasses.info/";
+    protected $homeurl = "http://localhost/eeeclasses/eeeclasses.info/";
     protected function model($model)
     {
         require_once("../app/model/".$model.".php");

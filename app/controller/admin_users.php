@@ -10,12 +10,12 @@ class Admin_users extends Controller{
         if(empty($res))
         {
             echo "<script>alert('Incorrect Username or Password! Please contact department')</script>";
-            echo "<script>window.location.href='https://eeeclasses.info/admin/login'</script>";
+            echo "<script>window.location.href='http://localhost/eeeclasses/eeeclasses.info/admin/login'</script>";
         }
         else
         {
             $_SESSION["admin"]=$uid;
-            echo "<script>window.location.href='https://eeeclasses.info/admin/'</script>";
+            echo "<script>window.location.href='http://localhost/eeeclasses/eeeclasses.info/admin/'</script>";
         }
     }
     public function logout()
@@ -23,11 +23,11 @@ class Admin_users extends Controller{
         if(isset($_SESSION["admin"]))
         {
             unset($_SESSION["admin"]);
-            echo "<script>window.location.href='https://eeeclasses.info/admin/login'</script>";
+            echo "<script>window.location.href='http://localhost/eeeclasses/eeeclasses.info/admin/login'</script>";
         }
         else
         {
-            echo "<script>window.location.href='https://eeeclasses.info/admin/'</script>";
+            echo "<script>window.location.href='http://localhost/eeeclasses/eeeclasses.info/admin/'</script>";
         }
     }
     public function add()
@@ -58,7 +58,7 @@ class Admin_users extends Controller{
             if ($_FILES["studphoto"]["error"] == 0) {
                 $o=$_FILES["studphoto"]["tmp_name"];
                 $newname="img/users/students/".$stud_id . $_FILES["studphoto"]["name"];
-                $n = $_SERVER["DOCUMENT_ROOT"] . "https://eeeclasses.info/".$newname;
+                $n = $_SERVER["DOCUMENT_ROOT"] . "http://localhost/eeeclasses/eeeclasses.info/".$newname;
                 move_uploaded_file($o, $n);
             } else {
                 $n = "img/users/user.png";
@@ -69,7 +69,7 @@ class Admin_users extends Controller{
             if($res==1)
             {
                 echo "<script>alert('Added')</script>";
-                echo "<script>window.location.href='https://eeeclasses.info/admin/students/'</script>";
+                echo "<script>window.location.href='http://localhost/eeeclasses/eeeclasses.info/admin/students/'</script>";
             }
             else
             {
@@ -87,17 +87,17 @@ class Admin_users extends Controller{
             if($res==1)
             {
                 echo "<script>alert('Deleted')</script>";
-                echo "<script>window.location.href='https://eeeclasses.info/admin/students/'</script>";
+                echo "<script>window.location.href='http://localhost/eeeclasses/eeeclasses.info/admin/students/'</script>";
             }
             else
             {
                 echo "<script>alert('Something went wrong! Try again later')</script>";
-                echo "<script>window.location.href='https://eeeclasses.info/admin/students/'</script>";
+                echo "<script>window.location.href='http://localhost/eeeclasses/eeeclasses.info/admin/students/'</script>";
             }
         }
         else
         {
-            echo "<script>window.location.href='https://eeeclasses.info/admin/students/'</script>";
+            echo "<script>window.location.href='http://localhost/eeeclasses/eeeclasses.info/admin/students/'</script>";
         }
     }
     public function update()
@@ -125,7 +125,7 @@ class Admin_users extends Controller{
             if($res==1)
             {
                 echo "<script>alert('Updated')</script>";
-                echo "<script>window.location.href='https://eeeclasses.info/admin/students/'</script>";
+                echo "<script>window.location.href='http://localhost/eeeclasses/eeeclasses.info/admin/students/'</script>";
             }
             else
             {
@@ -141,12 +141,12 @@ class Admin_users extends Controller{
         if($feed==1)
         {
             echo "<script>alert('Approved')</script>";
-            echo "<script>window.location.href='https://eeeclasses.info/admin/feedback'</script>";
+            echo "<script>window.location.href='http://localhost/eeeclasses/eeeclasses.info/admin/feedback'</script>";
         }
         else
         {
             echo "<script>alert('Something Went Wrong!')</script>";
-            echo "<script>window.location.href='https://eeeclasses.info/admin/feedback'</script>";
+            echo "<script>window.location.href='http://localhost/eeeclasses/eeeclasses.info/admin/feedback'</script>";
         }
     }
     public function question($qid='')
@@ -157,12 +157,12 @@ class Admin_users extends Controller{
         if($feed==1)
         {
             echo "<script>alert('Yay! Replied')</script>";
-            echo "<script>window.location.href='https://eeeclasses.info/admin/question'</script>";
+            echo "<script>window.location.href='http://localhost/eeeclasses/eeeclasses.info/admin/question'</script>";
         }
         else
         {
             echo "<script>alert('Something Went Wrong!')</script>";
-            echo "<script>window.location.href='https://eeeclasses.info/admin/question'</script>";
+            echo "<script>window.location.href='http://localhost/eeeclasses/eeeclasses.info/admin/question'</script>";
         }
     }
     public function question_del($qid='')
@@ -173,12 +173,12 @@ class Admin_users extends Controller{
         if($feed==1)
         {
             echo "<script>alert('Deleted')</script>";
-            echo "<script>window.location.href='https://eeeclasses.info/admin/question'</script>";
+            echo "<script>window.location.href='http://localhost/eeeclasses/eeeclasses.info/admin/question'</script>";
         }
         else
         {
             echo "<script>alert('Something Went Wrong!')</script>";
-            echo "<script>window.location.href='https://eeeclasses.info/admin/question'</script>";
+            echo "<script>window.location.href='http://localhost/eeeclasses/eeeclasses.info/admin/question'</script>";
         }
     }
     public function feedback_del($fid='')
@@ -189,12 +189,12 @@ class Admin_users extends Controller{
         if($feed==1)
         {
             echo "<script>alert('Deleted')</script>";
-            echo "<script>window.location.href='https://eeeclasses.info/admin/feedback'</script>";
+            echo "<script>window.location.href='http://localhost/eeeclasses/eeeclasses.info/admin/feedback'</script>";
         }
         else
         {
             echo "<script>alert('Something Went Wrong!')</script>";
-            echo "<script>window.location.href='https://eeeclasses.info/admin/feedback'</script>";
+            echo "<script>window.location.href='http://localhost/eeeclasses/eeeclasses.info/admin/feedback'</script>";
         }
     }
 }

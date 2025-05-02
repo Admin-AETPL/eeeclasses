@@ -47,7 +47,7 @@ class Student extends Controller
     public function login()
     {
         if (isset($_SESSION["student"])) {
-            echo "<script>window.location.href='https://eeeclasses.info/student/'</script>";
+            echo "<script>window.location.href='http://localhost/eeeclasses/eeeclasses.info/student/'</script>";
         } else {
             $this->view("student/header", $title = "EEE Class - student Portal");
             $this->view("student/login");

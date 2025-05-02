@@ -25,13 +25,13 @@ class Feedback extends Controller
             if($res==1)
             {
                 echo "<script>alert('Thank you for your valuable feedback 😊')</script>";
-                echo "<script>window.location.href='https://eeeclasses.info/'</script>";
+                echo "<script>window.location.href='http://localhost/eeeclasses/eeeclasses.info/'</script>";
             }
             else
             {
                 
                 echo "<script>alert('Something Went Wrong! Try Again')</script>";
-                echo "<script>window.location.href='https://eeeclasses.info/feedback'</script>";
+                echo "<script>window.location.href='http://localhost/eeeclasses/eeeclasses.info/feedback'</script>";
             }
         }
     }
@@ -51,13 +51,13 @@ class Feedback extends Controller
             if($res==1)
             {
                 echo "<script>alert('Thanks! We will get back to you soon either via phone or email')</script>";
-                echo "<script>window.location.href='https://eeeclasses.info/'</script>";
+                echo "<script>window.location.href='http://localhost/eeeclasses/eeeclasses.info/'</script>";
             }
             else
             {
                 
                 echo "<script>alert('Something Went Wrong! Try Again')</script>";
-                echo "<script>window.location.href='https://eeeclasses.info/feedback'</script>";
+                echo "<script>window.location.href='http://localhost/eeeclasses/eeeclasses.info/feedback'</script>";
             }
         }
     } 

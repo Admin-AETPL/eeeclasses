@@ -15,7 +15,7 @@ class Admin_teachers extends Controller{
             if ($_FILES["studphoto"]["error"] == 0) {
                 $o=$_FILES["studphoto"]["tmp_name"];
                 $newname="img/users/teachers/".$stud_id . $_FILES["studphoto"]["name"];
-                $n = $_SERVER["DOCUMENT_ROOT"] . "https://eeeclasses.info/".$newname;
+                $n = $_SERVER["DOCUMENT_ROOT"] . "http://localhost/eeeclasses/eeeclasses.info/".$newname;
                 move_uploaded_file($o, $n);
             } else {
                 $n = "img/users/user.png";
@@ -26,7 +26,7 @@ class Admin_teachers extends Controller{
             if($res==1)
             {
                 echo "<script>alert('Added')</script>";
-                echo "<script>window.location.href='https://eeeclasses.info/admin/teachers/'</script>";
+                echo "<script>window.location.href='http://localhost/eeeclasses/eeeclasses.info/admin/teachers/'</script>";
             }
             else
             {
@@ -44,17 +44,17 @@ class Admin_teachers extends Controller{
             if($res==1)
             {
                 echo "<script>alert('Deleted')</script>";
-                echo "<script>window.location.href='https://eeeclasses.info/admin/teachers/'</script>";
+                echo "<script>window.location.href='http://localhost/eeeclasses/eeeclasses.info/admin/teachers/'</script>";
             }
             else
             {
                 echo "<script>alert('Something went wrong! Try again later')</script>";
-                echo "<script>window.location.href='https://eeeclasses.info/admin/teachers/'</script>";
+                echo "<script>window.location.href='http://localhost/eeeclasses/eeeclasses.info/admin/teachers/'</script>";
             }
         }
         else
         {
-            echo "<script>window.location.href='https://eeeclasses.info/admin/teachers/'</script>";
+            echo "<script>window.location.href='http://localhost/eeeclasses/eeeclasses.info/admin/teachers/'</script>";
         }
     }
     public function update()
@@ -69,7 +69,7 @@ class Admin_teachers extends Controller{
             if($res==1)
             {
                 echo "<script>alert('Updated')</script>";
-                echo "<script>window.location.href='https://eeeclasses.info/admin/teachers/'</script>";
+                echo "<script>window.location.href='http://localhost/eeeclasses/eeeclasses.info/admin/teachers/'</script>";
             }
             else
             {

@@ -104,7 +104,7 @@
                 }
                 
                 $.ajax({
-                    url: "https://eeeclasses.info/teacher_exists/index",
+                    url: "http://localhost/eeeclasses/eeeclasses.info/teacher_exists/index",
                     method: "post",
                     data: "stud_mail=" + smail,
                     success: function(result) {
@@ -122,7 +122,7 @@
             $("#inputmail").focusout(function() {
                 var smail = $("#inputmail").val();
                 $.ajax({
-                    url: "https://eeeclasses.info/teacher_exists/index",
+                    url: "http://localhost/eeeclasses/eeeclasses.info/teacher_exists/index",
                     method: "post",
                     data: "stud_mail=" + smail,
                     success: function(result) {

@@ -76,7 +76,7 @@
         $("#sbm").click(function(){
             var fname=$("#inputfile").val();
             $.ajax({
-                url: "https://eeeclasses.info/app/controller/extcheck.php",
+                url: "http://localhost/eeeclasses/eeeclasses.info/app/controller/extcheck.php",
                 method: "post",
                 data:"fname="+fname,
                 success:function(result)
@@ -100,7 +100,7 @@
         $("#inputfile").change(function(){
             var fname=$(this).val();
             $.ajax({
-                url: "https://eeeclasses.info/app/controller/extcheck.php",
+                url: "http://localhost/eeeclasses/eeeclasses.info/app/controller/extcheck.php",
                 method: "post",
                 data:"fname="+fname,
                 success:function(result)
