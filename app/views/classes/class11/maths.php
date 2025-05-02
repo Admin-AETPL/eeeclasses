@@ -52,12 +52,12 @@
                         <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
                             <div class="accordion-body">
                                 <div class="text-start">
-                                    <h5 class="h5 text-dark text-start fw-bold">Chapter-1: Trigonometric Functions </h5>
-                                    <p class="text-dark">Positive and negative angles. Measuring angles in radians and in degrees and conversion from one
-                                        measure to another. Definition of trigonometric functions with the help of unit circle. Truth of the identity
-                                        sin2x + cos2x = 1, for all x. Signs of trigonometric functions. Domain and range of trigonometric functions
-                                        and their graphs. Expressing sin (x±y) and cos (x±y) in terms of sinx, siny, cosx & cosy and their simple
-                                        applications.
+                                    <h5 class="h5 text-dark text-start fw-bold">Chapter-1: Sets </h5>
+                                    <p class="text-dark">Sets and their representations, Empty set, Finite and Infinite sets, Equal sets, Subsets,
+                                        Subsets of a set of real numbers especially intervals (with notations). Universal set. Venn
+                                        diagrams. Union and Intersection of sets. Difference of sets. Complement of a set.
+                                        Properties of Complement.
+
                                     </p>
                                 </div>
                                 <div class="text-start">
@@ -68,6 +68,41 @@
                                         function, domain, co-domain and range of a function. Real valued functions, domain and range of these
                                         functions, constant, identity, polynomial, rational, modulus, signum, exponential, logarithmic and greatest
                                         integer functions, with their graphs.
+                                    </p>
+                                </div>
+                                <div class="text-start">
+                                    <h5 class="h5 text-dark text-start fw-bold">Chapter-3: Trigonometric Functions</h5>
+                                    <p class="text-dark">Positive and negative angles. Measuring angles in radians and in degrees and conversion
+                                        from one measure to another. Definition of trigonometric functions with the help of unit circle.
+                                        Truth of the identity 𝑠𝑖𝑛2𝑥 + 𝑐𝑜𝑠2𝑥 = 1, for all x. Signs of trigonometric functions. Domain
+                                        and range of trigonometric functions and their graphs. Expressing 𝑠𝑖𝑛 (𝑥 ± 𝑦) and 𝑐𝑜𝑠 (𝑥 ±
+                                        𝑦) in terms of 𝑠𝑖𝑛𝑥, 𝑠𝑖𝑛𝑦, 𝑐𝑜𝑠𝑥 & 𝑐𝑜𝑠𝑦 and their simple applications. Deducing identities like
+                                        the following:
+                                        tan(𝑥 ± 𝑦) =
+                                        tan 𝑥±tan 𝑦
+                                        1∓tan 𝑥 tan 𝑦
+                                        , cot(𝑥 ± 𝑦) =
+                                        cot𝑥∓cot𝑦
+                                        cot𝑦±cot𝑥
+                                        sin 𝛼 ± sin 𝛽 = 2 sin 1
+                                        2
+                                        (𝛼 ± 𝛽) cos
+                                        1
+                                        2
+                                        (𝛼 ∓ 𝛽)
+                                        cos 𝛼 + cos 𝛽 = 2 cos
+                                        1
+                                        2
+                                        (𝛼 + 𝛽) cos
+                                        1
+                                        2
+                                        (𝛼 − 𝛽)
+                                        cos 𝛼 − cos 𝛽 = −2 sin 1
+                                        2
+                                        (𝛼 + 𝛽) sin 1
+                                        2
+                                        (𝛼 − 𝛽)
+                                        Identities related to sin 2𝑥 , cos 2𝑥 ,tan 2𝑥 , sin 3𝑥 , cos 3𝑥 and tan 3�
                                     </p>
                                 </div>
                             </div>
@@ -84,17 +119,38 @@
                                 <div class="text-start">
                                     <h5 class="h5 text-dark text-start fw-bold">Chapter-1: Complex Numbers and Quadratic Equations</h5>
                                     <p class="text-dark">Need for complex numbers, especially√−1, to be motivated by inability to solve some of the quardratic
-                                        equations. Algebraic properties of complex numbers. Argand plane. Statement of Fundamental Theorem
-                                        of Algebra, solution of quadratic equations (with real coefficients) in the complex number system.
+                                        equations. Algebraic properties of complex numbers. Argand plane.
 
                                     </p>
                                 </div>
                                 <div class="text-start">
-                                    <h5 class="h5 text-dark text-start fw-bold">Chapter-2: Sequence and Series</h5>
-                                    <p class="text-dark">Sequence and Series. Arithmetic Progression (A. P.). Arithmetic Mean (A.M.) Geometric Progression
-                                        (G.P.), general term of a G.P., sum of n terms of a G.P., infinite G.P. and its sum, geometric mean (G.M.),
-                                        relation between A.M. and G.M.
-
+                                    <h5 class="h5 text-dark text-start fw-bold">Chapter-2: Linear Inequalities</h5>
+                                    <p class="text-dark">Linear inequalities. Algebraic solutions of linear inequalities in one variable and their
+                                    representation on the number line. 
+                                    </p>
+                                </div>
+                                <div class="text-start">
+                                    <h5 class="h5 text-dark text-start fw-bold">Chapter-3: Permutations and Combinations</h5>
+                                    <p class="text-dark">Fundamental principle of counting. Factorial n. (n!) Permutations and combinations, derivation
+                                        of Formulae for
+                                        n
+                                        Pr
+                                        ,
+                                        nCr
+                                        and their connections, simple applications.
+                                    </p>
+                                </div>
+                                <div class="text-start">
+                                    <h5 class="h5 text-dark text-start fw-bold">Chapter-4: Binomial Theorem</h5>
+                                    <p class="text-dark">Historical perspective, statement and proof of the binomial theorem for positive integral indices.
+                                    Pascal’s triangle, simple applications.  
+                                    </p>
+                                </div>
+                                <div class="text-start">
+                                    <h5 class="h5 text-dark text-start fw-bold">Chapter-5: Sequence and Series</h5>
+                                    <p class="text-dark">Sequence and Series. Arithmetic Mean (A.M.) Geometric Progression (G.P.), general term of
+                                        a G.P., sum of n terms of a G.P., infinite G.P. and its sum, geometric mean (G.M.), relation
+                                        between A.M. and G.M
                                     </p>
                                 </div>
                             </div>
@@ -115,6 +171,23 @@
                                         intercept form and normal form. General equation of a line. Distance of a point from a line.</p>
                                 </div>
                             </div>
+                            <div class="accordion-body">
+                                <div class="text-start">
+                                    <h5 class="h5 text-dark text-start fw-bold">Chapter-2: Conic Sections </h5>
+                                    <p class="text-dark">Sections of a cone: circles, ellipse, parabola, hyperbola, a point, a straight line and a pair of
+                                    intersecting lines as a degenerated case of a conic section. Standard equations and simple
+                                    properties of parabola, ellipse and hyperbola. Standard equation of a circle.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="accordion-body">
+                                <div class="text-start">
+                                    <h5 class="h5 text-dark text-start fw-bold">Chapter-3: Introduction to Three-dimensional Geometry </h5>
+                                    <p class="text-dark">Coordinate axes and coordinate planes in three dimensions. Coordinates of a point.
+                                        Distance between two points.
+                                        </p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="accordion-item">
@@ -126,9 +199,12 @@
                         <div id="flush-collapse4" class="accordion-collapse collapse" aria-labelledby="flush-heading4" data-bs-parent="#accordionFlushExample">
                             <div class="accordion-body">
                                 <div class="text-start">
-                                    <h5 class="h5 text-dark text-start fw-bold">Chapter-1: Limits</h5>
-                                    <p class="text-dark">Intuitive idea of limit. Limits of polynomials and rational functions trigonometric, exponential and
-                                        logarithmic functions.
+                                    <h5 class="h5 text-dark text-start fw-bold">Chapter-1: Limits and Derivatives</h5>
+                                    <p class="text-dark">Derivative introduced as rate of change both as that of distance function and geometrically.
+                                        Intuitive idea of limit. Limits of polynomials and rational functions trigonometric, exponential
+                                        and logarithmic functions. Definition of derivative relate it to scope of tangent of the curve,
+                                        derivative of sum, difference, product and quotient of functions of polynomial and
+                                        trigonometric functions.
                                     </p>
                                 </div>
                             </div>
@@ -141,120 +217,27 @@
                             </button>
                         </h2>
                         <div id="flush-collapse10" class="accordion-collapse collapse" aria-labelledby="flush-heading10" data-bs-parent="#accordionFlushExample">
-                            <div class="accordion-body">
-                                <div class="text-start">
-                                    <h5 class="h5 text-dark text-start fw-bold">Chapter-1: Statistics</h5>
-                                    <p class="text-dark">Measures of Dispersion: Range, mean deviation, variance and standard deviation of ungrouped/grouped
-                                        data.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <h4 class="h4 text-dark text-center fw-bold">Term-II</h4>
-                <div class="accordion accordion-flush" id="accordionFlushExample2">
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="flush-heading5">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse5" aria-expanded="false" aria-controls="flush-collapse5">
-                                Unit-I - Sets and Functions
-                            </button>
-                        </h2>
-                        <div id="flush-collapse5" class="accordion-collapse collapse" aria-labelledby="flush-heading5" data-bs-parent="#accordionFlushExample2">
-                            <div class="accordion-body">
-                                <div class="text-start">
-                                    <h5 class="h5 text-dark text-start fw-bold">Chapter-1: Trigonometric Functions </h5>
-                                    <p class="text-dark">Positive and negative angles. Measuring angles in radians and in degrees and conversion from one
-                                        measure to another. Definition of trigonometric functions with the help of unit circle. Truth of the identity
-                                        sin2x + cos2x = 1, for all x. Signs of trigonometric functions. Domain and range of trigonometric functions
-                                        and their graphs. Expressing sin (x±y) and cos (x±y) in terms of sinx, siny, cosx & cosy and their simple
-                                        applications.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="flush-heading6">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse6" aria-expanded="false" aria-controls="flush-collapse6">
-                                Unit-II - Algebra
-                            </button>
-                        </h2>
-                        <div id="flush-collapse6" class="accordion-collapse collapse" aria-labelledby="flush-heading6" data-bs-parent="#accordionFlushExample2">
-                            <div class="accordion-body">
-                                <div class="text-start">
-                                    <h5 class="h5 text-dark text-start fw-bold">Chapter-1: Linear Inequalities</h5>
-                                    <p class="text-dark">Linear inequalities. Algebraic solutions of linear inequalities in one variable and their representation on the
-                                        number line. Graphical solution of linear inequalities in two variables. Graphical method of finding a solution
-                                        of system of linear inequalities in two variables.
+                        <div class="accordion-body">
 
-                                    </p>
-                                </div>
-                                <div class="text-start">
-                                    <h5 class="h5 text-dark text-start fw-bold">Chapter-2: Permutations and Combinations</h5>
-                                    <p class="text-dark">Fundamental principle of counting. Factorial n. (n!) Permutations and combinations, formula
-                                        for nPr and nCr, simple applications.
-                                    </p>
-                                </div>
+                            <!-- Chapter 1 -->
+                            <div class="text-start mb-3">
+                                <h5 class="h5 text-dark fw-bold">Chapter-1: Statistics</h5>
+                                <p class="text-dark">
+                                    Measures of Dispersion: Range, mean deviation, variance and standard deviation of ungrouped/grouped data.
+                                </p>
                             </div>
+
+                            <!-- Chapter 2 -->
+                            <div class="text-start">
+                                <h5 class="h5 text-dark fw-bold">Chapter-2: Probability</h5>
+                                <p class="text-dark">
+                                    Events; occurrence of events, ‘not’, ‘and’ and ‘or’ events, exhaustive events, mutually exclusive events, Axiomatic (set theoretic) probability, connections with other theories of earlier classes. Probability of an event, probability of ‘not’, ‘and’ and ‘or’ events.
+                                </p>
+                            </div>
+
                         </div>
                     </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="flush-heading7">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse7" aria-expanded="false" aria-controls="flush-collapse7">
-                                Unit-III - Coordinate Geometry
-                            </button>
-                        </h2>
-                        <div id="flush-collapse7" class="accordion-collapse collapse" aria-labelledby="flush-heading7" data-bs-parent="#accordionFlushExample2">
-                            <div class="accordion-body">
-                                <div class="text-start">
-                                    <h5 class="h5 text-dark text-start fw-bold">Chapter-1: Conic Sections </h5>
-                                    <p class="text-dark">Sections of a cone: circles, ellipse, parabola, hyperbola. Standard equations and simple properties of
-                                        parabola, ellipse and hyperbola. Standard equation of a circle.</p>
-                                </div>
-                                <div class="text-start">
-                                    <h5 class="h5 text-dark text-start fw-bold">Chapter-2: Introduction to Three-dimensional Geometry </h5>
-                                    <p class="text-dark">Coordinate axes and coordinate planes in three dimensions. Coordinates of a point. Distance between two
-                                        points and section formula.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="flush-heading8">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse8" aria-expanded="false" aria-controls="flush-collapse8">
-                                Unit-IV - Calculus
-                            </button>
-                        </h2>
-                        <div id="flush-collapse8" class="accordion-collapse collapse" aria-labelledby="flush-heading8" data-bs-parent="#accordionFlushExample2">
-                            <div class="accordion-body">
-                                <div class="text-start">
-                                    <h5 class="h5 text-dark text-start fw-bold">Chapter-1: Derivatives</h5>
-                                    <p class="text-dark">Derivative introduced as rate of change both as that of distance function and geometrically. Definition of
-                                        Derivative, relate it to scope of tangent of the curve, derivative of sum, difference, product and quotient of
-                                        functions. Derivatives of polynomial and trigonometric functions.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="flush-heading9">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse9" aria-expanded="false" aria-controls="flush-collapse9">
-                                Unit-V - Statistics and Probability
-                            </button>
-                        </h2>
-                        <div id="flush-collapse9" class="accordion-collapse collapse" aria-labelledby="flush-heading9" data-bs-parent="#accordionFlushExample2">
-                            <div class="accordion-body">
-                                <div class="text-start">
-                                    <h5 class="h5 text-dark text-start fw-bold">Chapter-1: Probability</h5>
-                                    <p class="text-dark">Random experiments; outcomes, sample spaces (set representation). Events; occurrence of events, ‘not’,
-                                        ‘and’ and ‘or’ events, exhaustive events, mutually exclusive events, Probability of an event, probability of
-                                        ‘not’, ‘and’ and ‘or’ events.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
+
                     </div>
                 </div>
             </div>

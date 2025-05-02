@@ -57,7 +57,7 @@
                             <div class="accordion-body">
                                 <div class="text-start">
                                     <h5 class="h5 text-dark text-start fw-bold">Chapter-1: The Living World </h5>
-                                    <p class="text-dark">What is living? Biodiversity; Need for classification; three domains of life; concept of species
+                                    <p class="text-dark">Biodiversity; Need for classification; three domains of life; concept of species
                                         and taxonomical hierarchy; binomial nomenclature.
                                     </p>
                                     <div class="text-start my-1">
@@ -77,8 +77,7 @@
                                 </div>
                                 <div class="text-start">
                                     <h5 class="h5 text-dark text-start fw-bold">Chapter-3: Plant Kingdom</h5>
-                                    <p class="text-dark">Salient features and classification of plants into major groups - Algae, Bryophyta, Pteridophyta
-                                        and Gymnospermae. (salient and distinguishing features and a few examples of each category).
+                                    <p class="text-dark">Classification of plants into major groups; Salient features and classification of plants into major groups - Algae, Bryophyta, Pteridophyta, Gymnospermae and Angiosperms.
                                     </p>
                                     <div class="text-start my-1">
                                         <a target="_blank" href="<?php echo $home ?>study_material/11/notes/Biology/Chapter3.pdf" class="btn align-middle btn-outline-primary">Sample Notes</a>
@@ -106,14 +105,18 @@
                             <div class="accordion-body">
                                 <div class="text-start">
                                     <h5 class="h5 text-dark text-start fw-bold">Chapter-5: Morphology of Flowering Plants</h5>
-                                    <p class="text-dark">Morphology of inflorescence and flower, Description of 01 family: Solanaceae or Liliaceae (to
-                                        be dealt along with the relevant experiments of the Practical Syllabus).
-
+                                    <p class="text-dark">Morphology of inflorescence and flower, Description of 01 family: Solanaceae 
+                                    </p>
+                                </div>
+                                <div class="text-start">
+                                    <h5 class="h5 text-dark text-start fw-bold">Chapter-6: Anatomy of Flowering Plants</h5>
+                                    <p class="text-dark">Anatomy and functions of tissue systems in dicots and monocots.
                                     </p>
                                 </div>
                                 <div class="text-start">
                                     <h5 class="h5 text-dark text-start fw-bold">Chapter-7: Structural Organization in Animals</h5>
-                                    <p class="text-dark">Animal tissues.
+                                    <p class="text-dark">Morphology, Anatomy and functions of different systems (digestive, circulatory, respiratory,
+                                    nervous and reproductive) of frog.
 
                                     </p>
                                 </div>
@@ -139,7 +142,10 @@
                                 <div class="text-start">
                                     <h5 class="h5 text-dark text-start fw-bold">Chapter-9: Biomolecules</h5>
                                     <p class="text-dark">Chemical constituents of living cells: biomolecules, structure and function of proteins,
-                                        carbohydrates, lipids, nucleic acids; Enzymes- types, properties, enzyme action.</p>
+                                        carbohydrates, lipids, nucleic acids; Enzymes- types, properties, enzyme action.. (Topics
+                                        excluded: Nature of Bond Linking Monomers in a Polymer, Dynamic State of Body
+                                        Constituents Concept of Metabolism, Metabolic Basis of Living, The Living State)
+                                        </p>
                                 </div>
                                 <div class="text-start">
                                     <h5 class="h5 text-dark text-start fw-bold">Chapter-10: Cell Cycle and Cell Division</h5>
@@ -157,7 +163,7 @@
                         <div id="flush-collapse4" class="accordion-collapse collapse" aria-labelledby="flush-heading4" data-bs-parent="#accordionFlushExample">
                             <div class="accordion-body">
                                 <div class="text-start">
-                                    <h5 class="h5 text-dark text-start fw-bold">Chapter-13: Photosynthesis in Higher Plants</h5>
+                                    <h5 class="h5 text-dark text-start fw-bold">Chapter-11: Photosynthesis in Higher Plants</h5>
                                     <p class="text-dark">Photosynthesis as a means of autotrophic nutrition; site of photosynthesis, pigments involved in
                                         photosynthesis (elementary idea); photochemical and biosynthetic phases of photosynthesis;
                                         cyclic and non-cyclic photophosphorylation; chemiosmotic hypothesis; photorespiration; C3 and
@@ -165,15 +171,16 @@
                                     </p>
                                 </div>
                                 <div class="text-start">
-                                    <h5 class="h5 text-dark text-start fw-bold">Chapter-14: Respiration in Plants </h5>
+                                    <h5 class="h5 text-dark text-start fw-bold">Chapter-12: Respiration in Plants </h5>
                                     <p class="text-dark">Exchange of gases; cellular respiration - glycolysis, fermentation (anaerobic), TCA cycle and
                                         electron transport system (aerobic); energy relations - number of ATP molecules generated;
                                         amphibolic pathways; respiratory quotient.
                                 </div>
                                 <div class="text-start">
-                                    <h5 class="h5 text-dark text-start fw-bold">Chapter-15: Plant - Growth and Development </h5>
-                                    <p class="text-dark">Growth regulators - auxin, gibberellin, cytokinin, ethylene, ABA.
-                                        amphibolic pathways; respiratory quotient.
+                                    <h5 class="h5 text-dark text-start fw-bold">Chapter-13: Plant - Growth and Development </h5>
+                                    <p class="text-dark">Seed germination; phases of plant growth and plant growth rate; conditions of growth;
+                                        differentiation, dedifferentiation and redifferentiation; sequence of developmental processes
+                                        in a plant cell; plant growth regulators - auxin, gibberellin, cytokinin, ethylene, ABA.
                                 </div>
                             </div>
                         </div>
@@ -187,7 +194,7 @@
                         <div id="flush-collapse5" class="accordion-collapse collapse" aria-labelledby="flush-heading5" data-bs-parent="#accordionFlushExample">
                             <div class="accordion-body">
                                 <div class="text-start">
-                                    <h5 class="h5 text-dark text-start fw-bold">Chapter-17: Breathing and Exchange of Gases</h5>
+                                    <h5 class="h5 text-dark text-start fw-bold">Chapter-14: Breathing and Exchange of Gases</h5>
                                     <p class="text-dark">Respiratory organs in animals (recall only); Respiratory system in humans; mechanism of
                                         breathing and its regulation in humans - exchange of gases, transport of gases and regulation of
                                         respiration, respiratory volume; disorders related to respiration - asthma, emphysema,
@@ -195,7 +202,7 @@
                                     </p>
                                 </div>
                                 <div class="text-start">
-                                    <h5 class="h5 text-dark text-start fw-bold">Chapter-18: Body Fluids and Circulation </h5>
+                                    <h5 class="h5 text-dark text-start fw-bold">Chapter-15: Body Fluids and Circulation </h5>
                                     <p class="text-dark">Composition of blood, blood groups, coagulation of blood; composition of lymph and its
                                         function; human circulatory system - Structure of human heart and blood vessels; cardiac cycle,
                                         cardiac output, ECG; double circulation; regulation of cardiac activity; disorders of circulatory
@@ -203,7 +210,7 @@
                                     </p>
                                 </div>
                                 <div class="text-start">
-                                    <h5 class="h5 text-dark text-start fw-bold">Chapter-19: Excretory Products and their Elimination</h5>
+                                    <h5 class="h5 text-dark text-start fw-bold">Chapter-16: Excretory Products and their Elimination</h5>
                                     <p class="text-dark">Modes of excretion - ammonotelism, ureotelism, uricotelism; human excretory system –
                                         structure and function; urine formation, osmoregulation; regulation of kidney function - renin -
                                         angiotensin, atrial natriuretic factor, ADH and diabetes insipidus; role of other organs in excretion; disorders - uremia, renal failure, renal calculi, nephritis; dialysis and artificial kidney,
@@ -211,23 +218,26 @@
                                     </p>
                                 </div>
                                 <div class="text-start">
-                                    <h5 class="h5 text-dark text-start fw-bold">Chapter-20: Locomotion and Movement</h5>
-                                    <p class="text-dark">Skeletal muscle, contractile proteins and muscle contraction.
+                                    <h5 class="h5 text-dark text-start fw-bold">Chapter-17: Locomotion and Movement</h5>
+                                    <p class="text-dark">Types of movement - ciliary, flagellar, muscular; skeletal muscle, contractile proteins and
+                                        muscle contraction; skeletal system and its functions; joints; disorders of muscular and
+                                        skeletal systems - myasthenia gravis, tetany, muscular dystrophy, arthritis, osteoporosis,
+                                        gout.
+
                                     </p>
                                 </div>
                                 <div class="text-start">
-                                    <h5 class="h5 text-dark text-start fw-bold">Chapter-21: Neural Control and Coordination</h5>
+                                    <h5 class="h5 text-dark text-start fw-bold">Chapter-18: Neural Control and Coordination</h5>
                                     <p class="text-dark">Neuron and nerves; Nervous system in humans - central nervous system; peripheral nervous
                                         system and visceral nervous system; generation and conduction of nerve impulse.
                                     </p>
                                 </div>
                                 <div class="text-start">
-                                    <h5 class="h5 text-dark text-start fw-bold">Chapter-22: Chemical Coordination and Integration</h5>
+                                    <h5 class="h5 text-dark text-start fw-bold">Chapter-19: Chemical Coordination and Integration</h5>
                                     <p class="text-dark">Endocrine glands and hormones; human endocrine system - hypothalamus, pituitary, pineal,
                                         thyroid, parathyroid, adrenal, pancreas, gonads; mechanism of hormone action (elementary idea);
                                         role of hormones as messengers and regulators, hypo - and hyperactivity and related disorders;
                                         dwarfism, acromegaly, cretinism, goiter, exophthalmic goiter, diabetes, Addison's disease.
-                                        Note: Diseases related to all the human physiological systems to be taught in brief.
                                     </p>
                                 </div>
                             </div>

@@ -46,12 +46,7 @@
                         <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
                             <div class="accordion-body">
                                 <div class="text-start">
-                                    <h5 class="h5 text-dark text-start fw-bold">Chapter-1: Physical World </h5>
-                                    <p class="text-dark">Physics-scope and excitement; nature of physical laws; Physics, technology and society.</p>
-                                    
-                                </div>
-                                <div class="text-start">
-                                    <h5 class="h5 text-dark text-start fw-bold">Chapter-2: Units and Measurements </h5>
+                                    <h5 class="h5 text-dark text-start fw-bold">Chapter-1: Units and Measurements </h5>
                                     <p class="text-dark">Need for measurement: Units of measurement; systems of units; SI units,
                                         fundamental and derived units. Length, mass and time measurements;
                                         accuracy and precision of measuring instruments; errors in measurement;
@@ -70,7 +65,7 @@
                         <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
                             <div class="accordion-body">
                                 <div class="text-start">
-                                    <h5 class="h5 text-dark text-start fw-bold">Chapter-3: Motion in a straight line </h5>
+                                    <h5 class="h5 text-dark text-start fw-bold">Chapter-2: Motion in a straight line </h5>
                                     <p class="text-dark">Frame of reference, Motion in a straight line: Position-time graph, speed and
                                         velocity.
                                         Elementary concepts of differentiation and integration for describing motion,
@@ -79,7 +74,7 @@
                                         Relations for uniformly accelerated motion (graphical treatment).</p>
                                 </div>
                                 <div class="text-start">
-                                    <h5 class="h5 text-dark text-start fw-bold">Chapter-4: Motion in a Plane </h5>
+                                    <h5 class="h5 text-dark text-start fw-bold">Chapter-3: Motion in a Plane </h5>
                                     <p class="text-dark">Scalar and vector quantities; position and displacement vectors, general
                                         vectors and their notations; equality of vectors, multiplication of vectors by a
                                         real number; addition and subtraction of vectors, relative velocity, Unit vector;
@@ -99,7 +94,7 @@
                         <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
                             <div class="accordion-body">
                                 <div class="text-start">
-                                    <h5 class="h5 text-dark text-start fw-bold">Chapter-5: Laws of motion </h5>
+                                    <h5 class="h5 text-dark text-start fw-bold">Chapter-4: Laws of motion </h5>
                                     <p class="text-dark">Intuitive concept of force, Inertia, Newton's first law of motion; momentum
                                         and Newton's second law of motion; impulse; Newton's third law of motion.
                                         Law of conservation of linear momentum and its applications.
@@ -120,7 +115,7 @@
                         <div id="flush-collapse4" class="accordion-collapse collapse" aria-labelledby="flush-heading4" data-bs-parent="#accordionFlushExample">
                             <div class="accordion-body">
                                 <div class="text-start">
-                                    <h5 class="h5 text-dark text-start fw-bold">Chapter-6: Work, Energy and Power </h5>
+                                    <h5 class="h5 text-dark text-start fw-bold">Chapter-5: Work, Energy and Power </h5>
                                     <p class="text-dark">Work done by a constant force and a variable force; kinetic energy, workenergy theorem, power.
                                         Notion of potential energy, potential energy of a spring, conservative forces:
                                         conservation of mechanical energy (kinetic and potential energies); nonconservative forces: motion in a vertical circle; elastic and inelastic collisions
@@ -139,16 +134,14 @@
                         <div id="flush-collapse5" class="accordion-collapse collapse" aria-labelledby="flush-heading5" data-bs-parent="#accordionFlushExample">
                             <div class="accordion-body">
                                 <div class="text-start">
-                                    <h5 class="h5 text-dark text-start fw-bold">Chapter-7: System of Particles and Rotational Motion </h5>
-                                    <p class="text-dark">Centre of mass of a two-particle system, momentum conservation and centre of
-                                        mass motion. Centre of mass of a rigid body; centre of mass of a uniform rod.
-                                        Moment of a force, torque, angular momentum, law of conservation of
-                                        angular momentum and its applications.
-                                        Equilibrium of rigid bodies, rigid body rotation and equations of rotational
-                                        motion, comparison of linear and rotational motions.
-                                        Moment of inertia, radius of gyration, values of moments of inertia for simple
-                                        geometrical objects (no derivation). Statement of parallel and perpendicular
-                                        axes theorems and their applications.
+                                    <h5 class="h5 text-dark text-start fw-bold">Chapter-6: System of Particles and Rotational Motion </h5>
+                                    <p class="text-dark">Centre of mass of a two-particle system, momentum conservation and Centre of mass motion.
+                                            Centre of mass of a rigid body; centre of mass of a uniform rod. Moment of a force, torque,
+                                            angular momentum, law of conservation of angular momentum and its applications.
+                                            Equilibrium of rigid bodies, rigid body rotation and equations of rotational motion, comparison
+                                            of linear and rotational motions.
+                                            Moment of inertia, radius of gyration, values of moments of inertia for simple geometrical
+                                            objects (no derivation).
                                     </p>
                                 </div>
                             </div>
@@ -163,11 +156,11 @@
                         <div id="flush-collapse6" class="accordion-collapse collapse" aria-labelledby="flush-heading6" data-bs-parent="#accordionFlushExample">
                             <div class="accordion-body">
                                 <div class="text-start">
-                                    <h5 class="h5 text-dark text-start fw-bold">Chapter-8: Gravitation </h5>
-                                    <p class="text-dark">Kepler's laws of planetary motion, universal law of gravitation. Acceleration
-                                        due to gravity and its variation with altitude and depth.
-                                        Gravitational potential energy and gravitational potential, escape velocity,
-                                        orbital velocity of a satellite, Geo-stationary satellites.
+                                    <h5 class="h5 text-dark text-start fw-bold">Chapter-7: Gravitation </h5>
+                                    <p class="text-dark">Kepler's laws of planetary motion, universal law of gravitation. Acceleration due to gravity and
+                                        its variation with altitude and depth.
+                                        Gravitational potential energy and gravitational potential, escape speed, orbital velocity of a
+                                        satellite, energy of an orbiting satellite.
                                     </p>
                                 </div>
                             </div>
@@ -182,13 +175,14 @@
                         <div id="flush-collapse7" class="accordion-collapse collapse" aria-labelledby="flush-heading7" data-bs-parent="#accordionFlushExample">
                             <div class="accordion-body">
                                 <div class="text-start">
-                                    <h5 class="h5 text-dark text-start fw-bold">Chapter-9: Mechanical Properties of Solids </h5>
-                                    <p class="text-dark">Elastic behaviour, Stress-strain relationship, Hooke's law, Young's modulus,
-                                        bulk modulus, shear modulus of rigidity, Poisson's ratio; elastic energy.
+                                    <h5 class="h5 text-dark text-start fw-bold">Chapter-8: Mechanical Properties of Solids </h5>
+                                    <p class="text-dark">Elasticity, Stress-strain relationship, Hooke's law, Young’s modulus, bulk modulus, shear
+                                        modulus of rigidity (qualitative idea only), Poisson's ratio; elastic energy. Application of elastic
+                                        behavior of materials (qualitative idea only)
                                     </p>
                                 </div>
                                 <div class="text-start">
-                                    <h5 class="h5 text-dark text-start fw-bold">Chapter-10: Mechanical Properties of Fluids </h5>
+                                    <h5 class="h5 text-dark text-start fw-bold">Chapter-9: Mechanical Properties of Fluids </h5>
                                     <p class="text-dark">Pressure due to a fluid column; Pascal's law and its applications (hydraulic lift
                                         and hydraulic brakes), effect of gravity on fluid pressure.
                                         Viscosity, Stokes' law, terminal velocity, streamline and turbulent flow, critical
@@ -199,13 +193,13 @@
                                     </p>
                                 </div>
                                 <div class="text-start">
-                                    <h5 class="h5 text-dark text-start fw-bold">Chapter-11: Thermal Properties of Matter </h5>
-                                    <p class="text-dark">Heat, temperature, thermal expansion; thermal expansion of solids, liquids
-                                        and gases, anomalous expansion of water; specific heat capacity; Cp, Cv -
-                                        calorimetry; change of state - latent heat capacity.
-                                        Heat transfer-conduction, convection and radiation, thermal conductivity,
-                                        qualitative ideas of Blackbody radiation, Wein's displacement Law, Stefan's
-                                        law, Greenhouse effect.
+                                    <h5 class="h5 text-dark text-start fw-bold">Chapter-10: Thermal Properties of Matter </h5>
+                                    <p class="text-dark">Heat, temperature, thermal expansion; thermal expansion of solids, liquids and gases,
+                                        anomalous expansion of water; specific heat capacity; Cp, Cv - calorimetry; change of state
+                                        - latent heat capacity.
+                                        Heat transfer-conduction, convection and radiation, thermal conductivity, qualitative ideas of
+                                        Blackbody radiation, Wein's displacement Law, Stefan's law.
+
                                     </p>
                                 </div>
                             </div>
@@ -220,12 +214,11 @@
                         <div id="flush-collapse8" class="accordion-collapse collapse" aria-labelledby="flush-heading8" data-bs-parent="#accordionFlushExample">
                             <div class="accordion-body">
                                 <div class="text-start">
-                                    <h5 class="h5 text-dark text-start fw-bold">Chapter-12: Thermodynamics </h5>
-                                    <p class="text-dark">Thermal equilibrium and definition of temperature (zeroth law of
-                                        thermodynamics), heat, work and internal energy. First law of thermodynamics,
-                                        isothermal and adiabatic processes.
-                                        Second law of thermodynamics: reversible and irreversible processes, Heat
-                                        engine and refrigerator.
+                                    <h5 class="h5 text-dark text-start fw-bold">Chapter-11: Thermodynamics </h5>
+                                    <p class="text-dark">Thermal equilibrium and definition of temperature, zeroth law of thermodynamics, heat, work
+                                                and internal energy. First law of thermodynamics, Second law of thermodynamics:
+                                                Thermodynamic state variable and equation of state. Change of condition of gaseous state -
+                                                isothermal, adiabatic, reversible, irreversible, and cyclic processes.
                                     </p>
                                 </div>
                             </div>
@@ -240,7 +233,7 @@
                         <div id="flush-collapse9" class="accordion-collapse collapse" aria-labelledby="flush-heading9" data-bs-parent="#accordionFlushExample">
                             <div class="accordion-body">
                                 <div class="text-start">
-                                    <h5 class="h5 text-dark text-start fw-bold">Chapter-13: Kinetic Theory </h5>
+                                    <h5 class="h5 text-dark text-start fw-bold">Chapter-12: Kinetic Theory </h5>
                                     <p class="text-dark">Equation of state of a perfect gas, work done in compressing a gas.
                                         Kinetic theory of gases - assumptions, concept of pressure. Kinetic
                                         interpretation of temperature; rms speed of gas molecules; degrees of
@@ -261,23 +254,22 @@
                         <div id="flush-collapse10" class="accordion-collapse collapse" aria-labelledby="flush-heading10" data-bs-parent="#accordionFlushExample">
                             <div class="accordion-body">
                                 <div class="text-start">
-                                    <h5 class="h5 text-dark text-start fw-bold">Chapter-14: Oscillations </h5>
-                                    <p class="text-dark">Periodic motion - time period, frequency, displacement as a function of time,
-                                        periodic functions.
-                                        Simple harmonic motion (S.H.M) and its equation; phase; oscillations of a
-                                        loaded spring- restoring force and force constant; energy in S.H.M. Kinetic
-                                        and potential energies; simple pendulum derivation of expression for its time
-                                        period. Free, forced and damped oscillations (qualitative ideas only),
-                                        resonance.
+                                    <h5 class="h5 text-dark text-start fw-bold">Chapter-13: Oscillations </h5>
+                                    <p class="text-dark">Periodic motion - time period, frequency, displacement as a function of time, periodic functions
+                                        and their applications.
+                                        Simple harmonic motion (S.H.M), uniform circular motion and its equations of motion; phase;
+                                        oscillations of a loaded spring- restoring force and force constant; energy in S.H.M.
+                                        Kinetic and potential energies; simple pendulum derivation of expression for its time period.
+
 
                                     </p>
                                 </div>
                                 <div class="text-start">
-                                    <h5 class="h5 text-dark text-start fw-bold">Chapter-15: Waves </h5>
+                                    <h5 class="h5 text-dark text-start fw-bold">Chapter-14: Waves </h5>
                                     <p class="text-dark">Wave motion: Transverse and longitudinal waves, speed of travelling wave,
                                         displacement relation for a progressive wave, principle of superposition of
                                         waves, reflection of waves, standing waves in strings and organ pipes,
-                                        fundamental mode and harmonics, Beats, Doppler effect.
+                                        fundamental mode and harmonics, Beats.
 
                                     </p>
                                 </div>

@@ -83,7 +83,7 @@
                         <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
                             <div class="accordion-body">
                                 <div class="text-start">
-                                    <h5 class="h5 text-dark text-start fw-bold">Chapter-2: Sexual Reproduction in Flowering Plants </h5>
+                                    <h5 class="h5 text-dark text-start fw-bold">Chapter-1: Sexual Reproduction in Flowering Plants </h5>
                                     <p class="text-dark">Flower structure; development of male and female gametophytes; pollination - types, agencies
                                         and examples; outbreeding devices; pollen-pistil interaction; double fertilization; post
                                         fertilization events - development of endosperm and embryo, development of seed and formation
@@ -92,7 +92,7 @@
                                     </p>
                                 </div>
                                 <div class="text-start">
-                                    <h5 class="h5 text-dark text-start fw-bold">Chapter-3: Human Reproduction</h5>
+                                    <h5 class="h5 text-dark text-start fw-bold">Chapter-2: Human Reproduction</h5>
                                     <p class="text-dark">Male and female reproductive systems; microscopic anatomy of testis and ovary; gametogenesis
                                         - spermatogenesis and oogenesis; menstrual cycle; fertilisation, embryo development upto
                                         blastocyst formation, implantation; pregnancy and placenta formation (elementary idea);
@@ -100,7 +100,7 @@
                                     </p>
                                 </div>
                                 <div class="text-start">
-                                    <h5 class="h5 text-dark text-start fw-bold">Chapter-4: Reproductive Health</h5>
+                                    <h5 class="h5 text-dark text-start fw-bold">Chapter-3: Reproductive Health</h5>
                                     <p class="text-dark">Need for reproductive health and prevention of Sexually Transmitted Diseases (STDs); birth
                                         control - need and methods, contraception and medical termination of pregnancy (MTP);
                                         amniocentesis; infertility and assisted reproductive technologies - IVF, ZIFT, GIFT (elementary
@@ -119,7 +119,7 @@
                         <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
                             <div class="accordion-body">
                                 <div class="text-start">
-                                    <h5 class="h5 text-dark text-start fw-bold">Chapter-5: Principles of Inheritance and Variation </h5>
+                                    <h5 class="h5 text-dark text-start fw-bold">Chapter-4: Principles of Inheritance and Variation </h5>
                                     <p class="text-dark"><strong>Heredity and variation:</strong> Mendelian inheritance; deviations from Mendelism – incomplete
                                         dominance, co-dominance, multiple alleles and inheritance of blood groups, pleiotropy;
                                         elementary idea of polygenic inheritance; chromosome theory of inheritance; chromosomes and
@@ -130,11 +130,21 @@
                                     </p>
                                 </div>
                                 <div class="text-start">
-                                    <h5 class="h5 text-dark text-start fw-bold">Chapter-6: Molecular Basis of Inheritance</h5>
+                                    <h5 class="h5 text-dark text-start fw-bold">Chapter-5: Molecular Basis of Inheritance</h5>
                                     <p class="text-dark">Search for genetic material and DNA as genetic material; Structure of DNA and RNA; DNA
                                         packaging; DNA replication; Central Dogma; transcription, genetic code, translation; gene
                                         expression and regulation - lac operon; Genome, Human and rice genome projects; DNA
                                         fingerprinting.
+
+                                    </p>
+                                </div>
+                                <div class="text-start">
+                                    <h5 class="h5 text-dark text-start fw-bold">Chapter-6: Evolution</h5>
+                                    <p class="text-dark">Origin of life; biological evolution and evidences for biological evolution (paleontology,
+                                        comparative anatomy, embryology and molecular evidences); Darwin's contribution, modern
+                                        synthetic theory of evolution; mechanism of evolution - variation (mutation and recombination)
+                                        and natural selection with examples, types of natural selection; Gene flow and genetic drift;
+                                        Hardy- Weinberg's principle; adaptive radiation; human evolution.
 
                                     </p>
                                 </div>
@@ -150,14 +160,14 @@
                         <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
                             <div class="accordion-body">
                                 <div class="text-start">
-                                    <h5 class="h5 text-dark text-start fw-bold">Chapter-8: Human Health and Diseases </h5>
+                                    <h5 class="h5 text-dark text-start fw-bold">Chapter-7: Human Health and Diseases </h5>
                                     <p class="text-dark">Pathogens; parasites causing human diseases (malaria, dengue, chikungunya, filariasis,
                                         ascariasis, typhoid, pneumonia, common cold, amoebiasis, ring worm) and their control; Basic
                                         concepts of immunology - vaccines; cancer, HIV and AIDS; Adolescence - drug and alcohol
                                         abuse.</p>
                                 </div>
                                 <div class="text-start">
-                                    <h5 class="h5 text-dark text-start fw-bold">Chapter-10: Microbes in Human Welfare </h5>
+                                    <h5 class="h5 text-dark text-start fw-bold">Chapter-8: Microbes in Human Welfare </h5>
                                     <p class="text-dark">Microbes in food processing, industrial production, sewage treatment, energy generation and
                                         microbes as bio-control agents and bio-fertilizers. Antibiotics; production and judicious use.</p>
                                 </div>
@@ -173,13 +183,13 @@
                         <div id="flush-collapse4" class="accordion-collapse collapse" aria-labelledby="flush-heading4" data-bs-parent="#accordionFlushExample">
                             <div class="accordion-body">
                                 <div class="text-start">
-                                    <h5 class="h5 text-dark text-start fw-bold">Chapter-11: Biotechnology - Principles and Processes</h5>
+                                    <h5 class="h5 text-dark text-start fw-bold">Chapter-9: Biotechnology - Principles and Processes</h5>
                                     <p class="text-dark">Genetic Engineering (Recombinant DNA Technology)
 
                                     </p>
                                 </div>
                                 <div class="text-start">
-                                    <h5 class="h5 text-dark text-start fw-bold">Chapter-12: Biotechnology and its Application </h5>
+                                    <h5 class="h5 text-dark text-start fw-bold">Chapter-10: Biotechnology and its Application </h5>
                                     <p class="text-dark">Application of biotechnology in health and agriculture: Human insulin and vaccine production,
                                         stem cell technology, gene therapy; genetically modified organisms - Bt crops; transgenic
                                         animals; biosafety issues, biopiracy and patents.
@@ -197,15 +207,22 @@
                         <div id="flush-collapse5" class="accordion-collapse collapse" aria-labelledby="flush-heading5" data-bs-parent="#accordionFlushExample">
                             <div class="accordion-body">
                                 <div class="text-start">
-                                    <h5 class="h5 text-dark text-start fw-bold">Chapter-13: Organisms and Populations </h5>
-                                    <p class="text-dark">Organisms and environment: Habitat and niche, population and ecological adaptations;
-                                        population interactions - mutualism, competition, predation, parasitism; population attributes -
-                                        growth, birth rate and death rate, age distribution.
+                                    <h5 class="h5 text-dark text-start fw-bold">Chapter-11: Organisms and Populations </h5>
+                                    <p class="text-dark">Population interactions - mutualism, competition, predation, parasitism; population attributes
+                                    - growth, birth rate and death rate, age distribution. 
 
                                     </p>
                                 </div>
                                 <div class="text-start">
-                                    <h5 class="h5 text-dark text-start fw-bold">Chapter-15: Biodiversity and its Conservation </h5>
+                                    <h5 class="h5 text-dark text-start fw-bold">Chapter-12: Ecosystem </h5>
+                                    <p class="text-dark">Ecosystems: Patterns, components; productivity and decomposition; energy flow; pyramids
+                                        of number, biomass, energy.
+ 
+
+                                    </p>
+                                </div>
+                                <div class="text-start">
+                                    <h5 class="h5 text-dark text-start fw-bold">Chapter-13: Biodiversity and its Conservation </h5>
                                     <p class="text-dark">Biodiversity - Concept, patterns, importance; loss of biodiversity; biodiversity conservation;
                                         hotspots, endangered organisms, extinction, Red Data Book, Sacred Groves, biosphere reserves,
                                         national parks, wildlife, sanctuaries and Ramsar sites.

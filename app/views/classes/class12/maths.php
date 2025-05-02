@@ -41,7 +41,7 @@
             </div>
             <div class="col-12 col-sm-12">
                 <h4 class="h4 text-dark text-start fw-bold">Syllabus</h4>
-                <h4 class="h4 text-dark text-center fw-bold">Term-I</h4>
+                <!-- <h4 class="h4 text-dark text-center fw-bold">Term-I</h4> -->
                 <div class="accordion accordion-flush" id="accordionFlushExample">
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="flush-headingOne">
@@ -59,7 +59,8 @@
                                 </div>
                                 <div class="text-start">
                                     <h5 class="h5 text-dark text-start fw-bold">Chapter-2: Inverse Trigonometric Functions</h5>
-                                    <p class="text-dark">Definition, range, domain, principal value branch.
+                                    <p class="text-dark">Definition, range, domain, principal value branch. Graphs of inverse trigonometric functions.
+
                                     </p>
                                 </div>
                             </div>
@@ -115,57 +116,118 @@
                                         tool). Simple problems (that illustrate basic principles and understanding of the subject as well as reallife situations).
                                     </p>
                                 </div>
+                                <div class="text-start">
+                                    <h5 class="h5 text-dark text-start fw-bold">Chapter-3: Integrals </h5>
+                                    <p class="text-dark">Integration as inverse process of differentiation. Integration of a variety of functions by
+                                            substitution, by partial fractions and by parts, Evaluation of simple integrals of the following
+                                            types and problems based on them.
+                                            ∫
+                                            𝒅𝒙
+                                            𝒙
+                                            𝟐±𝒂𝟐
+                                            , ∫
+                                            𝒅𝒙
+                                            √𝒙
+                                            𝟐±𝒂𝟐
+                                            , ∫
+                                            𝒅𝒙
+                                            √𝒂𝟐−𝒙
+                                            𝟐
+                                            , ∫
+                                            𝒅𝒙
+                                            𝒂𝒙𝟐+𝒃𝒙+𝒄
+                                            , ∫
+                                            𝒅𝒙
+                                            √𝒂𝒙𝟐+𝒃𝒙+𝒄
+                                            , ∫
+                                            𝒑𝒙+𝒒
+                                            𝒂𝒙𝟐+𝒃𝒙+𝒄
+                                            𝒅𝒙,
+                                            ∫
+                                            𝒑𝒙+𝒒
+                                            √𝒂𝒙𝟐+𝒃𝒙+𝒄
+                                            𝒅𝒙, ∫ √𝒂𝟐 ± 𝒙
+                                            𝟐 𝒅𝒙 , ∫√𝒙
+                                            𝟐 − 𝒂𝟐 𝒅𝒙 , ∫ √𝒂𝒙
+                                            𝟐 + 𝒃𝒙 + 𝒄 𝒅𝒙
+                                            Fundamental Theorem of Calculus (without proof). Basic properties of definite integrals and
+                                            evaluation of definite integrals.
+
+                                    </p>
+                                </div>
+                                <div class="text-start">
+                                    <h5 class="h5 text-dark text-start fw-bold">Chapter-4: Applications of the Integrals </h5>
+                                    <p class="text-dark">Applications in finding the area under simple curves, especially lines, circles/ parabolas/ellipses
+                                    (in standard form only)
+                                    </p>
+                                </div>
+                                <div class="text-start">
+                                    <h5 class="h5 text-dark text-start fw-bold">Chapter-5: Differential Equations </h5>
+                                    <p class="text-dark">Definition, order and degree, general and particular solutions of a differential equation. Solution
+                                            of differential equations by method of separation of variables, solutions of homogeneous
+                                            differential equations of first order and first degree. Solutions of linear differential equation of the
+                                            type:
+                                            𝑑𝑦
+                                            𝑑𝑥
+                                            + 𝑝𝑦 = 𝑞, where 𝑝 and 𝑞 are functions of 𝑥 or constants.
+                                            𝑑𝑥
+                                            𝑑𝑦
+                                            + 𝑝𝑥 = 𝑞, where 𝑝 and 𝑞 are functions of 𝑦 or constants
+                                    </p>
+                                </div>
+
                             </div>
                         </div>
                     </div>
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="flush-heading4">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse4" aria-expanded="false" aria-controls="flush-collapse4">
-                                Unit-IV - Linear Programming
+                                Unit-IV - Vectors and Three-dimensional Geometry
                             </button>
                         </h2>
                         <div id="flush-collapse4" class="accordion-collapse collapse" aria-labelledby="flush-heading4" data-bs-parent="#accordionFlushExample">
                             <div class="accordion-body">
                                 <div class="text-start">
-                                    <h5 class="h5 text-dark text-start fw-bold">Chapter-1: Linear Programming</h5>
-                                    <p class="text-dark">Introduction, related terminology such as constraints, objective function, optimization, different types of
-                                        linear programming (L.P.) problems. Graphical method of solution for problems in two variables, feasible
-                                        and infeasible regions (bounded), feasible and infeasible solutions, optimal feasible solutions (up to
-                                        three non-trivial constraints).
+                                    <h5 class="h5 text-dark text-start fw-bold">Chapter-1: Vectors</h5>
+                                    <p class="text-dark">Vectors and scalars, magnitude and direction of a vector. Direction cosines and direction ratios
+                                        of a vector. Types of vectors (equal, unit, zero, parallel and collinear vectors), position vector of
+                                        a point, negative of a vector, components of a vector, addition of vectors, multiplication of a
+                                        vector by a scalar, position vector of a point dividing a line segment in a given ratio. Definition,
+                                        Geometrical Interpretation, properties and application of scalar (dot) product of vectors, vector
+                                        (cross) product of vectors.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="flush-collapse4" class="accordion-collapse collapse" aria-labelledby="flush-heading4" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                <div class="text-start">
+                                    <h5 class="h5 text-dark text-start fw-bold">Chapter-2: Three-dimensional Geometry</h5>
+                                    <p class="text-dark">Direction cosines and direction ratios of a line joining two points. Cartesian equation and vector
+                                        equation of a line, skew lines, shortest distance between two lines. Angle between two lines.
+
                                     </p>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <h4 class="h4 text-dark text-center fw-bold">Term-II</h4>
-                <div class="accordion accordion-flush" id="accordionFlushExample2">
+
+
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="flush-heading5">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse5" aria-expanded="false" aria-controls="flush-collapse5">
-                                Unit-III - Calculus
+                                Unit-V - Linear Programming Problem
                             </button>
                         </h2>
-                        <div id="flush-collapse5" class="accordion-collapse collapse" aria-labelledby="flush-heading5" data-bs-parent="#accordionFlushExample2">
+                        <div id="flush-collapse5" class="accordion-collapse collapse" aria-labelledby="flush-heading5" data-bs-parent="#accordionFlushExample"                        ">
                             <div class="accordion-body">
                                 <div class="text-start">
-                                    <h5 class="h5 text-dark text-start fw-bold">Chapter-1: Integrals </h5>
-                                    <p class="text-dark">Integration as inverse process of differentiation. Integration of a variety of functions by substitution, by
-                                        partial fractions and by parts, Evaluation of simple integrals, Fundamental Theorem of Calculus (without proof).Basic properties of definite integrals and evaluation
-                                        of definite integrals.
-                                    </p>
-                                </div>
-                                <div class="text-start">
-                                    <h5 class="h5 text-dark text-start fw-bold">Chapter-2: Applications of the Integrals</h5>
-                                    <p class="text-dark">Applications in finding the area under simple curves, especially lines, parabolas; area of circles /ellipses
-                                        (in standard form only) (the region should be clearly identifiable).
-                                    </p>
-                                </div>
-                                <div class="text-start">
-                                    <h5 class="h5 text-dark text-start fw-bold">Chapter-3: Differential Equations</h5>
-                                    <p class="text-dark">Definition, order and degree, general and particular solutions of a differential equation. Solution of
-                                        differential equations by method of separation of variables, solutions of homogeneous differential
-                                        equations of first order and first degree.
+                                    <h5 class="h5 text-dark text-start fw-bold">Chapter-1: Linear Programming </h5>
+                                    <p class="text-dark">Introduction, related terminology such as constraints, objective function, optimization, graphical
+                                        method of solution for problems in two variables, feasible and infeasible regions (bounded or
+                                        unbounded), feasible and infeasible solutions, optimal feasible solutions (up to three non-trivial
+                                        constraints).
                                     </p>
                                 </div>
                             </div>
@@ -174,46 +236,25 @@
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="flush-heading6">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse6" aria-expanded="false" aria-controls="flush-collapse6">
-                                Unit-IV - Vectors and Three-Dimensional Geometry
-                            </button>
-                        </h2>
-                        <div id="flush-collapse6" class="accordion-collapse collapse" aria-labelledby="flush-heading6" data-bs-parent="#accordionFlushExample2">
-                            <div class="accordion-body">
-                                <div class="text-start">
-                                    <h5 class="h5 text-dark text-start fw-bold">Chapter-1: Vectors</h5>
-                                    <p class="text-dark">Vectors and scalars, magnitude and direction of a vector. Direction cosines and direction ratios of a
-                                        vector. Types of vectors (equal, unit, zero, parallel and collinear vectors), position vector of a point,
-                                        negative of a vector, components of a vector, addition of vectors, multiplication of a vector by a scalar,
-                                        position vector of a point dividing a line segment in a given ratio. Definition, Geometrical Interpretation,
-                                        properties and application of scalar (dot) product of vectors, vector (cross) product of vectors.
-                                    </p>
-                                </div>
-                                <div class="text-start">
-                                    <h5 class="h5 text-dark text-start fw-bold">Chapter-2: Three - dimensional Geometry</h5>
-                                    <p class="text-dark">Direction cosines and direction ratios of a line joining two points. Cartesian equation and vector equation
-                                        of a line, coplanar and skew lines, shortest distance between two lines. Cartesian and vector equation
-                                        of a plane. Distance of a point from a plane.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="flush-heading7">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse7" aria-expanded="false" aria-controls="flush-collapse7">
                                 Unit-VI - Probability
                             </button>
                         </h2>
-                        <div id="flush-collapse7" class="accordion-collapse collapse" aria-labelledby="flush-heading7" data-bs-parent="#accordionFlushExample2">
+                        <div id="flush-collapse6" class="accordion-collapse collapse" aria-labelledby="flush-heading6" data-bs-parent="#accordionFlushExample">
                             <div class="accordion-body">
                                 <div class="text-start">
-                                    <h5 class="h5 text-dark text-start fw-bold">Chapter-1: Probability </h5>
-                                    <p class="text-dark">Conditional probability, multiplication theorem on probability, independent events, total probability,
-                                        Bayes’ theorem, Random variable and its probability distribution.</p>
+                                    <h5 class="h5 text-dark text-start fw-bold">Chapter-1: Probability</h5>
+                                    <p class="text-dark">Conditional probability, multiplication theorem on probability, independent events, total
+                                    probability, Bayes’ theorem.
+                                    </p>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    
+                </div>
+                <!-- <h4 class="h4 text-dark text-center fw-bold">Term-II</h4> -->
+                <!-- <div class="accordion accordion-flush" id="accordionFlushExample2"> -->
+                    
                 </div>
             </div>
         </div>

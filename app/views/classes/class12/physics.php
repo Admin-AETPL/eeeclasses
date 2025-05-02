@@ -64,8 +64,7 @@
                                         uniformly charged thin spherical shell (field inside and outside). </p>
                                 </div>
                                 <div class="text-start">
-                                    <h5 class="h5 text-dark text-start fw-bold">Chapter-2: Electrostatic Potential and
-                                        Capacitance </h5>
+                                    <h5 class="h5 text-dark text-start fw-bold">Chapter-2: Electrostatic Potential and Capacitance </h5>
                                     <p class="text-dark">Electric potential, potential difference, electric potential due to a point charge,
                                         a dipole and system of charges; equipotential surfaces, electrical potential
                                         energy of a system of two point charges and of electric dipole in an
@@ -74,7 +73,7 @@
                                         conductor. Dielectrics and electric polarisation, capacitors and capacitance,
                                         combination of capacitors in series and in parallel, capacitance of a parallel
                                         plate capacitor with and without dielectric medium between the plates, energy
-                                        stored in a capacitor. </p>
+                                        stored in a capacitor(no derivation, formulae only). </p>
                                 </div>
                             </div>
                         </div>
@@ -89,17 +88,11 @@
                             <div class="accordion-body">
                                 <div class="text-start">
                                     <h5 class="h5 text-dark text-start fw-bold">Chapter-3: Current Electricity </h5>
-                                    <p class="text-dark">Electric current, flow of electric charges in a metallic conductor, drift velocity,
-                                        mobility and their relation with electric current; Ohm's law, electrical
-                                        resistance, V-I characteristics (linear and non-linear), electrical energy and
-                                        power, electrical resistivity and conductivity, Carbon resistors, colour code for
-                                        carbon resistors; series and parallel combinations of resistors; temperature
-                                        dependence of resistance. <br>Internal resistance of a cell, potential difference and emf of a cell, combination
-                                        of cells in series and in parallel, Kirchhoff's laws and simple applications,
-                                        Wheatstone bridge, metre bridge.
-                                        Potentiometer - principle and its applications to measure potential difference
-                                        and for comparing EMF of two cells; measurement of internal resistance of a
-                                        cell.
+                                    <p class="text-dark">Electric current, flow of electric charges in a metallic conductor, drift velocity, mobility and
+                                        their relation with electric current; Ohm's law, V-I characteristics (linear and non-linear),
+                                        electrical energy and power, electrical resistivity and conductivity, temperature dependence
+                                        of resistance, Internal resistance of a cell, potential difference and emf of a cell, combination
+                                        of cells in series and in parallel, Kirchhoff's rules, Wheatstone bridge.
                                     </p>
                                 </div>
                             </div>
@@ -127,14 +120,12 @@
                                 </div>
                                 <div class="text-start">
                                     <h5 class="h5 text-dark text-start fw-bold">Chapter-5: Magnetism and Matter </h5>
-                                    <p class="text-dark">Current loop as a magnetic dipole and its magnetic dipole moment, magnetic
-                                        dipole moment of a revolving electron, magnetic field intensity due to a
-                                        magnetic dipole (bar magnet) along its axis and perpendicular to its axis,
-                                        torque on a magnetic dipole (bar magnet) in a uniform magnetic field; bar
-                                        magnet as an equivalent solenoid, magnetic field lines; earth's magnetic field
-                                        and magnetic elements.
-                                        Para-, dia- and ferro - magnetic substances, with examples. Electromagnets
-                                        and factors affecting their strengths, permanent magnets. </p>
+                                    <p class="text-dark">Bar magnet, bar magnet as an equivalent solenoid (qualitative treatment only), magnetic field
+                                        intensity due to a magnetic dipole (bar magnet) along its axis and perpendicular to its axis
+                                        (qualitative treatment only), torque on a magnetic dipole (bar magnet) in a uniform magnetic
+                                        field (qualitative treatment only), magnetic field lines.
+                                        Magnetic properties of materials- Para-, dia- and ferro – magnetic substances with examples,
+                                        Magnetization of materials, effect of temperature on magnetic properties.</p>
                                 </div>
                             </div>
                         </div>
@@ -208,14 +199,11 @@
                                 </div>
                                 <div class="text-start">
                                     <h5 class="h5 text-dark text-start fw-bold">Chapter-10: Wave Optics </h5>
-                                    <p class="text-dark">Wave front and Huygen's principle, reflection and refraction of
-                                        plane wave at a plane surface using wave fronts. Proof of laws of reflection
-                                        and refraction using Huygen's principle. Interference, Young's double slit
-                                        experiment and expression for fringe width, coherent sources and sustained
-                                        interference of light, diffraction due to a single slit, width of central maximum,
-                                        resolving power of microscope and astronomical telescope, polarisation,
-                                        plane polarised light, Brewster's law, uses of plane polarised light and
-                                        Polaroids.
+                                    <p class="text-dark">Wave optics: Wave front and Huygen’s principle, reflection and refraction of plane wave at
+                                    a plane surface using wave fronts. Proof of laws of reflection and refraction using Huygen’s
+                                    principle. Interference, Young's double slit experiment and expression for fringe width (No
+                                    derivation final expression only), coherent sources and sustained interference of light,
+                                    diffraction due to a single slit, width of central maxima (qualitative treatment only).
                                     </p>
                                 </div>
                             </div>
@@ -232,12 +220,10 @@
                                 <div class="text-start">
                                     <h5 class="h5 text-dark text-start fw-bold">Chapter-11: Dual Nature of Radiation and
                                         Matter </h5>
-                                    <p class="text-dark">Dual nature of radiation, Photoelectric effect, Hertz and Lenard's observations;
-                                        Einstein's photoelectric equation-particle nature of light.
+                                    <p class="text-dark">Dual nature of radiation, Photoelectric effect, Hertz and Lenard's observations; Einstein's
+                                        photoelectric equation-particle nature of light.
                                         Experimental study of photoelectric effect
-                                        Matter waves-wave nature of particles, de-Broglie relation, Davisson-Germer
-                                        experiment (experimental details should be omitted; only conclusion should be
-                                        explained).
+                                        Matter waves-wave nature of particles, de-Broglie relation
 
                                     </p>
                                 </div>
@@ -254,8 +240,9 @@
                             <div class="accordion-body">
                                 <div class="text-start">
                                     <h5 class="h5 text-dark text-start fw-bold">Chapter-12: Atoms </h5>
-                                    <p class="text-dark">Alpha-particle scattering experiment; Rutherford's model of atom; Bohr model,
-                                        energy levels, hydrogen spectrum.
+                                    <p class="text-dark">Alpha-particle scattering experiment; Rutherford's model of atom; Bohr model of hydrogen
+                                        atom, Expression for radius of nth possible orbit, velocity and energy of electron in nth orbit,
+                                        hydrogen line spectra (qualitative treatment only).
                                     </p>
                                 </div>
                                 <div class="text-start">
@@ -280,12 +267,10 @@
                                 <div class="text-start">
                                     <h5 class="h5 text-dark text-start fw-bold">Chapter-14: Semiconductor Electronics:
                                         Materials, Devices and Simple Circuits </h5>
-                                    <p class="text-dark">Energy bands in conductors, semiconductors and insulators (qualitative ideas
-                                        only)
-                                        Semiconductor diode - I-V characteristics in forward and reverse bias, diode as
-                                        a rectifier;
-                                        Special purpose p-n junction diodes: LED, photodiode, solar cell and Zener
-                                        diode and their characteristics, zener diode as a voltage regulator.
+                                    <p class="text-dark">Energy bands in conductors, semiconductors and insulators (qualitative ideas only) Intrinsic
+                                        and extrinsic semiconductors- p and n type, p-n junction
+                                        Semiconductor diode - I-V characteristics in forward and reverse bias, application of junction
+                                        diode -diode as a rectifier.
 
                                     </p>
                                 </div>

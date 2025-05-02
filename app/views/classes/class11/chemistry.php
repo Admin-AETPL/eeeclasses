@@ -70,11 +70,14 @@
                         <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
                             <div class="accordion-body">
                                 <div class="text-start">
-                                    <p class="text-dark">Bohr's model and its limitations, concept of shells and subshells, dual nature of
-                                        matter and light, de Broglie's relationship, Heisenberg uncertainty principle, concept of orbitals,
-                                        quantum numbers, shapes of s, p and d orbitals, rules for filling electrons in orbitals - Aufbau
-                                        principle, Pauli's exclusion principle and Hund's rule, electronic configuration of atoms, stability of
-                                        half-filled and completely filled orbitals</p>
+                                    <p class="text-dark">Discovery of Electron, Proton and Neutron, atomic number, isotopes and isobars.
+                                        Thomson's model and its limitations. Rutherford's model and its limitations, Bohr's model
+                                        and its limitations, concept of shells and subshells, dual nature of matter and light, de
+                                        Broglie's relationship, Heisenberg uncertainty principle, concept of orbitals, quantum
+                                        numbers, shapes of s, p and d orbitals, rules for filling electrons in orbitals - Aufbau
+                                        principle, Pauli's exclusion principle and Hund's rule, electronic configuration of atoms,
+                                        stability of half-filled and completely filled orbitals.
+                                    </p>
                                 </div>
                                 <div class="text-start my-1">
                                     <a target="_blank" href="<?php echo $home ?>study_material/11/notes/Chemistry/Chapter2.pdf" class="btn align-middle btn-outline-primary">Sample Notes</a>
@@ -92,10 +95,11 @@
                         <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
                             <div class="accordion-body">
                                 <div class="text-start">
-                                    <p class="text-dark">Modern periodic law and the present form
-                                        of periodic table, periodic trends in properties of elements -atomic radii, ionic radii, inert gas radii,
-                                        Ionization enthalpy, electron gain enthalpy, electronegativity, valency. Nomenclature of elements
-                                        with atomic number greater than 100 </p>
+                                    <p class="text-dark">Significance of classification, brief history of the development of periodic table, modern
+                                        periodic law and the present form of periodic table, periodic trends in properties of
+                                        elements -atomic radii, ionic radii, inert gas radii, Ionization enthalpy, electron gain
+                                        enthalpy, electronegativity, valiancy, Nomenclature of elements with atomic number
+                                        greater than 100.</p>
                                 </div>
                                 <div class="text-start my-1">
                                     <a target="_blank" href="<?php echo $home ?>study_material/11/notes/Chemistry/Chapter3.pdf" class="btn align-middle btn-outline-primary">Sample Notes</a>
@@ -127,14 +131,21 @@
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="flush-heading5">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse5" aria-expanded="false" aria-controls="flush-collapse5">
-                                Unit-V - Redox Reactions
+                                Unit-V - Chemical Thermodynamics
                             </button>
                         </h2>
                         <div id="flush-collapse5" class="accordion-collapse collapse" aria-labelledby="flush-heading5" data-bs-parent="#accordionFlushExample">
                             <div class="accordion-body">
                                 <div class="text-start">
-                                    <p class="text-dark">Concept of oxidation and reduction, redox reactions, oxidation number, balancing redox reactions,
-                                        in terms of loss and gain of electrons and change in oxidation number.
+                                    <p class="text-dark">Concepts of System and types of systems, surroundings, work, heat, energy, extensive
+                                        and intensive properties, state functions.
+                                        First law of thermodynamics -internal energy and enthalpy, heat capacity and specific
+                                        heat, measurement of ∆U and ∆H, Hess's law of constant heat summation, enthalpy of
+                                        bond dissociation, combustion, formation, atomization, sublimation, phase transition,
+                                        ionization, solution and dilution. Second law of Thermodynamics (brief introduction),
+                                        Introduction of entropy as a state function, Gibb's energy change for spontaneous and
+                                        non- spontaneous processes, criteria for equilibrium, Third law of thermodynamics (brief
+                                        introduction). 
                                     </p>
                                 </div>
                             </div>
@@ -143,14 +154,19 @@
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="flush-heading6">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse6" aria-expanded="false" aria-controls="flush-collapse6">
-                                Unit-VI - Hydrogen
+                                Unit-VI - Equilibrium
                             </button>
                         </h2>
                         <div id="flush-collapse6" class="accordion-collapse collapse" aria-labelledby="flush-heading6" data-bs-parent="#accordionFlushExample">
                             <div class="accordion-body">
                                 <div class="text-start">
-                                    <p class="text-dark">Position of hydrogen in periodic table, occurrence, isotopes, hydrides-ionic covalent and
-                                        interstitial; physical and chemical properties of water, heavy water, hydrogen as a fuel
+                                    <p class="text-dark">Equilibrium in physical and chemical processes, dynamic nature of equilibrium, law of
+                                        mass action, equilibrium constant, factors affecting equilibrium – Le Chatelier's principle,
+                                        ionic equilibrium- ionization of acids and bases, strong and weak electrolytes, degree of
+                                        ionization, ionization of poly basic acids, acid strength, concept of pH, hydrolysis of salts
+                                        (elementary idea), buffer solution, Henderson Equation, solubility product, common ion
+                                        effect (with illustrative examples).
+
                                     </p>
                                 </div>
                             </div>
@@ -159,17 +175,15 @@
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="flush-heading7">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse7" aria-expanded="false" aria-controls="flush-collapse7">
-                                Unit-VII - Organic Chemistry: Some basic Principles and Techniques
+                                Unit-VII - Redox Reactions
                             </button>
                         </h2>
                         <div id="flush-collapse7" class="accordion-collapse collapse" aria-labelledby="flush-heading7" data-bs-parent="#accordionFlushExample">
                             <div class="accordion-body">
                                 <div class="text-start">
-                                    <p class="text-dark">General introduction, classification and
-                                        IUPAC nomenclature of organic compounds. Electronic displacements in a covalent bond: inductive
-                                        effect, electromeric effect, resonance and hyper conjugation. Homolytic and heterolytic fission of a
-                                        covalent bond: free radicals, carbocations, carbanions, electrophiles and nucleophiles, types of
-                                        organic reactions
+                                    <p class="text-dark">Concept of oxidation and reduction, redox reactions, oxidation number, balancing redox
+                                        reactions, in terms of loss and gain of electrons and change in oxidation number,
+                                        applications of redox reactions.
                                     </p>
                                 </div>
                             </div>
@@ -181,16 +195,17 @@
                     <div class="accordion-item">
                     <h2 class="accordion-header" id="flush-heading8">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse8" aria-expanded="false" aria-controls="flush-collapse8">
-                            Unit-VIII - States of Matter: Gases and Liquids
+                            Unit-VIII - Organic Chemistry - Some Basic Principles and Techniques
                         </button>
                     </h2>
                     <div id="flush-collapse8" class="accordion-collapse collapse" aria-labelledby="flush-heading8" data-bs-parent="#accordionFlushExample">
                         <div class="accordion-body">
                             <div class="text-start">
-                                <p class="text-dark">Three states of matter, intermolecular interactions, types of
-                                    bonding, melting and boiling points, role of gas laws in elucidating the concept of the molecule,
-                                    Boyle's law, Charles law, Gay Lussac's law, Avogadro's law, ideal behaviour, empirical derivation of
-                                    gas equation, Avogadro's number, ideal gas equation and deviation from ideal behaviour.
+                                <p class="text-dark">General introduction, methods of purification, qualitative and quantitative analysis,
+                                    classification and IUPAC nomenclature of organic compounds. Electronic displacements
+                                    in a covalent bond: inductive effect, electrometric effect, resonance and hyper
+                                    conjugation. Homolytic and heterolytic fission of a covalent bond: free radicals,
+                                    carbocations, carbanions, electrophiles and nucleophiles, types of organic reactions.
                                 </p>
                             </div>
                         </div>
@@ -199,26 +214,34 @@
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="flush-heading9">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse9" aria-expanded="false" aria-controls="flush-collapse9">
-                            Unit-IX - Chemical Thermodynamics
+                            Unit-IX - Hydrocarbons
                         </button>
                     </h2>
                     <div id="flush-collapse9" class="accordion-collapse collapse" aria-labelledby="flush-heading9" data-bs-parent="#accordionFlushExample">
                         <div class="accordion-body">
                             <div class="text-start">
-                                <p class="text-dark">Concepts of System and types of systems, surroundings, work, heat,
-                                    energy, extensive and intensive properties, state functions.<br>
-                                    First law of thermodynamics -internal energy and enthalpy, measurement of U and H, Hess's law
-                                    of constant heat summation, enthalpy of bond dissociation, combustion, formation, atomization,
-                                    sublimation, phase transition, ionization, solution and dilution. Second law of Thermodynamics (brief
-                                    introduction)<br>
-                                    Introduction of entropy as a state function, Gibb's energy change for spontaneous and nonspontaneous processes.<br>
-                                    Third law of thermodynamics (brief introduction).
+                                <p class="text-dark">Aliphatic Hydrocarbons
+                                    Alkanes - Nomenclature, isomerism, conformation (ethane only), physical properties,
+                                    chemical reactions including free radical mechanism of halogenation, combustion and
+                                    pyrolysis.
+                                    Alkenes - Nomenclature, structure of double bond (ethene), geometrical isomerism,
+                                    physical properties, methods of preparation, chemical reactions: addition of hydrogen,
+                                    halogen, water, hydrogen halides (Markovnikov's addition and peroxide effect),
+                                    ozonolysis, oxidation, mechanism of electrophilic addition.
+                                    Alkynes - Nomenclature, structure of triple bond (ethyne), physical properties, methods
+                                    of preparation, chemical reactions: acidic character of alkynes, addition reaction of -
+                                    hydrogen, halogens, hydrogen halides and water.
+                                    Aromatic Hydrocarbons
+                                    Introduction, IUPAC nomenclature, benzene: resonance, aromaticity, chemical
+                                    properties: mechanism of electrophilic substitution. Nitration, sulphonation, halogenation,
+                                    Friedel Craft's alkylation and acylation, directive influence of functional group in mono
+                                    substituted benzene, carcinogenicity and toxicity
                                 </p>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="accordion-item">
+                <!-- <div class="accordion-item">
                     <h2 class="accordion-header" id="flush-heading10">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse10" aria-expanded="false" aria-controls="flush-collapse10">
                             Unit-X - Equilibrium
@@ -310,7 +333,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
                 </div>
                 
             </div>
