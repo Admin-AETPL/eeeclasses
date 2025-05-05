@@ -10,8 +10,12 @@ $subjects = explode(",", $det["subjects"]);
             <div class="bg-white p-3 rounded shadow-sm">
 
                 <!-- Student Info -->
+            
+                    
                 <div class="mb-4 text-center">
-                    <div class="fw-bold text-uppercase text-primary mb-2"><?php echo $_SESSION["student"]; ?></div>
+                    <a href="<?php echo $home ?>student/" class="fw-bold text-uppercase text-primary mb-2 text-decoration-none d-block">
+                        <?php echo $_SESSION["student"]; ?><!--redirection back to home by clicking on the ids-->
+                    </a>
                     <div class="text-muted">Class <?php echo $det["stud_class"]; ?></div>
                 </div>
 
