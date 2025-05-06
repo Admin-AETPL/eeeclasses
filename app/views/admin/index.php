@@ -38,7 +38,7 @@
                 }
                 ?>
                 </p>
-                <a href="<?php echo $home ?>admin/requests" class="btn bg-coral text-white">View</a>
+                <a href="<?php echo $home ?>admin/question" class="btn bg-coral text-white">View</a>
             </div>
         </div>
         <div class="col-12 col-sm-6 my-2">
