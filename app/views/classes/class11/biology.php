@@ -1,3 +1,25 @@
+<?php
+function renderChapterButtons($chapterNo, $classNo = "11", $subject = "Physics", $home = "") {
+    $notesPath = "study_material/$classNo/notes/$subject/Chapter$chapterNo.pdf";
+    $examplesPath = "study_material/$classNo/examples/$subject/Chapter$chapterNo.pdf";
+
+    echo '<div class="text-start mb-3">';
+
+    if (file_exists($notesPath)) {
+        echo '<a target="_blank" href="' . $home . $notesPath . '" class="btn align-middle btn-outline-primary">Study Material/Notes</a>';
+    } else {
+        echo '<button type="button" class="btn align-middle btn-outline-primary" data-bs-toggle="modal" data-bs-target="#comingSoonModal1">Study Material/Notes</button>';
+    }
+
+    if (file_exists($examplesPath)) {
+        echo '<a target="_blank" href="' . $home . $examplesPath . '" class="btn align-middle btn-outline-primary">Solved Examples</a>';
+    } else {
+        echo '<button type="button" class="btn align-middle btn-outline-primary" data-bs-toggle="modal" data-bs-target="#comingSoonModal2">Solved Examples</button>';
+    }
+
+    echo '</div>';
+}
+?>
 <style>
     .physics-laws img {
         height: 216px !important;
@@ -60,29 +82,20 @@
                                     <p class="text-dark">Biodiversity; Need for classification; three domains of life; concept of species
                                         and taxonomical hierarchy; binomial nomenclature.
                                     </p>
-                                    <div class="text-start my-1">
-                                        <a target="_blank" href="<?php echo $home ?>study_material/11/notes/Biology/Chapter1.pdf" class="btn align-middle btn-outline-primary">Sample Notes</a>
-                                        
-                                    </div>
+                                    <?php renderChapterButtons(1, "11", "Biology", $home); ?>
                                 </div>
                                 <div class="text-start">
                                     <h5 class="h5 text-dark text-start fw-bold">Chapter-2: Biological Classification</h5>
                                     <p class="text-dark">Five kingdom classification; Salient features and classification of Monera, Protista and Fungi
                                         into major groups; Lichens, Viruses and Viroids.
                                     </p>
-                                    <div class="text-start my-1">
-                                        <a target="_blank" href="<?php echo $home ?>study_material/11/notes/Biology/Chapter2.pdf" class="btn align-middle btn-outline-primary">Sample Notes</a>
-                                        
-                                    </div>
+                                    <?php renderChapterButtons(2, "11", "Biology", $home); ?>
                                 </div>
                                 <div class="text-start">
                                     <h5 class="h5 text-dark text-start fw-bold">Chapter-3: Plant Kingdom</h5>
                                     <p class="text-dark">Classification of plants into major groups; Salient features and classification of plants into major groups - Algae, Bryophyta, Pteridophyta, Gymnospermae and Angiosperms.
                                     </p>
-                                    <div class="text-start my-1">
-                                        <a target="_blank" href="<?php echo $home ?>study_material/11/notes/Biology/Chapter3.pdf" class="btn align-middle btn-outline-primary">Sample Notes</a>
-                                        
-                                    </div>
+                                    <?php renderChapterButtons(3, "11", "Biology", $home); ?>
                                 </div>
                                 <div class="text-start">
                                     <h5 class="h5 text-dark text-start fw-bold">Chapter-4: Animal Kingdom</h5>
@@ -90,6 +103,7 @@
                                         to class level (salient features and distinguishing features of a few examples of each category).
                                         (No live animals or specimen should be displayed.)
                                     </p>
+                                    <?php renderChapterButtons(4, "11", "Biology", $home); ?>
                                 </div>
 
                             </div>
@@ -107,11 +121,13 @@
                                     <h5 class="h5 text-dark text-start fw-bold">Chapter-5: Morphology of Flowering Plants</h5>
                                     <p class="text-dark">Morphology of inflorescence and flower, Description of 01 family: Solanaceae 
                                     </p>
+                                    <?php renderChapterButtons(5, "11", "Biology", $home); ?>
                                 </div>
                                 <div class="text-start">
                                     <h5 class="h5 text-dark text-start fw-bold">Chapter-6: Anatomy of Flowering Plants</h5>
                                     <p class="text-dark">Anatomy and functions of tissue systems in dicots and monocots.
                                     </p>
+                                    <?php renderChapterButtons(6, "11", "Biology", $home); ?>
                                 </div>
                                 <div class="text-start">
                                     <h5 class="h5 text-dark text-start fw-bold">Chapter-7: Structural Organization in Animals</h5>
@@ -119,6 +135,7 @@
                                     nervous and reproductive) of frog.
 
                                     </p>
+                                    <?php renderChapterButtons(7, "11", "Biology", $home); ?>
                                 </div>
                             </div>
                         </div>
@@ -138,6 +155,7 @@
                                         function; endomembrane system, endoplasmic reticulum, golgi bodies, lysosomes, vacuoles,
                                         mitochondria, ribosomes, plastids, microbodies; cytoskeleton, cilia, flagella, centrioles
                                         (ultrastructure and function); nucleus.</p>
+                                        <?php renderChapterButtons(8, "11", "Biology", $home); ?>
                                 </div>
                                 <div class="text-start">
                                     <h5 class="h5 text-dark text-start fw-bold">Chapter-9: Biomolecules</h5>
@@ -146,10 +164,12 @@
                                         excluded: Nature of Bond Linking Monomers in a Polymer, Dynamic State of Body
                                         Constituents Concept of Metabolism, Metabolic Basis of Living, The Living State)
                                         </p>
+                                        <?php renderChapterButtons(9, "11", "Biology", $home); ?>
                                 </div>
                                 <div class="text-start">
                                     <h5 class="h5 text-dark text-start fw-bold">Chapter-10: Cell Cycle and Cell Division</h5>
                                     <p class="text-dark">Cell cycle, mitosis, meiosis and their significance.</p>
+                                    <?php renderChapterButtons(10, "11", "Biology", $home); ?>
                                 </div>
                             </div>
                         </div>
@@ -169,18 +189,21 @@
                                         cyclic and non-cyclic photophosphorylation; chemiosmotic hypothesis; photorespiration; C3 and
                                         C4 pathways; factors affecting photosynthesis.
                                     </p>
+                                    <?php renderChapterButtons(11, "11", "Biology", $home); ?>
                                 </div>
                                 <div class="text-start">
                                     <h5 class="h5 text-dark text-start fw-bold">Chapter-12: Respiration in Plants </h5>
                                     <p class="text-dark">Exchange of gases; cellular respiration - glycolysis, fermentation (anaerobic), TCA cycle and
                                         electron transport system (aerobic); energy relations - number of ATP molecules generated;
-                                        amphibolic pathways; respiratory quotient.
+                                        amphibolic pathways; respiratory quotient.</p>
+                                        <?php renderChapterButtons(12, "11", "Biology", $home); ?>
                                 </div>
                                 <div class="text-start">
                                     <h5 class="h5 text-dark text-start fw-bold">Chapter-13: Plant - Growth and Development </h5>
                                     <p class="text-dark">Seed germination; phases of plant growth and plant growth rate; conditions of growth;
                                         differentiation, dedifferentiation and redifferentiation; sequence of developmental processes
-                                        in a plant cell; plant growth regulators - auxin, gibberellin, cytokinin, ethylene, ABA.
+                                        in a plant cell; plant growth regulators - auxin, gibberellin, cytokinin, ethylene, ABA.</p>
+                                        <?php renderChapterButtons(13, "11", "Biology", $home); ?>
                                 </div>
                             </div>
                         </div>
@@ -200,6 +223,7 @@
                                         respiration, respiratory volume; disorders related to respiration - asthma, emphysema,
                                         occupational respiratory disorders.
                                     </p>
+                                    <?php renderChapterButtons(14, "11", "Biology", $home); ?>
                                 </div>
                                 <div class="text-start">
                                     <h5 class="h5 text-dark text-start fw-bold">Chapter-15: Body Fluids and Circulation </h5>
@@ -208,6 +232,7 @@
                                         cardiac output, ECG; double circulation; regulation of cardiac activity; disorders of circulatory
                                         system - hypertension, coronary artery disease, angina pectoris, heart failure.
                                     </p>
+                                    <?php renderChapterButtons(15, "11", "Biology", $home); ?>
                                 </div>
                                 <div class="text-start">
                                     <h5 class="h5 text-dark text-start fw-bold">Chapter-16: Excretory Products and their Elimination</h5>
@@ -216,6 +241,7 @@
                                         angiotensin, atrial natriuretic factor, ADH and diabetes insipidus; role of other organs in excretion; disorders - uremia, renal failure, renal calculi, nephritis; dialysis and artificial kidney,
                                         kidney transplant.
                                     </p>
+                                    <?php renderChapterButtons(16, "11", "Biology", $home); ?>
                                 </div>
                                 <div class="text-start">
                                     <h5 class="h5 text-dark text-start fw-bold">Chapter-17: Locomotion and Movement</h5>
@@ -225,12 +251,14 @@
                                         gout.
 
                                     </p>
+                                    <?php renderChapterButtons(17, "11", "Biology", $home); ?>
                                 </div>
                                 <div class="text-start">
                                     <h5 class="h5 text-dark text-start fw-bold">Chapter-18: Neural Control and Coordination</h5>
                                     <p class="text-dark">Neuron and nerves; Nervous system in humans - central nervous system; peripheral nervous
                                         system and visceral nervous system; generation and conduction of nerve impulse.
                                     </p>
+                                    <?php renderChapterButtons(18, "11", "Biology", $home); ?>
                                 </div>
                                 <div class="text-start">
                                     <h5 class="h5 text-dark text-start fw-bold">Chapter-19: Chemical Coordination and Integration</h5>
@@ -239,6 +267,8 @@
                                         role of hormones as messengers and regulators, hypo - and hyperactivity and related disorders;
                                         dwarfism, acromegaly, cretinism, goiter, exophthalmic goiter, diabetes, Addison's disease.
                                     </p>
+                                    <?php renderChapterButtons(19, "11", "Biology", $home); ?>
+
                                 </div>
                             </div>
                         </div>
@@ -248,4 +278,38 @@
         </div>
     </div>
 </div>
+</div>
+<!-- Modal (Only once in the whole page) -->
+<div class="modal fade" id="comingSoonModal1" tabindex="-1" aria-labelledby="comingSoonLabel1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content border-primary shadow">
+      <div class="modal-header bg-primary text-white">
+        <h5 class="modal-title" id="comingSoonLabel1"><i class="fas fa-info-circle"></i> Coming Soon</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body text-dark">
+        Study Material/Notes are not yet available but going to come soon.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-sm btn-outline-primary" data-bs-dismiss="modal">Okay</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="comingSoonModal2" tabindex="-1" aria-labelledby="comingSoonLabel2" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content border-primary shadow">
+      <div class="modal-header bg-primary text-white">
+        <h5 class="modal-title" id="comingSoonLabel2"><i class="fas fa-info-circle"></i> Coming Soon</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body text-dark">
+        Solved Examples are not yet available but going to come soon.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-sm btn-outline-primary" data-bs-dismiss="modal">Okay</button>
+      </div>
+    </div>
+  </div>
 </div>

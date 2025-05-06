@@ -1,3 +1,25 @@
+<?php
+function renderChapterButtons($chapterNo, $classNo = "11", $subject = "Physics", $home = "") {
+    $notesPath = "study_material/$classNo/notes/$subject/Chapter$chapterNo.pdf";
+    $examplesPath = "study_material/$classNo/examples/$subject/Chapter$chapterNo.pdf";
+
+    echo '<div class="text-start mb-3">';
+
+    if (file_exists($notesPath)) {
+        echo '<a target="_blank" href="' . $home . $notesPath . '" class="btn align-middle btn-outline-primary">Study Material/Notes</a>';
+    } else {
+        echo '<button type="button" class="btn align-middle btn-outline-primary" data-bs-toggle="modal" data-bs-target="#comingSoonModal1">Study Material/Notes</button>';
+    }
+
+    if (file_exists($examplesPath)) {
+        echo '<a target="_blank" href="' . $home . $examplesPath . '" class="btn align-middle btn-outline-primary">Solved Examples</a>';
+    } else {
+        echo '<button type="button" class="btn align-middle btn-outline-primary" data-bs-toggle="modal" data-bs-target="#comingSoonModal2">Solved Examples</button>';
+    }
+
+    echo '</div>';
+}
+?>
 <style>
     .physics-laws img{height: 216px !important;width: auto !important;}
 </style>
@@ -52,6 +74,7 @@
                                         accuracy and precision of measuring instruments; errors in measurement;
                                         significant figures.
                                         Dimensions of physical quantities, dimensional analysis and its applications</p>
+                                        <?php renderChapterButtons(1, "11", "Physics", $home); ?>
                                 </div>
                             </div>
                         </div>
@@ -72,6 +95,7 @@
                                         uniform and non- uniform motion, average speed and instantaneous velocity,
                                         uniformly accelerated motion, velocity - time and position-time graphs.
                                         Relations for uniformly accelerated motion (graphical treatment).</p>
+                                        <?php renderChapterButtons(2, "11", "Physics", $home); ?>
                                 </div>
                                 <div class="text-start">
                                     <h5 class="h5 text-dark text-start fw-bold">Chapter-3: Motion in a Plane </h5>
@@ -81,6 +105,7 @@
                                         resolution of a vector in a plane, rectangular components, Scalar and Vector
                                         product of vectors.
                                         Motion in a plane, cases of uniform velocity and uniform accelerationprojectile motion, uniform circular motion</p>
+                                        <?php renderChapterButtons(3, "11", "Physics", $home); ?>
                                 </div>
                             </div>
                         </div>
@@ -102,6 +127,7 @@
                                         rolling friction, lubrication.
                                         Dynamics of uniform circular motion: Centripetal force, examples of circular
                                         motion (vehicle on a level circular road, vehicle on a banked road). </p>
+                                        <?php renderChapterButtons(4, "11", "Physics", $home); ?>
                                 </div>
                             </div>
                         </div>
@@ -121,6 +147,7 @@
                                         conservation of mechanical energy (kinetic and potential energies); nonconservative forces: motion in a vertical circle; elastic and inelastic collisions
                                         in one and two dimensions.
                                     </p>
+                                    <?php renderChapterButtons(5, "11", "Physics", $home); ?>
                                 </div>
                             </div>
                         </div>
@@ -143,6 +170,7 @@
                                             Moment of inertia, radius of gyration, values of moments of inertia for simple geometrical
                                             objects (no derivation).
                                     </p>
+                                    <?php renderChapterButtons(6, "11", "Physics", $home); ?>
                                 </div>
                             </div>
                         </div>
@@ -162,6 +190,7 @@
                                         Gravitational potential energy and gravitational potential, escape speed, orbital velocity of a
                                         satellite, energy of an orbiting satellite.
                                     </p>
+                                    <?php renderChapterButtons(7, "11", "Physics", $home); ?>
                                 </div>
                             </div>
                         </div>
@@ -180,6 +209,7 @@
                                         modulus of rigidity (qualitative idea only), Poisson's ratio; elastic energy. Application of elastic
                                         behavior of materials (qualitative idea only)
                                     </p>
+                                    <?php renderChapterButtons(8, "11", "Physics", $home); ?>
                                 </div>
                                 <div class="text-start">
                                     <h5 class="h5 text-dark text-start fw-bold">Chapter-9: Mechanical Properties of Fluids </h5>
@@ -191,6 +221,7 @@
                                         across a curved surface, application of surface tension ideas to drops, bubbles
                                         and capillary rise.
                                     </p>
+                                    <?php renderChapterButtons(9, "11", "Physics", $home); ?>
                                 </div>
                                 <div class="text-start">
                                     <h5 class="h5 text-dark text-start fw-bold">Chapter-10: Thermal Properties of Matter </h5>
@@ -201,6 +232,7 @@
                                         Blackbody radiation, Wein's displacement Law, Stefan's law.
 
                                     </p>
+                                    <?php renderChapterButtons(10, "11", "Physics", $home); ?>
                                 </div>
                             </div>
                         </div>
@@ -220,6 +252,7 @@
                                                 Thermodynamic state variable and equation of state. Change of condition of gaseous state -
                                                 isothermal, adiabatic, reversible, irreversible, and cyclic processes.
                                     </p>
+                                    <?php renderChapterButtons(11, "11", "Physics", $home); ?>
                                 </div>
                             </div>
                         </div>
@@ -241,6 +274,7 @@
                                         specific heat capacities of gases; concept of mean free path, Avogadro's
                                         number.
                                     </p>
+                                    <?php renderChapterButtons(12, "11", "Physics", $home); ?>
                                 </div>
                             </div>
                         </div>
@@ -263,6 +297,7 @@
 
 
                                     </p>
+                                    <?php renderChapterButtons(13, "11", "Physics", $home); ?>
                                 </div>
                                 <div class="text-start">
                                     <h5 class="h5 text-dark text-start fw-bold">Chapter-14: Waves </h5>
@@ -272,6 +307,7 @@
                                         fundamental mode and harmonics, Beats.
 
                                     </p>
+                                    <?php renderChapterButtons(14, "11", "Physics", $home); ?>
                                 </div>
                             </div>
                         </div>
@@ -280,4 +316,38 @@
             </div>
         </div>
     </div>
+</div>
+<!-- Modal (Only once in the whole page) -->
+<div class="modal fade" id="comingSoonModal1" tabindex="-1" aria-labelledby="comingSoonLabel1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content border-primary shadow">
+      <div class="modal-header bg-primary text-white">
+        <h5 class="modal-title" id="comingSoonLabel1"><i class="fas fa-info-circle"></i> Coming Soon</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body text-dark">
+        Study Material/Notes are not yet available but going to come soon.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-sm btn-outline-primary" data-bs-dismiss="modal">Okay</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="comingSoonModal2" tabindex="-1" aria-labelledby="comingSoonLabel2" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content border-primary shadow">
+      <div class="modal-header bg-primary text-white">
+        <h5 class="modal-title" id="comingSoonLabel2"><i class="fas fa-info-circle"></i> Coming Soon</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body text-dark">
+        Solved Examples are not yet available but going to come soon.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-sm btn-outline-primary" data-bs-dismiss="modal">Okay</button>
+      </div>
+    </div>
+  </div>
 </div>

@@ -1,3 +1,25 @@
+<?php
+function renderChapterButtons($chapterNo, $classNo = "12", $subject = "Physics", $home = "") {
+    $notesPath = "study_material/$classNo/notes/$subject/Chapter$chapterNo.pdf";
+    $examplesPath = "study_material/$classNo/examples/$subject/Chapter$chapterNo.pdf";
+
+    echo '<div class="text-start mb-3">';
+
+    if (file_exists($notesPath)) {
+        echo '<a target="_blank" href="' . $home . $notesPath . '" class="btn align-middle btn-outline-primary">Study Material/Notes</a>';
+    } else {
+        echo '<button type="button" class="btn align-middle btn-outline-primary" data-bs-toggle="modal" data-bs-target="#comingSoonModal1">Study Material/Notes</button>';
+    }
+
+    if (file_exists($examplesPath)) {
+        echo '<a target="_blank" href="' . $home . $examplesPath . '" class="btn align-middle btn-outline-primary">Solved Examples</a>';
+    } else {
+        echo '<button type="button" class="btn align-middle btn-outline-primary" data-bs-toggle="modal" data-bs-target="#comingSoonModal2">Solved Examples</button>';
+    }
+
+    echo '</div>';
+}
+?>
 <style>
     .physics-laws img {
         height: 216px !important;
@@ -62,6 +84,7 @@
                                         Electric flux, statement of Gauss's theorem and its applications to find field
                                         due to infinitely long straight wire, uniformly charged infinite plane sheet and
                                         uniformly charged thin spherical shell (field inside and outside). </p>
+                                        <?php renderChapterButtons(1, "12", "Physics", $home); ?>
                                 </div>
                                 <div class="text-start">
                                     <h5 class="h5 text-dark text-start fw-bold">Chapter-2: Electrostatic Potential and Capacitance </h5>
@@ -74,6 +97,7 @@
                                         combination of capacitors in series and in parallel, capacitance of a parallel
                                         plate capacitor with and without dielectric medium between the plates, energy
                                         stored in a capacitor(no derivation, formulae only). </p>
+                                        <?php renderChapterButtons(2, "12", "Physics", $home); ?>
                                 </div>
                             </div>
                         </div>
@@ -94,6 +118,7 @@
                                         of resistance, Internal resistance of a cell, potential difference and emf of a cell, combination
                                         of cells in series and in parallel, Kirchhoff's rules, Wheatstone bridge.
                                     </p>
+                                    <?php renderChapterButtons(3, "12", "Physics", $home); ?>
                                 </div>
                             </div>
                         </div>
@@ -117,6 +142,7 @@
                                         between two parallel current-carrying conductors-definition of ampere, torque
                                         experienced by a current loop in uniform magnetic field; moving coil
                                         galvanometer-its current sensitivity and conversion to ammeter and voltmeter.</p>
+                                        <?php renderChapterButtons(4, "12", "Physics", $home); ?>
                                 </div>
                                 <div class="text-start">
                                     <h5 class="h5 text-dark text-start fw-bold">Chapter-5: Magnetism and Matter </h5>
@@ -126,6 +152,7 @@
                                         field (qualitative treatment only), magnetic field lines.
                                         Magnetic properties of materials- Para-, dia- and ferro – magnetic substances with examples,
                                         Magnetization of materials, effect of temperature on magnetic properties.</p>
+                                        <?php renderChapterButtons(5, "12", "Physics", $home); ?>
                                 </div>
                             </div>
                         </div>
@@ -144,6 +171,7 @@
                                         Law, Eddy currents. Self and mutual induction.
 
                                     </p>
+                                    <?php renderChapterButtons(6, "12", "Physics", $home); ?>
                                 </div>
                                 <div class="text-start">
                                     <h5 class="h5 text-dark text-start fw-bold">Chapter-7: Alternating Current </h5>
@@ -152,6 +180,7 @@
                                         series circuit, resonance; power in AC circuits, power factor, wattless current.
                                         AC generator and transformer.
                                     </p>
+                                    <?php renderChapterButtons(7, "12", "Physics", $home); ?>
                                 </div>
                             </div>
                         </div>
@@ -172,6 +201,7 @@
                                         ultraviolet, X-rays, gamma rays) including elementary facts about their uses.
 
                                     </p>
+                                    <?php renderChapterButtons(8, "12", "Physics", $home); ?>
                                 </div>
                             </div>
                         </div>
@@ -196,6 +226,7 @@
                                         Optical instruments: Microscopes and astronomical telescopes (reflecting and
                                         refracting) and their magnifying powers.
                                     </p>
+                                    <?php renderChapterButtons(9, "12", "Physics", $home); ?>
                                 </div>
                                 <div class="text-start">
                                     <h5 class="h5 text-dark text-start fw-bold">Chapter-10: Wave Optics </h5>
@@ -205,6 +236,7 @@
                                     derivation final expression only), coherent sources and sustained interference of light,
                                     diffraction due to a single slit, width of central maxima (qualitative treatment only).
                                     </p>
+                                    <?php renderChapterButtons(10, "12", "Physics", $home); ?>
                                 </div>
                             </div>
                         </div>
@@ -226,6 +258,7 @@
                                         Matter waves-wave nature of particles, de-Broglie relation
 
                                     </p>
+                                    <?php renderChapterButtons(11, "12", "Physics", $home); ?>
                                 </div>
                             </div>
                         </div>
@@ -244,6 +277,7 @@
                                         atom, Expression for radius of nth possible orbit, velocity and energy of electron in nth orbit,
                                         hydrogen line spectra (qualitative treatment only).
                                     </p>
+                                    <?php renderChapterButtons(12, "12", "Physics", $home); ?>
                                 </div>
                                 <div class="text-start">
                                     <h5 class="h5 text-dark text-start fw-bold">Chapter-13: Nuclei </h5>
@@ -252,6 +286,7 @@
                                         life. Mass-energy relation, mass defect; binding energy per nucleon and its
                                         variation with mass number; nuclear fission, nuclear fusion.
                                     </p>
+                                    <?php renderChapterButtons(13, "12", "Physics", $home); ?>
                                 </div>
                             </div>
                         </div>
@@ -273,6 +308,7 @@
                                         diode -diode as a rectifier.
 
                                     </p>
+                                    <?php renderChapterButtons(14, "12", "Physics", $home); ?>
                                 </div>
                             </div>
                         </div>
@@ -281,4 +317,38 @@
             </div>
         </div>
     </div>
+</div>
+<!-- Modal (Only once in the whole page) -->
+<div class="modal fade" id="comingSoonModal1" tabindex="-1" aria-labelledby="comingSoonLabel1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content border-primary shadow">
+      <div class="modal-header bg-primary text-white">
+        <h5 class="modal-title" id="comingSoonLabel1"><i class="fas fa-info-circle"></i> Coming Soon</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body text-dark">
+        Study Material/Notes are not yet available but going to come soon.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-sm btn-outline-primary" data-bs-dismiss="modal">Okay</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="comingSoonModal2" tabindex="-1" aria-labelledby="comingSoonLabel2" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content border-primary shadow">
+      <div class="modal-header bg-primary text-white">
+        <h5 class="modal-title" id="comingSoonLabel2"><i class="fas fa-info-circle"></i> Coming Soon</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body text-dark">
+        Solved Examples are not yet available but going to come soon.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-sm btn-outline-primary" data-bs-dismiss="modal">Okay</button>
+      </div>
+    </div>
+  </div>
 </div>

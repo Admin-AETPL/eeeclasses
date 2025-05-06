@@ -1,3 +1,26 @@
+<?php
+function renderChapterButtons($chapterNo, $classNo = "11", $subject = "Mathematics", $home = "") {
+    $notesPath = "study_material/$classNo/notes/$subject/Chapter$chapterNo.pdf";
+    $examplesPath = "study_material/$classNo/examples/$subject/Chapter$chapterNo.pdf";
+
+    echo '<div class="text-start mb-3">';
+
+    if (file_exists($notesPath)) {
+        echo '<a target="_blank" href="' . $home . $notesPath . '" class="btn align-middle btn-outline-primary">Study Material/Notes</a>';
+    } else {
+        echo '<button type="button" class="btn align-middle btn-outline-primary" data-bs-toggle="modal" data-bs-target="#comingSoonModal1">Study Material/Notes</button>';
+    }
+
+    if (file_exists($examplesPath)) {
+        echo '<a target="_blank" href="' . $home . $examplesPath . '" class="btn align-middle btn-outline-primary">Solved Examples</a>';
+    } else {
+        echo '<button type="button" class="btn align-middle btn-outline-primary" data-bs-toggle="modal" data-bs-target="#comingSoonModal2">Solved Examples</button>';
+    }
+
+    echo '</div>';
+}
+?>
+
 <style>
     .physics-laws img {
         height: 216px !important;
@@ -59,6 +82,7 @@
                                         Properties of Complement.
 
                                     </p>
+                                    <?php renderChapterButtons(1, "11", "Mathematics", $home); ?>
                                 </div>
                                 <div class="text-start">
                                     <h5 class="h5 text-dark text-start fw-bold">Chapter-2: Relations & Functions</h5>
@@ -69,6 +93,8 @@
                                         functions, constant, identity, polynomial, rational, modulus, signum, exponential, logarithmic and greatest
                                         integer functions, with their graphs.
                                     </p>
+                                    <?php renderChapterButtons(2, "11", "Mathematics", $home); ?>
+
                                 </div>
                                 <div class="text-start">
                                     <h5 class="h5 text-dark text-start fw-bold">Chapter-3: Trigonometric Functions</h5>
@@ -104,6 +130,8 @@
                                         (𝛼 − 𝛽)
                                         Identities related to sin 2𝑥 , cos 2𝑥 ,tan 2𝑥 , sin 3𝑥 , cos 3𝑥 and tan 3�
                                     </p>
+                                    <?php renderChapterButtons(3, "11", "Mathematics", $home); ?>
+
                                 </div>
                             </div>
                         </div>
@@ -122,12 +150,15 @@
                                         equations. Algebraic properties of complex numbers. Argand plane.
 
                                     </p>
+                                    <?php renderChapterButtons(5, "11", "Mathematics", $home); ?>
+
                                 </div>
                                 <div class="text-start">
                                     <h5 class="h5 text-dark text-start fw-bold">Chapter-2: Linear Inequalities</h5>
                                     <p class="text-dark">Linear inequalities. Algebraic solutions of linear inequalities in one variable and their
                                     representation on the number line. 
                                     </p>
+                                    <?php renderChapterButtons(6, "11", "Mathematics", $home); ?>
                                 </div>
                                 <div class="text-start">
                                     <h5 class="h5 text-dark text-start fw-bold">Chapter-3: Permutations and Combinations</h5>
@@ -139,12 +170,14 @@
                                         nCr
                                         and their connections, simple applications.
                                     </p>
+                                    <?php renderChapterButtons(7, "11", "Mathematics", $home); ?>
                                 </div>
                                 <div class="text-start">
                                     <h5 class="h5 text-dark text-start fw-bold">Chapter-4: Binomial Theorem</h5>
                                     <p class="text-dark">Historical perspective, statement and proof of the binomial theorem for positive integral indices.
                                     Pascal’s triangle, simple applications.  
                                     </p>
+                                    <?php renderChapterButtons(8, "11", "Mathematics", $home); ?>
                                 </div>
                                 <div class="text-start">
                                     <h5 class="h5 text-dark text-start fw-bold">Chapter-5: Sequence and Series</h5>
@@ -152,6 +185,7 @@
                                         a G.P., sum of n terms of a G.P., infinite G.P. and its sum, geometric mean (G.M.), relation
                                         between A.M. and G.M
                                     </p>
+                                    <?php renderChapterButtons(9, "11", "Mathematics", $home); ?>
                                 </div>
                             </div>
                         </div>
@@ -169,6 +203,7 @@
                                     <p class="text-dark">Brief recall of two dimensional geometry from earlier classes. Slope of a line and angle between two lines.
                                         Various forms of equations of a line: parallel to axis, point -slope form, slope-intercept form, two-point form,
                                         intercept form and normal form. General equation of a line. Distance of a point from a line.</p>
+                                        <?php renderChapterButtons(10, "11", "Mathematics", $home); ?>
                                 </div>
                             </div>
                             <div class="accordion-body">
@@ -178,6 +213,7 @@
                                     intersecting lines as a degenerated case of a conic section. Standard equations and simple
                                     properties of parabola, ellipse and hyperbola. Standard equation of a circle.
                                     </p>
+                                    <?php renderChapterButtons(11, "11", "Mathematics", $home); ?>
                                 </div>
                             </div>
                             <div class="accordion-body">
@@ -186,6 +222,7 @@
                                     <p class="text-dark">Coordinate axes and coordinate planes in three dimensions. Coordinates of a point.
                                         Distance between two points.
                                         </p>
+                                        <?php renderChapterButtons(12, "11", "Mathematics", $home); ?>
                                 </div>
                             </div>
                         </div>
@@ -206,6 +243,7 @@
                                         derivative of sum, difference, product and quotient of functions of polynomial and
                                         trigonometric functions.
                                     </p>
+                                    <?php renderChapterButtons(13, "11", "Mathematics", $home); ?>
                                 </div>
                             </div>
                         </div>
@@ -225,6 +263,7 @@
                                 <p class="text-dark">
                                     Measures of Dispersion: Range, mean deviation, variance and standard deviation of ungrouped/grouped data.
                                 </p>
+                                <?php renderChapterButtons(15, "11", "Mathematics", $home); ?>
                             </div>
 
                             <!-- Chapter 2 -->
@@ -233,6 +272,7 @@
                                 <p class="text-dark">
                                     Events; occurrence of events, ‘not’, ‘and’ and ‘or’ events, exhaustive events, mutually exclusive events, Axiomatic (set theoretic) probability, connections with other theories of earlier classes. Probability of an event, probability of ‘not’, ‘and’ and ‘or’ events.
                                 </p>
+                                <?php renderChapterButtons(16, "11", "Mathematics", $home); ?>
                             </div>
 
                         </div>
@@ -243,4 +283,38 @@
             </div>
         </div>
     </div>
+</div>
+<!-- Modal (Only once in the whole page) -->
+<div class="modal fade" id="comingSoonModal1" tabindex="-1" aria-labelledby="comingSoonLabel1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content border-primary shadow">
+      <div class="modal-header bg-primary text-white">
+        <h5 class="modal-title" id="comingSoonLabel1"><i class="fas fa-info-circle"></i> Coming Soon</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body text-dark">
+        Study Material/Notes are not yet available but going to come soon.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-sm btn-outline-primary" data-bs-dismiss="modal">Okay</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="comingSoonModal2" tabindex="-1" aria-labelledby="comingSoonLabel2" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content border-primary shadow">
+      <div class="modal-header bg-primary text-white">
+        <h5 class="modal-title" id="comingSoonLabel2"><i class="fas fa-info-circle"></i> Coming Soon</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body text-dark">
+        Solved Examples are not yet available but going to come soon.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-sm btn-outline-primary" data-bs-dismiss="modal">Okay</button>
+      </div>
+    </div>
+  </div>
 </div>

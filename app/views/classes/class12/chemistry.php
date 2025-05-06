@@ -1,3 +1,25 @@
+<?php
+function renderChapterButtons($chapterNo, $classNo = "12", $subject = "Physics", $home = "") {
+    $notesPath = "study_material/$classNo/notes/$subject/Chapter$chapterNo.pdf";
+    $examplesPath = "study_material/$classNo/examples/$subject/Chapter$chapterNo.pdf";
+
+    echo '<div class="text-start mb-3">';
+
+    if (file_exists($notesPath)) {
+        echo '<a target="_blank" href="' . $home . $notesPath . '" class="btn align-middle btn-outline-primary">Study Material/Notes</a>';
+    } else {
+        echo '<button type="button" class="btn align-middle btn-outline-primary" data-bs-toggle="modal" data-bs-target="#comingSoonModal1">Study Material/Notes</button>';
+    }
+
+    if (file_exists($examplesPath)) {
+        echo '<a target="_blank" href="' . $home . $examplesPath . '" class="btn align-middle btn-outline-primary">Solved Examples</a>';
+    } else {
+        echo '<button type="button" class="btn align-middle btn-outline-primary" data-bs-toggle="modal" data-bs-target="#comingSoonModal2">Solved Examples</button>';
+    }
+
+    echo '</div>';
+}
+?>
 <style>
     .physics-laws img {
         height: 216px !important;
@@ -55,6 +77,7 @@
                                     pressure, determination of molecular masses using colligative properties, abnormal
                                     molecular mass, Van't Hoff factor
                                     </p>
+                                    <?php renderChapterButtons(1, "12", "Chemistry", $home); ?>
                                 </div>
                             </div>
                         </div>
@@ -75,6 +98,7 @@
                                     (elementary idea), dry cell-electrolytic cells and Galvanic cells, lead accumulator, fuel
                                     cells, corrosion.
                                     </p>
+                                    <?php renderChapterButtons(2, "12", "Chemistry", $home); ?>
                                 </div>
                             </div>
                         </div>
@@ -94,6 +118,7 @@
                                         10
                                         reactions), concept of collision theory (elementary idea, no mathematical treatment),
                                         activation energy, Arrhenius equation.</p>
+                                        <?php renderChapterButtons(3, "12", "Chemistry", $home); ?>
                                 </div>
                             </div>
                         </div>
@@ -117,6 +142,7 @@
                                     Actinides - Electronic configuration, oxidation states and comparison with lanthanides
 
                                     </p>
+                                    <?php renderChapterButtons(4, "12", "Chemistry", $home); ?>
                                 </div>
                             </div>
                         </div>
@@ -137,6 +163,7 @@
                                         system).
 
                                     </p>
+                                    <?php renderChapterButtons(5, "12", "Chemistry", $home); ?>
                                 </div>
                             </div>
                         </div>
@@ -159,6 +186,7 @@
 
 
                                     </p>
+                                    <?php renderChapterButtons(6, "12", "Chemistry", $home); ?>
                                 </div>
                             </div>
                         </div>
@@ -179,6 +207,7 @@
                                         acidic nature of phenol, electrophilic substitution reactions, uses of phenols.
                                         Ethers: Nomenclature, methods of preparation, physical and chemical properties, uses
                                     </p>
+                                    <?php renderChapterButtons(7, "12", "Chemistry", $home); ?>
                                 </div>
                             </div>
                         </div>
@@ -203,6 +232,7 @@
                                     chemical properties; uses.
 
                                 </p>
+                                <?php renderChapterButtons(8, "12", "Chemistry", $home); ?>
                             </div>
                         </div>
                     </div>
@@ -221,6 +251,7 @@
                                     Diazonium salts: Preparation, chemical reactions and importance in synthetic organic
                                     chemistry
                                 </p>
+                                <?php renderChapterButtons(9, "12", "Chemistry", $home); ?>
                             </div>
                         </div>
                     </div>
@@ -247,6 +278,7 @@
 
 
                                 </p>
+                                <?php renderChapterButtons(10, "12", "Chemistry", $home); ?>
                             </div>
                         </div>
                     </div>
@@ -312,4 +344,38 @@
             </div>
         </div>
     </div>
+</div>
+<!-- Modal (Only once in the whole page) -->
+<div class="modal fade" id="comingSoonModal1" tabindex="-1" aria-labelledby="comingSoonLabel1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content border-primary shadow">
+      <div class="modal-header bg-primary text-white">
+        <h5 class="modal-title" id="comingSoonLabel1"><i class="fas fa-info-circle"></i> Coming Soon</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body text-dark">
+        Study Material/Notes are not yet available but going to come soon.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-sm btn-outline-primary" data-bs-dismiss="modal">Okay</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="comingSoonModal2" tabindex="-1" aria-labelledby="comingSoonLabel2" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content border-primary shadow">
+      <div class="modal-header bg-primary text-white">
+        <h5 class="modal-title" id="comingSoonLabel2"><i class="fas fa-info-circle"></i> Coming Soon</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body text-dark">
+        Solved Examples are not yet available but going to come soon.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-sm btn-outline-primary" data-bs-dismiss="modal">Okay</button>
+      </div>
+    </div>
+  </div>
 </div>

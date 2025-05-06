@@ -1,3 +1,26 @@
+
+<?php
+function renderChapterButtons($chapterNo, $classNo = "12", $subject = "Mathematics", $home = "") {
+    $notesPath = "study_material/$classNo/notes/$subject/Chapter$chapterNo.pdf";
+    $examplesPath = "study_material/$classNo/examples/$subject/Chapter$chapterNo.pdf";
+
+    echo '<div class="text-start mb-3">';
+
+    if (file_exists($notesPath)) {
+        echo '<a target="_blank" href="' . $home . $notesPath . '" class="btn align-middle btn-outline-primary">Study Material/Notes</a>';
+    } else {
+        echo '<button type="button" class="btn align-middle btn-outline-primary" data-bs-toggle="modal" data-bs-target="#comingSoonModal1">Study Material/Notes</button>';
+    }
+
+    if (file_exists($examplesPath)) {
+        echo '<a target="_blank" href="' . $home . $examplesPath . '" class="btn align-middle btn-outline-primary">Solved Examples</a>';
+    } else {
+        echo '<button type="button" class="btn align-middle btn-outline-primary" data-bs-toggle="modal" data-bs-target="#comingSoonModal2">Solved Examples</button>';
+    }
+
+    echo '</div>';
+}
+?>
 <style>
     .physics-laws img {
         height: 216px !important;
@@ -56,12 +79,14 @@
                                     <p class="text-dark">Types of relations: reflexive, symmetric, transitive and equivalence relations. One to one and onto
                                         functions.
                                     </p>
+                                    <?php renderChapterButtons(1, "12", "Mathematics", $home); ?>
                                 </div>
                                 <div class="text-start">
                                     <h5 class="h5 text-dark text-start fw-bold">Chapter-2: Inverse Trigonometric Functions</h5>
                                     <p class="text-dark">Definition, range, domain, principal value branch. Graphs of inverse trigonometric functions.
 
                                     </p>
+                                    <?php renderChapterButtons(2, "12", "Mathematics", $home); ?>
                                 </div>
                             </div>
                         </div>
@@ -82,6 +107,7 @@
                                         entries).
 
                                     </p>
+                                    <?php renderChapterButtons(3, "12", "Mathematics", $home); ?>
                                 </div>
                                 <div class="text-start">
                                     <h5 class="h5 text-dark text-start fw-bold">Chapter-2: Determinants</h5>
@@ -90,6 +116,7 @@
                                         of linear equations in two or three variables (having unique solution) using inverse of a matrix.
 
                                     </p>
+                                    <?php renderChapterButtons(4, "12", "Mathematics", $home); ?>
                                 </div>
                             </div>
                         </div>
@@ -108,6 +135,7 @@
                                         trigonometric functions, derivative of implicit functions. Concept of exponential and logarithmic functions.<br>
                                         Derivatives of logarithmic and exponential functions. Logarithmic differentiation, derivative of functions
                                         expressed in parametric forms. Second order derivatives.</p>
+                                        <?php renderChapterButtons(5, "12", "Mathematics", $home); ?>
                                 </div>
                                 <div class="text-start">
                                     <h5 class="h5 text-dark text-start fw-bold">Chapter-2: Applications of Derivatives </h5>
@@ -115,6 +143,7 @@
                                         minima (first derivative test motivated geometrically and second derivative test given as a provable
                                         tool). Simple problems (that illustrate basic principles and understanding of the subject as well as reallife situations).
                                     </p>
+                                    <?php renderChapterButtons(6, "12", "Mathematics", $home); ?>
                                 </div>
                                 <div class="text-start">
                                     <h5 class="h5 text-dark text-start fw-bold">Chapter-3: Integrals </h5>
@@ -154,12 +183,14 @@
                                             evaluation of definite integrals.
 
                                     </p>
+                                    <?php renderChapterButtons(7, "12", "Mathematics", $home); ?>
                                 </div>
                                 <div class="text-start">
                                     <h5 class="h5 text-dark text-start fw-bold">Chapter-4: Applications of the Integrals </h5>
                                     <p class="text-dark">Applications in finding the area under simple curves, especially lines, circles/ parabolas/ellipses
                                     (in standard form only)
                                     </p>
+                                    <?php renderChapterButtons(8, "12", "Mathematics", $home); ?>
                                 </div>
                                 <div class="text-start">
                                     <h5 class="h5 text-dark text-start fw-bold">Chapter-5: Differential Equations </h5>
@@ -174,6 +205,7 @@
                                             𝑑𝑦
                                             + 𝑝𝑥 = 𝑞, where 𝑝 and 𝑞 are functions of 𝑦 or constants
                                     </p>
+                                    <?php renderChapterButtons(9, "12", "Mathematics", $home); ?>
                                 </div>
 
                             </div>
@@ -196,6 +228,7 @@
                                         Geometrical Interpretation, properties and application of scalar (dot) product of vectors, vector
                                         (cross) product of vectors.
                                     </p>
+                                    <?php renderChapterButtons(10, "12", "Mathematics", $home); ?>
                                 </div>
                             </div>
                         </div>
@@ -208,6 +241,7 @@
                                         equation of a line, skew lines, shortest distance between two lines. Angle between two lines.
 
                                     </p>
+                                    <?php renderChapterButtons(11, "12", "Mathematics", $home); ?>
                                 </div>
                             </div>
                         </div>
@@ -229,6 +263,7 @@
                                         unbounded), feasible and infeasible solutions, optimal feasible solutions (up to three non-trivial
                                         constraints).
                                     </p>
+                                    <?php renderChapterButtons(12, "12", "Mathematics", $home); ?>
                                 </div>
                             </div>
                         </div>
@@ -246,6 +281,7 @@
                                     <p class="text-dark">Conditional probability, multiplication theorem on probability, independent events, total
                                     probability, Bayes’ theorem.
                                     </p>
+                                    <?php renderChapterButtons(13, "12", "Mathematics", $home); ?>
                                 </div>
                             </div>
                         </div>
@@ -259,4 +295,39 @@
             </div>
         </div>
     </div>
+</div>
+
+<!-- Modal (Only once in the whole page) -->
+<div class="modal fade" id="comingSoonModal1" tabindex="-1" aria-labelledby="comingSoonLabel1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content border-primary shadow">
+      <div class="modal-header bg-primary text-white">
+        <h5 class="modal-title" id="comingSoonLabel1"><i class="fas fa-info-circle"></i> Coming Soon</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body text-dark">
+        Study Material/Notes are not yet available but going to come soon.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-sm btn-outline-primary" data-bs-dismiss="modal">Okay</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="comingSoonModal2" tabindex="-1" aria-labelledby="comingSoonLabel2" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content border-primary shadow">
+      <div class="modal-header bg-primary text-white">
+        <h5 class="modal-title" id="comingSoonLabel2"><i class="fas fa-info-circle"></i> Coming Soon</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body text-dark">
+        Solved Examples are not yet available but going to come soon.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-sm btn-outline-primary" data-bs-dismiss="modal">Okay</button>
+      </div>
+    </div>
+  </div>
 </div>
