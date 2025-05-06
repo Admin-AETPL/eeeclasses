@@ -41,7 +41,7 @@
                         <th scope="col">Subjects</th>
                         <th scope="col">Phone no.</th>
                         <th scope="col">Email ID</th>
-                        <th scope="col">Password</th>
+                        <!-- <th scope="col">Password</th> -->
                         <th scope="col">Total Fees (in &#8377;)</th>
                         <th scope="col">Paid Fees (in &#8377;)</th>
                         <th scope="col">Remaining Fees (in &#8377;)</th>
@@ -63,7 +63,7 @@
                                     <td class="subj"><?php echo htmlspecialchars($det["subjects"]); ?></td>
                                     <td class="phone"><?php echo htmlspecialchars($det["stud_phone"]); ?></td>
                                     <td class="smail"><?php echo htmlspecialchars($det["stud_mail"]); ?></td>
-                                    <td class="spass"><?php echo htmlspecialchars($det["stud_pass"]); ?></td>
+                                    <!-- <td class="spass"><?php echo htmlspecialchars($det["stud_pass"]); ?></td> -->
                                     <td class="sfees"><?php echo htmlspecialchars($det["total_fees"]); ?></td>
                                     <td class="spaid"><?php echo htmlspecialchars($det["paid_fees"]); ?></td>
                                     <td><?php echo htmlspecialchars($det["total_fees"] - $det["paid_fees"]); ?></td>

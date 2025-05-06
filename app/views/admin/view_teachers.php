@@ -32,7 +32,7 @@
                         <th scope="col">Name</th>
                         <th scope="col">Phone no.</th>
                         <th scope="col">Email ID</th>
-                        <th scope="col">Password</th>
+                        <!-- <th scope="col">Password</th> -->
                     </tr>
                 </thead>
                 <tbody>
@@ -50,7 +50,7 @@
                                     <td><?php echo htmlspecialchars($det["teacher_name"]); ?></td>
                                     <td><?php echo htmlspecialchars($det["teacher_phone"]); ?></td>
                                     <td><?php echo htmlspecialchars($det["teacher_mail"]); ?></td>
-                                    <td><?php echo htmlspecialchars($det["teacher_pass"]); ?></td>
+                                    <!-- <td><?php echo htmlspecialchars($det["teacher_pass"]); ?></td> -->
                                 </tr>
                         <?php
                                 $i++;

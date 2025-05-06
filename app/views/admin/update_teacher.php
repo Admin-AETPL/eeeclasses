@@ -29,7 +29,7 @@
                         <th scope="col">Name</th>
                         <th scope="col">Phone no.</th>
                         <th scope="col">Email ID</th>
-                        <th scope="col">Password</th>
+                        <!-- <th scope="col">Password</th> -->
                         <th scope="col"></th>
                     </tr>
                 </thead>
@@ -48,7 +48,7 @@
                                     <td class="sname"><?php echo htmlspecialchars($det["teacher_name"]); ?></td>
                                     <td class="phone"><?php echo htmlspecialchars($det["teacher_phone"]); ?></td>
                                     <td class="smail"><?php echo htmlspecialchars($det["teacher_mail"]); ?></td>
-                                    <td class="spass"><?php echo htmlspecialchars($det["teacher_pass"]); ?></td>
+                                    <!-- <td class="spass"><?php echo htmlspecialchars($det["teacher_pass"]); ?></td> -->
                                     <td class="text-center">
                                         <button class="btn btn-primary text-white upd" data-bs-toggle="modal" data-bs-target="#staticBackdrop" aria-label="Update teacher details">Update</button>
                                     </td>
