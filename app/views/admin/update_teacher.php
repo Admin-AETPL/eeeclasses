@@ -24,7 +24,7 @@
                 <thead class="thead">
                     <tr>
                         <th scope="col">S.No.</th>
-                        <th scope="col">Teacher Photo</th>
+                        <!-- <th scope="col">Teacher Photo</th> -->
                         <th scope="col">Teacher ID</th>
                         <th scope="col">Name</th>
                         <th scope="col">Phone no.</th>
@@ -35,22 +35,35 @@
                 </thead>
                 <tbody>
                     <?php
-                    $i = 1;
-                    foreach ($data as $det) {
-                    ?>
-                        <tr>
-                            <td><?php echo $i;  ?></td>
-                            <td class="text-center"><img src="<?php echo $home.$det["teacher_photo"]; ?>" style="height:125px" alt="" class="img-fluid imghover"></td>                        
-                            <td class="sid"><?php echo $det["teacher_id"]; ?></td>
-                            <td class="sname"><?php echo $det["teacher_name"]; ?></td>
-                            <td class="phone"><?php echo $det["teacher_phone"]; ?></td>
-                            <td class="smail"><?php echo $det["teacher_mail"]; ?></td>
-                            <td class="spass"><?php echo $det["teacher_pass"]; ?></td>
-                            <td class="text-center"><button class="btn btn-primary text-white upd" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Update</button></td>
-                        </tr>
-                    <?php
-                    }
-                    ?>
+                        $i = 1;
+                        if (!empty($data)) { // Check if $data is not empty
+                            foreach ($data as $det) {
+                        ?>
+                                <tr>
+                                    <td><?php echo $i; ?></td>
+                                    <!-- <td class="text-center">
+                                        <img src="<?php echo htmlspecialchars($home . $det["teacher_photo"]); ?>" style="height:125px" alt="Teacher Photo" class="img-fluid imghover">
+                                    </td> -->
+                                    <td class="sid"><?php echo htmlspecialchars($det["teacher_id"]); ?></td>
+                                    <td class="sname"><?php echo htmlspecialchars($det["teacher_name"]); ?></td>
+                                    <td class="phone"><?php echo htmlspecialchars($det["teacher_phone"]); ?></td>
+                                    <td class="smail"><?php echo htmlspecialchars($det["teacher_mail"]); ?></td>
+                                    <td class="spass"><?php echo htmlspecialchars($det["teacher_pass"]); ?></td>
+                                    <td class="text-center">
+                                        <button class="btn btn-primary text-white upd" data-bs-toggle="modal" data-bs-target="#staticBackdrop" aria-label="Update teacher details">Update</button>
+                                    </td>
+                                </tr>
+                        <?php
+                                $i++;
+                            }
+                        } else { // Handle case when $data is empty
+                        ?>
+                            <tr>
+                                <td colspan="8" class="text-center">No teacher data available.</td>
+                            </tr>
+                        <?php
+                        }
+                        ?>
                 </tbody>
             </table>
             <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
@@ -100,69 +113,101 @@
     </div>
 </div>
 <script>
-    $(document).ready(function() {
-        $("#cls").change(function() {
+    $(document).ready(function () {
+        // Submit form when class is changed
+        $("#cls").change(function () {
             $("#uniqcls").submit();
         });
-        $(".upd").click(function() {
-            var sid = $(this).parent().parent("tr").children("td.sid").text();
-            var sname = $(this).parent().parent("tr").children("td.sname").text();
-            var sclass = $(this).parent().parent("tr").children("td.sclass").text();
-            var sphone = $(this).parent().parent("tr").children("td.phone").text();
-            var smail = $(this).parent().parent("tr").children("td.smail").text();
-            var spass = $(this).parent().parent("tr").children("td.spass").text();
-            var subj = $(this).parent().parent("tr").children("td.subj").text();
-            var sfees = $(this).parent().parent("tr").children("td.sfees").text();
-            var spaid = $(this).parent().parent("tr").children("td.spaid").text();
-            $("#inputid").attr("value", sid);
-            $("#staticname").attr("value", sname);
-            $("#inputclass").attr("value", sclass);
-            $("#inputphone").attr("value", sphone);
-            $("#inputpass").attr("value", spass);
-            $("#inputsubj").attr("value", subj);
-            $("#inputfees").attr("value", sfees);
-            $("#inputpaid").attr("value", spaid);
-        })
-        $("#inputclass").keyup(function() {
-            var cls = $("#inputclass").val();
+
+        // Populate modal fields when "Update" button is clicked
+        $(".upd").click(function () {
+            var row = $(this).closest("tr"); // Cache the row for better performance
+            var sid = row.find("td.sid").text();
+            var sname = row.find("td.sname").text();
+            var sphone = row.find("td.phone").text();
+            var smail = row.find("td.smail").text();
+            var spass = row.find("td.spass").text();
+
+            // Populate modal fields
+            $("#inputid").val(sid);
+            $("#staticname").val(sname);
+            $("#inputphone").val(sphone);
+            $("#inputmail").val(smail);
+            $("#inputpass").val(spass);
+        });
+
+        // Handle class input changes
+        $("#inputclass").change(function () {
+            var cls = Number($(this).val());
             if (cls <= 10) {
-                $("#subj").css("display", "none");
-                $("#inputsubj").css("display", "none");
-                $("#inputsubj").attr("value", "all");
+                $("#subj").hide();
+                $("#inputsubj").hide().val("all");
             } else {
-                $("#subj").css("display", "block");
-                $("#inputsubj").css("display", "block");
-                $("#inputsubj").attr("value", "");
+                $("#subj").show();
+                $("#inputsubj").show().val("");
             }
         });
-        $("#inputpaid").focusout(function() {
-            var sfees = $("#inputfees").val();
-            var spaid = $("#inputpaid").val();
-            if (Number(spaid.trim()) > Number(sfees.trim())) {
-                alert("Paid Fees cannot be greater than total fees");
-                $("#inputpaid").css("border-color", "red");
-            } else {
-                $("#inputpaid").css("border-color", "#ced4da");
+
+        // Validate paid fees
+        $("#inputpaid").focusout(function () {
+            var sfees = Number($("#inputfees").val());
+            var spaid = Number($(this).val());
+            if (!sfees || !spaid) {
+                alert("Please enter valid fees amounts.");
+                $(this).css("border-color", "red");
+                return;
             }
-        });
-        $("#sbm").click(function() {
-            var sname = $("#staticname").val();
-            var sclass = $("#inputclass").val();
-            var sphone = $("#inputphone").val();
-            var smail = $("#inputmail").val();
-            var spass = $("#inputpass").val();
-            var spasscon = $("#inputpasscon").val();
-            var sfees = $("#inputfees").val();
-            var spaid = $("#inputpaid").val();
-            var sdate = $("#inputdate").val();
-            if (sname.trim() == '' || sclass.trim() == '' || sphone.trim() == '' || smail.trim() == '' || spass.trim() == '' || spasscon.trim() == '' || sfees.trim() == '' || spaid.trim() == '') {
-                alert("Field(s) cannot be empty");
-                return false;
-            }
-            if (Number(spaid.trim()) > Number(sfees.trim())) {
+            if (spaid > sfees) {
                 alert("Paid Fees cannot be greater than Total Fees");
-                return false;
+                $(this).css("border-color", "red");
+            } else {
+                $(this).css("border-color", "#ced4da");
             }
         });
-    })
+
+        // Validate form before submission
+        $("#sbm").click(function (e) {
+            var sname = $("#staticname").val().trim();
+            var sphone = $("#inputphone").val().trim();
+            var smail = $("#inputmail").val().trim();
+            var spass = $("#inputpass").val().trim();
+
+            if (!sname || !sphone || !smail || !spass) {
+                alert("Field(s) cannot be empty");
+                e.preventDefault();
+                return false;
+            }
+
+            // Validate phone number
+            if (!/^\d{10}$/.test(sphone)) {
+                alert("Please enter a valid 10-digit phone number.");
+                $("#inputphone").css("border-color", "red");
+                e.preventDefault();
+                return false;
+            } else {
+                $("#inputphone").css("border-color", "#ced4da");
+            }
+
+            // Validate email format
+            var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(smail)) {
+                alert("Please enter a valid email address.");
+                $("#inputmail").css("border-color", "red");
+                e.preventDefault();
+                return false;
+            } else {
+                $("#inputmail").css("border-color", "#ced4da");
+            }
+
+            // Validate password length
+            if (spass.length < 8 || spass.length > 15) {
+                alert("Password must be between 8 and 15 characters.");
+                $("#inputpass").css("border-color", "red");
+                e.preventDefault();
+                return false;
+            } else {
+                $("#inputpass").css("border-color", "#ced4da");
+            }
+        });
+    });
 </script>

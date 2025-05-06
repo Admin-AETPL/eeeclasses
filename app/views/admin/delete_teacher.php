@@ -32,20 +32,36 @@
                 </thead>
                 <tbody>
                     <?php
-                    $i = 1;
-                    foreach ($data as $det) {
-                    ?>
-                        <tr>
-                            <td><?php echo $i;  ?></td>
-                            <td class="text-center"><img src="<?php echo $home.$det["teacher_photo"]; ?>" style="height:100px" alt="" class="img-fluid imghover"></td>
-                            <td><?php echo $det["teacher_id"]; ?></td>
-                            <td><?php echo $det["teacher_name"]; ?></td>
-                            <td class="text-center"><a href="<?php echo $home ?>admin_teachers/delete/<?php echo $det["teacher_id"]; ?>" class="btn btn-danger text-white">Delete</a></td>
-                        </tr>
-                    <?php
-                    $i++;
-                    }
-                    ?>
+                        $i = 1;
+                        if (!empty($data)) { // Check if $data is not empty
+                            foreach ($data as $det) {
+                        ?>
+                                <tr>
+                                    <td><?php echo $i; ?></td>
+                                    <td class="text-center">
+                                        <img src="<?php echo htmlspecialchars($home . $det["teacher_photo"]); ?>" style="height:100px" alt="Teacher Photo" class="img-fluid imghover">
+                                    </td>
+                                    <td><?php echo htmlspecialchars($det["teacher_id"]); ?></td>
+                                    <td><?php echo htmlspecialchars($det["teacher_name"]); ?></td>
+                                    <td class="text-center">
+                                        <a href="<?php echo $home ?>admin_teachers/delete/<?php echo htmlspecialchars($det["teacher_id"]); ?>" 
+                                        class="btn btn-danger text-white delete-btn" 
+                                        onclick="return confirm('Are you sure you want to delete this teacher?');">
+                                        Delete
+                                        </a>
+                                    </td>
+                                </tr>
+                        <?php
+                                $i++;
+                            }
+                        } else { // Handle case when $data is empty
+                        ?>
+                            <tr>
+                                <td colspan="5" class="text-center">No teacher data available.</td>
+                            </tr>
+                        <?php
+                        }
+                        ?>
                 </tbody>
             </table>
         </div>

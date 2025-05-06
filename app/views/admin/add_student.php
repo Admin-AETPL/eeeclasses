@@ -108,22 +108,31 @@
 </div>
     <script>
         $(document).ready(function() {
-            $("#inputclass").keyup(function() {
-                var cls = $("#inputclass").val();
+            $("#inputclass").change(function() {
+                var cls = Number($("#inputclass").val());
+                if (!cls || cls < 7 || cls > 12) {
+                    alert("Please enter a valid class between 7 and 12.");
+                    return;
+                }
                 if (cls <= 10) {
                     $("#subj").css("display", "none");
                     $("#inputsubj").css("display", "none");
-                    $("#inputsubj").attr("value", "all");
+                    $("#inputsubj").val("all");
                 } else {
                     $("#subj").css("display", "block");
                     $("#inputsubj").css("display", "block");
-                    $("#inputsubj").attr("value", "");
+                    $("#inputsubj").val("");
                 }
             });
             $("#inputpaid").focusout(function() {
-                var sfees = $("#inputfees").val();
-                var spaid = $("#inputpaid").val();
-                if (Number(spaid.trim()) > Number(sfees.trim())) {
+                var sfees = Number($("#inputfees").val());
+                var spaid = Number($("#inputpaid").val());
+                if (!sfees || !spaid) {
+                    alert("Please enter valid fees amounts.");
+                    $("#inputpaid").css("border-color", "red");
+                    return;
+                }
+                if (spaid > sfees) {
                     alert("Paid Fees cannot be greater than total fees");
                     $("#inputpaid").css("border-color", "red");
                 } else {
@@ -133,69 +142,79 @@
             $("#inputpasscon").focusout(function() {
                 var spass = $("#inputpass").val();
                 var spasscon = $("#inputpasscon").val();
-                if (spass.trim() != spasscon.trim()) {
+                if (!spass || !spasscon) {
+                    alert("Password fields cannot be empty.");
+                    $("#inputpasscon").css("border-color", "red");
+                    return;
+                }
+                if (spass !== spasscon) {
                     alert("Passwords do not match");
                     $("#inputpasscon").css("border-color", "red");
                 } else {
                     $("#inputpasscon").css("border-color", "#ced4da");
                 }
             });
-            $("#sbm").click(function() {
+            $("#sbm").click(function(e) {
+                e.preventDefault(); // Prevent form submission
                 var sname = $("#staticname").val();
-                var sclass = $("#inputclass").val();
+                var sclass = Number($("#inputclass").val());
                 var sphone = $("#inputphone").val();
                 var smail = $("#inputmail").val();
                 var spass = $("#inputpass").val();
                 var spasscon = $("#inputpasscon").val();
-                var sfees = $("#inputfees").val();
-                var spaid = $("#inputpaid").val();
+                var sfees = Number($("#inputfees").val());
+                var spaid = Number($("#inputpaid").val());
                 var sdate = $("#inputdate").val();
-                if (sname.trim() == '' || sclass.trim() == '' || sphone.trim() == '' || smail.trim() == '' || spass.trim() == '' || spasscon.trim() == '' || sfees.trim() == '' || spaid.trim() == '') {
+
+                if (!sname || !sclass || !sphone || !smail || !spass || !spasscon || !sfees || !spaid) {
                     alert("Field(s) cannot be empty");
                     return false;
                 }
-                if (spass.trim() != spasscon.trim()) {
+                if (spass !== spasscon) {
                     alert("Passwords do not match");
                     return false;
                 }
-                if (Number(spaid.trim()) > Number(sfees.trim())) {
+                if (spaid > sfees) {
                     alert("Paid Fees cannot be greater than Total Fees");
                     return false;
                 }
+
                 $.ajax({
                     url: "http://localhost/eeeclasses/eeeclasses.info/stud_exists/index",
                     method: "post",
-                    data: "stud_mail=" + smail,
+                    data: { stud_mail: smail },
                     success: function(result) {
-                        if (result == 'Exists') {
-                            return false;
+                        if (result === 'Exists') {
+                            alert("Email already exists");
+                            $("#inputmail").css("border-color", "red");
                         } else {
-                            return true;
+                            $("#inputmail").css("border-color", "#ced4da");
+                            $("form").submit(); // Submit the form if validation passes
                         }
                     },
                     error: function(xhr) {
-                        alert(xhr.status + " " + xhr.statusText)
+                        alert(xhr.status + " " + xhr.statusText);
                     }
-                })
+                });
             });
             $("#inputmail").focusout(function() {
                 var smail = $("#inputmail").val();
                 $.ajax({
                     url: "http://localhost/eeeclasses/eeeclasses.info/stud_exists/index",
                     method: "post",
-                    data: "stud_mail=" + smail,
+                    data: { stud_mail: smail },
                     success: function(result) {
-                        if (result == 'Exists') {
-                            alert(result);
+                        if (result === 'Exists') {
+                            alert("Email already exists");
                             $("#inputmail").css("border-color", "red");
                         } else {
                             $("#inputmail").css("border-color", "#ced4da");
                         }
                     },
                     error: function(xhr) {
-                        alert(xhr.status + " " + xhr.statusText)
+                        alert(xhr.status + " " + xhr.statusText);
                     }
-                })
-            })
+                });
+            });
         })
     </script>

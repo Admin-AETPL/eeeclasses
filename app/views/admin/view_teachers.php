@@ -37,22 +37,32 @@
                 </thead>
                 <tbody>
                     <?php
-                    $i = 1;
-                    foreach ($data as $det) {
-                    ?>
-                        <tr>
-                            <td><?php echo $i;  ?></td>
-                            <td class="text-center"><img src="<?php echo $home.$det["teacher_photo"]; ?>" style="height:100px" alt="" class="img-fluid imghover" data-bs-toggle="modal" data-bs-target="#myModal"></td>
-                            <td><?php echo $det["teacher_id"]; ?></td>
-                            <td><?php echo $det["teacher_name"]; ?></td>
-                            <td><?php echo $det["teacher_phone"]; ?></td>
-                            <td><?php echo $det["teacher_mail"]; ?></td>
-                            <td><?php echo $det["teacher_pass"]; ?></td>
-                        </tr>
-                    <?php
-                        $i++;
-                    }
-                    ?>
+                        $i = 1;
+                        if (!empty($data)) { // Check if $data is not empty
+                            foreach ($data as $det) {
+                        ?>
+                                <tr>
+                                    <td><?php echo $i; ?></td>
+                                    <td class="text-center">
+                                        <img src="<?php echo htmlspecialchars($home . $det["teacher_photo"]); ?>" style="height:100px" alt="Teacher Photo" class="img-fluid imghover" data-bs-toggle="modal" data-bs-target="#myModal">
+                                    </td>
+                                    <td><?php echo htmlspecialchars($det["teacher_id"]); ?></td>
+                                    <td><?php echo htmlspecialchars($det["teacher_name"]); ?></td>
+                                    <td><?php echo htmlspecialchars($det["teacher_phone"]); ?></td>
+                                    <td><?php echo htmlspecialchars($det["teacher_mail"]); ?></td>
+                                    <td><?php echo htmlspecialchars($det["teacher_pass"]); ?></td>
+                                </tr>
+                        <?php
+                                $i++;
+                            }
+                        } else { // Handle case when $data is empty
+                        ?>
+                            <tr>
+                                <td colspan="7" class="text-center">No teacher data available.</td>
+                            </tr>
+                        <?php
+                        }
+                        ?>
                 </tbody>
             </table>
         </div>

@@ -5,13 +5,13 @@ class Admin extends Controller
     {
         if (isset($_SESSION["admin"])) {
             $db = $this->model("select");
-            $qry = "select count(stud_id) from eee_students";
+            $qry = "select count(stud_id) as total_students from eee_students";
             $data = $db->sel($qry);
-            $qry1 = "select count(teacher_id) from eee_teachers";
+            $qry1 = "select count(teacher_id) as total_teachers from eee_teachers";
             $data1 = $db->sel($qry1);
-            $qry = "select count(sno) from eee_question where status='unanswered'";
+            $qry = "select count(sno) as total_quest from eee_question where status='unanswered'";
             $extra = $db->sel($qry);
-            $qry1 = "select count(sno) from eee_feedback where status='under review'";
+            $qry1 = "select count(sno) as total_rev from eee_feedback where status='under review'";
             $more = $db->sel($qry1);
             $this->view('admin/header', $title = 'EEE Classes - Admin');
             $this->view('admin/sidebar');
@@ -52,7 +52,7 @@ class Admin extends Controller
             if ($cls == '' || $cls == 'all') {
                 $qry = "select * from eee_students where account_status='active'";
             } else {
-                $qry = "select * from eee_students where stud_class='" . $cls . "' account_status='active'";
+                $qry = "select * from eee_students where stud_class='" . $cls . "' AND account_status='active'";
             }
             $db = $this->model("select");
             $data = $db->sel($qry);

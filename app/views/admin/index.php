@@ -6,7 +6,7 @@
                 <p class="display-2 text-primary fw-bold text-center">
                     <?php
                     foreach($data as $det)
-                       echo $det["count(stud_id)"];
+                       echo $det["total_students"];
                     ?>
                 </p>
                 <a href="<?php echo $home ?>admin/students" class="btn bg-coral text-white">View</a>
@@ -18,7 +18,7 @@
                 <p class="display-2 text-primary fw-bold text-center">
                 <?php
                     foreach($title as $det1)
-                       echo $det1["count(teacher_id)"];
+                       echo $det1["total_teachers"];
                     ?>
                 </p>
                 <a href="<?php echo $home ?>admin/teachers" class="btn bg-coral text-white">View</a>
@@ -34,7 +34,7 @@
                 else
                 {
                     foreach($extra as $det1)
-                       echo $det1["count(sno)"];
+                       echo $det1["total_quest"];
                 }
                 ?>
                 </p>
@@ -47,7 +47,7 @@
                 <p class="display-2 text-primary fw-bold text-center">
                 <?php
                     foreach($more as $det1)
-                       echo $det1["count(sno)"];
+                       echo $det1["total_rev"];
                     ?>
                 </p>
                 <a href="<?php echo $home ?>admin/feedback" class="btn bg-coral text-white">View</a>
