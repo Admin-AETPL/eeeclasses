@@ -82,7 +82,7 @@
                 
                 <!-- Logout -->
                 <div class="text-center">
-                    <a style="border-radius: 20px;" href="<?php echo $home ?>admin/login" 
+                    <a style="border-radius: 20px;" href="<?php echo $home ?>admin_users/logout" 
                        class="btn btn-outline-danger w-100">
                         Logout
                     </a>
