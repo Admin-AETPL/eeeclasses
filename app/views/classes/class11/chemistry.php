@@ -1,3 +1,25 @@
+<?php
+function renderChapterButtons($chapterNo, $classNo = "11", $subject = "Physics", $home = "") {
+    $notesPath = "study_material/$classNo/notes/$subject/Chapter$chapterNo.pdf";
+    $examplesPath = "study_material/$classNo/examples/$subject/Chapter$chapterNo.pdf";
+
+    echo '<div class="text-start mb-3">';
+
+    if (file_exists($notesPath)) {
+        echo '<a target="_blank" href="' . $home . $notesPath . '" class="btn align-middle btn-outline-primary">Study Material/Notes</a>';
+    } else {
+        echo '<button type="button" class="btn align-middle btn-outline-primary" data-bs-toggle="modal" data-bs-target="#comingSoonModal1">Study Material/Notes</button>';
+    }
+
+    if (file_exists($examplesPath)) {
+        echo '<a target="_blank" href="' . $home . $examplesPath . '" class="btn align-middle btn-outline-primary">Solved Examples</a>';
+    } else {
+        echo '<button type="button" class="btn align-middle btn-outline-primary" data-bs-toggle="modal" data-bs-target="#comingSoonModal2">Solved Examples</button>';
+    }
+
+    echo '</div>';
+}
+?>
 <style>
     .physics-laws img {
         height: 216px !important;
@@ -54,10 +76,7 @@
                                         and molecular formula, chemical reactions, stoichiometry and calculations based on stoichiometry.
                                     </p>
                                 </div>
-                                <div class="text-start my-1">
-                                    <a target="_blank" href="<?php echo $home ?>study_material/11/notes/Chemistry/Chapter1.pdf" class="btn align-middle btn-outline-primary">Sample Notes</a>
-                                    
-                                </div>
+                                <?php renderChapterButtons(1, "11", "Chemistry", $home); ?>
                             </div>
                         </div>
                     </div>
@@ -78,6 +97,7 @@
                                         principle, Pauli's exclusion principle and Hund's rule, electronic configuration of atoms,
                                         stability of half-filled and completely filled orbitals.
                                     </p>
+                                    <?php renderChapterButtons(2, "11", "Chemistry", $home); ?>
                                 </div>
                                 <div class="text-start my-1">
                                     <a target="_blank" href="<?php echo $home ?>study_material/11/notes/Chemistry/Chapter2.pdf" class="btn align-middle btn-outline-primary">Sample Notes</a>
@@ -100,6 +120,7 @@
                                         elements -atomic radii, ionic radii, inert gas radii, Ionization enthalpy, electron gain
                                         enthalpy, electronegativity, valiancy, Nomenclature of elements with atomic number
                                         greater than 100.</p>
+                                        <?php renderChapterButtons(3, "11", "Chemistry", $home); ?>
                                 </div>
                                 <div class="text-start my-1">
                                     <a target="_blank" href="<?php echo $home ?>study_material/11/notes/Chemistry/Chapter3.pdf" class="btn align-middle btn-outline-primary">Sample Notes</a>
@@ -124,6 +145,7 @@
                                         idea only), Hydrogen bond.
 
                                     </p>
+                                    <?php renderChapterButtons(4, "11", "Chemistry", $home); ?>
                                 </div>
                             </div>
                         </div>
@@ -147,6 +169,7 @@
                                         non- spontaneous processes, criteria for equilibrium, Third law of thermodynamics (brief
                                         introduction). 
                                     </p>
+                                    <?php renderChapterButtons(5, "11", "Chemistry", $home); ?>
                                 </div>
                             </div>
                         </div>
@@ -168,6 +191,7 @@
                                         effect (with illustrative examples).
 
                                     </p>
+                                    <?php renderChapterButtons(6, "11", "Chemistry", $home); ?>
                                 </div>
                             </div>
                         </div>
@@ -185,6 +209,7 @@
                                         reactions, in terms of loss and gain of electrons and change in oxidation number,
                                         applications of redox reactions.
                                     </p>
+                                    <?php renderChapterButtons(7, "11", "Chemistry", $home); ?>
                                 </div>
                             </div>
                         </div>
@@ -207,6 +232,7 @@
                                     conjugation. Homolytic and heterolytic fission of a covalent bond: free radicals,
                                     carbocations, carbanions, electrophiles and nucleophiles, types of organic reactions.
                                 </p>
+                                <?php renderChapterButtons(8, "11", "Chemistry", $home); ?>
                             </div>
                         </div>
                     </div>
@@ -237,6 +263,7 @@
                                     Friedel Craft's alkylation and acylation, directive influence of functional group in mono
                                     substituted benzene, carcinogenicity and toxicity
                                 </p>
+                                <?php renderChapterButtons(9, "11", "Chemistry", $home); ?>
                             </div>
                         </div>
                     </div>
@@ -339,4 +366,38 @@
             </div>
         </div>
     </div>
+</div>
+<!-- Modal (Only once in the whole page) -->
+<div class="modal fade" id="comingSoonModal1" tabindex="-1" aria-labelledby="comingSoonLabel1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content border-primary shadow">
+      <div class="modal-header bg-primary text-white">
+        <h5 class="modal-title" id="comingSoonLabel1"><i class="fas fa-info-circle"></i> Coming Soon</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body text-dark">
+        Study Material/Notes are not yet available but going to come soon.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-sm btn-outline-primary" data-bs-dismiss="modal">Okay</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="comingSoonModal2" tabindex="-1" aria-labelledby="comingSoonLabel2" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content border-primary shadow">
+      <div class="modal-header bg-primary text-white">
+        <h5 class="modal-title" id="comingSoonLabel2"><i class="fas fa-info-circle"></i> Coming Soon</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body text-dark">
+        Solved Examples are not yet available but going to come soon.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-sm btn-outline-primary" data-bs-dismiss="modal">Okay</button>
+      </div>
+    </div>
+  </div>
 </div>

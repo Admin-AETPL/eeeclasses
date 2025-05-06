@@ -68,45 +68,82 @@
 <div class="pcmb bg-light py-3">
     <div class="container">
         <div class="row">
-            <div class="col-12 col-sm-12">
-                <h3 class="h3 text-dark text-center">Subjects</h3>
-            </div>
-            <div class="col-12 col-sm-4 my-1 order-1 order-sm-1" id="maths">
-                
-                    <div class="text-center bg-white pb-2 rounded subj">
-                        <img src="<?php echo $home ?>img/background/class9maths.jpg" alt="" class="rounded-top img-fluid">
-                        <h4 class="h4 text-dark text-center">Mathematics</h4>
-                    </div>
-                
-            </div>
-            <div class="col-12 col-sm-8 my-1 order-2 order-sm-2">
-                <div class="accordion" id="accordionExample">
-                    <?php
-                    $i = 1;
-                    foreach ($data as $det) {
-                    ?>
+        <div class="col-12 col-sm-12">
+    <h3 class="h3 text-dark text-center">Subjects</h3>
+</div>
 
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="heading<?php echo $i; ?>">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse<?php echo $i; ?>" aria-expanded="false" aria-controls="collapse<?php echo $i; ?>">
-                                    <?php echo "Chapter " . $det["chapter_no"] . " - " . $det["chapter_name"]; ?>
-                                </button>
-                            </h2>
-                            <div id="collapse<?php echo $i; ?>" class="accordion-collapse collapse" aria-labelledby="heading<?php echo $i; ?>" data-bs-parent="#accordionExample">
-                                <div class="accordion-body">
-                                    <div class="text-start">
-                                        <a target="_blank" href="<?php echo $home ?>study_material/<?php echo $det["class_no"] . "/notes/" . $det["subject"]; ?>/Chapter<?php echo $det["chapter_no"]; ?>.pdf" class="btn align-middle btn-outline-primary">Study Material/Notes</a>
-                                        <a target="_blank" href="<?php echo $home ?>study_material/<?php echo $det["class_no"] . "/examples/" . $det["subject"]; ?>/Chapter<?php echo $det["chapter_no"]; ?>.pdf" class="btn btn-outline-primary align-middle">Solved Examples</a>
-                                    </div>
-                                </div>
-                            </div>
+<div class="col-12 col-sm-4 my-1 order-1 order-sm-1" id="maths">
+    <div class="text-center bg-white pb-2 rounded subj">
+        <img src="<?php echo $home ?>img/background/class9maths.jpg" alt="" class="rounded-top img-fluid">
+        <h4 class="h4 text-dark text-center">Mathematics</h4>
+    </div>
+</div>
+
+<div class="col-12 col-sm-8 my-1 order-2 order-sm-2">
+    <div class="accordion" id="accordionExample">
+        <?php
+        $i = 1;
+        foreach ($data as $det) {
+        ?>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="heading<?php echo $i; ?>">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse<?php echo $i; ?>" aria-expanded="false" aria-controls="collapse<?php echo $i; ?>">
+                        <?php echo "Unit " . $det["chapter_no"] . " - " . $det["chapter_name"]; ?>
+                    </button>
+                </h2>
+                <div id="collapse<?php echo $i; ?>" class="accordion-collapse collapse" aria-labelledby="heading<?php echo $i; ?>" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <!-- Syllabus Section -->
+                        <div class="text-start mb-3">
+                            <!-- <h5 class="h5 text-dark fw-bold">
+                                Chapter <?php echo $det["chapter_no"]; ?>: <?php echo $det["chapter_name"]; ?>
+                            </h5> -->
+                            <p class="text-dark">
+                                <?php echo nl2br(htmlspecialchars($det['syllabus'])); ?>
+                            </p>
                         </div>
-                    <?php
-                        $i++;
-                    }
-                    ?>
+                        <div class="text-start">
+                        <?php
+                                // File paths
+                                $notesPath = "study_material/" . $det["class_no"] . "/notes/" . $det["subject"] . "/Chapter" . $det["chapter_no"] . ".pdf";
+                                $examplesPath = "study_material/" . $det["class_no"] . "/examples/" . $det["subject"] . "/Chapter" . $det["chapter_no"] . ".pdf";
+                            ?>
+
+                            <div class="text-start">
+                                <!-- Study Material / Notes Button -->
+                                <?php if (file_exists($notesPath)) { ?>
+                                    <a target="_blank" href="<?php echo $home . $notesPath; ?>" class="btn align-middle btn-outline-primary">
+                                        Study Material/Notes
+                                    </a>
+                                <?php } else { ?>
+                                    <button type="button" class="btn align-middle btn-outline-primary" data-bs-toggle="modal" data-bs-target="#comingSoonModal1">
+                                        Study Material/Notes
+                                    </button>
+                                <?php } ?>
+
+                                <!-- Solved Examples Button -->
+                                <?php if (file_exists($examplesPath)) { ?>
+                                    <a target="_blank" href="<?php echo $home . $examplesPath; ?>" class="btn align-middle btn-outline-primary">
+                                        Solved Examples
+                                    </a>
+                                <?php } else { ?>
+                                    <button type="button" class="btn align-middle btn-outline-primary" data-bs-toggle="modal" data-bs-target="#comingSoonModal2">
+                                        Solved Examples
+                                    </button>
+                                <?php } ?>
+                            </div>
+
+                        </div>
+                    </div>
                 </div>
             </div>
+        <?php
+            $i++;
+        }
+        ?>
+    </div>
+</div>
+
             <div class="col-12 col-sm-8 my-2 order-sm-3 order-4">
                 <div class="accordion" id="accordionExample1">
                     <?php
@@ -122,10 +159,48 @@
                             </h2>
                             <div id="collapsesc<?php echo $i; ?>" class="accordion-collapse collapse" aria-labelledby="headingsc<?php echo $i; ?>" data-bs-parent="#accordionExample1">
                                 <div class="accordion-body">
+
+                                <!-- Syllabus Section -->
+                                <div class="text-start mb-3">
+                                    <!-- <h5 class="h5 text-dark fw-bold">
+                                        Chapter <?php echo $det["chapter_no"]; ?>: <?php echo $det["chapter_name"]; ?>
+                                    </h5> -->
+                                    <p class="text-dark">
+                                        <?php echo nl2br(htmlspecialchars($det['syllabus'])); ?>
+                                    </p>
+                                </div>
+                                <div class="text-start">
+                                <?php
+                                        // File paths
+                                        $notesPath = "study_material/" . $det["class_no"] . "/notes/" . $det["subject"] . "/Chapter" . $det["chapter_no"] . ".pdf";
+                                        $examplesPath = "study_material/" . $det["class_no"] . "/examples/" . $det["subject"] . "/Chapter" . $det["chapter_no"] . ".pdf";
+                                    ?>
+
                                     <div class="text-start">
-                                        <a target="_blank" href="<?php echo $home ?>study_material/<?php echo $det["class_no"] . "/notes/" . $det["subject"]; ?>/Chapter<?php echo $det["chapter_no"]; ?>.pdf" class="btn align-middle btn-outline-primary">Study Material/Notes</a>
-                                        <a target="_blank" href="<?php echo $home ?>study_material/<?php echo $det["class_no"] . "/examples/" . $det["subject"]; ?>/Chapter<?php echo $det["chapter_no"]; ?>.pdf" class="btn btn-outline-primary align-middle">Solved Examples</a>
+                                        <!-- Study Material / Notes Button -->
+                                        <?php if (file_exists($notesPath)) { ?>
+                                            <a target="_blank" href="<?php echo $home . $notesPath; ?>" class="btn align-middle btn-outline-primary">
+                                                Study Material/Notes
+                                            </a>
+                                        <?php } else { ?>
+                                            <button type="button" class="btn align-middle btn-outline-primary" data-bs-toggle="modal" data-bs-target="#comingSoonModal1">
+                                                Study Material/Notes
+                                            </button>
+                                        <?php } ?>
+
+                                        <!-- Solved Examples Button -->
+                                        <?php if (file_exists($examplesPath)) { ?>
+                                            <a target="_blank" href="<?php echo $home . $examplesPath; ?>" class="btn align-middle btn-outline-primary">
+                                                Solved Examples
+                                            </a>
+                                        <?php } else { ?>
+                                            <button type="button" class="btn align-middle btn-outline-primary" data-bs-toggle="modal" data-bs-target="#comingSoonModal2">
+                                                Solved Examples
+                                            </button>
+                                        <?php } ?>
                                     </div>
+
+                                </div>
                                 </div>
                             </div>
                         </div>
@@ -145,4 +220,39 @@
             </div>
         </div>
     </div>
+</div>
+
+<!-- Modal (Only once in the whole page) -->
+<div class="modal fade" id="comingSoonModal1" tabindex="-1" aria-labelledby="comingSoonLabel1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content border-primary shadow">
+      <div class="modal-header bg-primary text-white">
+        <h5 class="modal-title" id="comingSoonLabel1"><i class="fas fa-info-circle"></i> Coming Soon</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body text-dark">
+        Study Material/Notes are not yet available but going to come soon.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-sm btn-outline-primary" data-bs-dismiss="modal">Okay</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="comingSoonModal2" tabindex="-1" aria-labelledby="comingSoonLabel2" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content border-primary shadow">
+      <div class="modal-header bg-primary text-white">
+        <h5 class="modal-title" id="comingSoonLabel2"><i class="fas fa-info-circle"></i> Coming Soon</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body text-dark">
+        Solved Examples are not yet available but going to come soon.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-sm btn-outline-primary" data-bs-dismiss="modal">Okay</button>
+      </div>
+    </div>
+  </div>
 </div>

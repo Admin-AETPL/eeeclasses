@@ -120,10 +120,48 @@
                             </h2>
                             <div id="collapse<?php echo $i; ?>" class="accordion-collapse collapse" aria-labelledby="heading<?php echo $i; ?>" data-bs-parent="#accordionExample">
                                 <div class="accordion-body">
-                                    <div class="text-start">
-                                        <a target="_blank" href="<?php echo $home ?>study_material/<?php echo $det["class_no"] . "/notes/" . $det["subject"]; ?>/Chapter<?php echo $det["chapter_no"]; ?>.pdf" class="btn align-middle btn-outline-primary">Study Material/Notes</a>
-                                        <a target="_blank" href="<?php echo $home ?>study_material/<?php echo $det["class_no"] . "/examples/" . $det["subject"]; ?>/Chapter<?php echo $det["chapter_no"]; ?>.pdf" class="btn btn-outline-primary align-middle">Solved Examples</a>
-                                    </div>
+                                    <!-- Syllabus Section -->
+                                        <div class="text-start mb-3">
+                                            <!-- <h5 class="h5 text-dark fw-bold">
+                                                Chapter <?php echo $det["chapter_no"]; ?>: <?php echo $det["chapter_name"]; ?>
+                                            </h5> -->
+                                            <p class="text-dark">
+                                                <?php echo nl2br(htmlspecialchars($det['syllabus'])); ?>
+                                            </p>
+                                        </div>
+                                        <div class="text-start">
+                                        <?php
+                                                // File paths
+                                                $notesPath = "study_material/" . $det["class_no"] . "/notes/" . $det["subject"] . "/Chapter" . $det["chapter_no"] . ".pdf";
+                                                $examplesPath = "study_material/" . $det["class_no"] . "/examples/" . $det["subject"] . "/Chapter" . $det["chapter_no"] . ".pdf";
+                                            ?>
+
+                                            <div class="text-start">
+                                                <!-- Study Material / Notes Button -->
+                                                <?php if (file_exists($notesPath)) { ?>
+                                                    <a target="_blank" href="<?php echo $home . $notesPath; ?>" class="btn align-middle btn-outline-primary">
+                                                        Study Material/Notes
+                                                    </a>
+                                                <?php } else { ?>
+                                                    <button type="button" class="btn align-middle btn-outline-primary" data-bs-toggle="modal" data-bs-target="#comingSoonModal1">
+                                                        Study Material/Notes
+                                                    </button>
+                                                <?php } ?>
+
+                                                <!-- Solved Examples Button -->
+                                                <?php if (file_exists($examplesPath)) { ?>
+                                                    <a target="_blank" href="<?php echo $home . $examplesPath; ?>" class="btn align-middle btn-outline-primary">
+                                                        Solved Examples
+                                                    </a>
+                                                <?php } else { ?>
+                                                    <button type="button" class="btn align-middle btn-outline-primary" data-bs-toggle="modal" data-bs-target="#comingSoonModal2">
+                                                        Solved Examples
+                                                    </button>
+                                                <?php } ?>
+                                            </div>
+
+                                        </div>
+
                                 </div>
                             </div>
                         </div>
@@ -148,10 +186,48 @@
                             </h2>
                             <div id="collapsesc<?php echo $i; ?>" class="accordion-collapse collapse" aria-labelledby="headingsc<?php echo $i; ?>" data-bs-parent="#accordionExample1">
                                 <div class="accordion-body">
-                                    <div class="text-start">
-                                        <a target="_blank" href="<?php echo $home ?>study_material/<?php echo $det["class_no"] . "/notes/" . $det["subject"]; ?>/Chapter<?php echo $det["chapter_no"]; ?>.pdf" class="btn align-middle btn-outline-primary">Study Material/Notes</a>
-                                        <a target="_blank" href="<?php echo $home ?>study_material/<?php echo $det["class_no"] . "/examples/" . $det["subject"]; ?>/Chapter<?php echo $det["chapter_no"]; ?>.pdf" class="btn btn-outline-primary align-middle">Solved Examples</a>
-                                    </div>
+                                    <!-- Syllabus Section -->
+                            <div class="text-start mb-3">
+                                <!-- <h5 class="h5 text-dark fw-bold">
+                                    Chapter <?php echo $det["chapter_no"]; ?>: <?php echo $det["chapter_name"]; ?>
+                                </h5> -->
+                                <p class="text-dark">
+                                    <?php echo nl2br(htmlspecialchars($det['syllabus'])); ?>
+                                </p>
+                            </div>
+                            <div class="text-start">
+                                <?php
+                                    // File paths
+                                    $notesPath = "study_material/" . $det["class_no"] . "/notes/" . $det["subject"] . "/Chapter" . $det["chapter_no"] . ".pdf";
+                                    $examplesPath = "study_material/" . $det["class_no"] . "/examples/" . $det["subject"] . "/Chapter" . $det["chapter_no"] . ".pdf";
+                                ?>
+
+                                <div class="text-start">
+                                    <!-- Study Material / Notes Button -->
+                                    <?php if (file_exists($notesPath)) { ?>
+                                        <a target="_blank" href="<?php echo $home . $notesPath; ?>" class="btn align-middle btn-outline-primary">
+                                            Study Material/Notes
+                                        </a>
+                                    <?php } else { ?>
+                                        <button type="button" class="btn align-middle btn-outline-primary" data-bs-toggle="modal" data-bs-target="#comingSoonModal1">
+                                            Study Material/Notes
+                                        </button>
+                                    <?php } ?>
+
+                                    <!-- Solved Examples Button -->
+                                    <?php if (file_exists($examplesPath)) { ?>
+                                        <a target="_blank" href="<?php echo $home . $examplesPath; ?>" class="btn align-middle btn-outline-primary">
+                                            Solved Examples
+                                        </a>
+                                    <?php } else { ?>
+                                        <button type="button" class="btn align-middle btn-outline-primary" data-bs-toggle="modal" data-bs-target="#comingSoonModal2">
+                                            Solved Examples
+                                        </button>
+                                    <?php } ?>
+                                </div>
+
+                            </div>
+
                                 </div>
                             </div>
                         </div>
@@ -172,3 +248,39 @@
         </div>
     </div>
 </div>
+
+<!-- Modal (Only once in the whole page) -->
+<div class="modal fade" id="comingSoonModal1" tabindex="-1" aria-labelledby="comingSoonLabel1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content border-primary shadow">
+      <div class="modal-header bg-primary text-white">
+        <h5 class="modal-title" id="comingSoonLabel1"><i class="fas fa-info-circle"></i> Coming Soon</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body text-dark">
+        Study Material/Notes are not yet available but going to come soon.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-sm btn-outline-primary" data-bs-dismiss="modal">Okay</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="comingSoonModal2" tabindex="-1" aria-labelledby="comingSoonLabel2" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content border-primary shadow">
+      <div class="modal-header bg-primary text-white">
+        <h5 class="modal-title" id="comingSoonLabel2"><i class="fas fa-info-circle"></i> Coming Soon</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body text-dark">
+        Solved Examples are not yet available but going to come soon.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-sm btn-outline-primary" data-bs-dismiss="modal">Okay</button>
+      </div>
+    </div>
+  </div>
+</div>
+

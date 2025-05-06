@@ -1,3 +1,25 @@
+<?php
+function renderChapterButtons($chapterNo, $classNo = "12", $subject = "Physics", $home = "") {
+    $notesPath = "study_material/$classNo/notes/$subject/Chapter$chapterNo.pdf";
+    $examplesPath = "study_material/$classNo/examples/$subject/Chapter$chapterNo.pdf";
+
+    echo '<div class="text-start mb-3">';
+
+    if (file_exists($notesPath)) {
+        echo '<a target="_blank" href="' . $home . $notesPath . '" class="btn align-middle btn-outline-primary">Study Material/Notes</a>';
+    } else {
+        echo '<button type="button" class="btn align-middle btn-outline-primary" data-bs-toggle="modal" data-bs-target="#comingSoonModal1">Study Material/Notes</button>';
+    }
+
+    if (file_exists($examplesPath)) {
+        echo '<a target="_blank" href="' . $home . $examplesPath . '" class="btn align-middle btn-outline-primary">Solved Examples</a>';
+    } else {
+        echo '<button type="button" class="btn align-middle btn-outline-primary" data-bs-toggle="modal" data-bs-target="#comingSoonModal2">Solved Examples</button>';
+    }
+
+    echo '</div>';
+}
+?>
 <style>
     .physics-laws img {
         height: 216px !important;
@@ -90,6 +112,7 @@
                                         of fruit; special modes- apomixis, parthenocarpy, polyembryony; Significance of seed dispersal
                                         and fruit formation.
                                     </p>
+                                    <?php renderChapterButtons(1, "12", "Biology", $home); ?>
                                 </div>
                                 <div class="text-start">
                                     <h5 class="h5 text-dark text-start fw-bold">Chapter-2: Human Reproduction</h5>
@@ -98,6 +121,7 @@
                                         blastocyst formation, implantation; pregnancy and placenta formation (elementary idea);
                                         parturition (elementary idea); lactation (elementary idea).
                                     </p>
+                                    <?php renderChapterButtons(2, "12", "Biology", $home); ?>
                                 </div>
                                 <div class="text-start">
                                     <h5 class="h5 text-dark text-start fw-bold">Chapter-3: Reproductive Health</h5>
@@ -106,6 +130,7 @@
                                         amniocentesis; infertility and assisted reproductive technologies - IVF, ZIFT, GIFT (elementary
                                         idea for general awareness)
                                     </p>
+                                    <?php renderChapterButtons(3, "12", "Biology", $home); ?>
                                 </div>
                             </div>
                         </div>
@@ -128,6 +153,7 @@
                                         chromosomal disorders in humans; Down's syndrome, Turner's and Klinefelter's syndromes.
 
                                     </p>
+                                    <?php renderChapterButtons(4, "12", "Biology", $home); ?>
                                 </div>
                                 <div class="text-start">
                                     <h5 class="h5 text-dark text-start fw-bold">Chapter-5: Molecular Basis of Inheritance</h5>
@@ -137,6 +163,7 @@
                                         fingerprinting.
 
                                     </p>
+                                    <?php renderChapterButtons(5, "12", "Biology", $home); ?>
                                 </div>
                                 <div class="text-start">
                                     <h5 class="h5 text-dark text-start fw-bold">Chapter-6: Evolution</h5>
@@ -147,6 +174,7 @@
                                         Hardy- Weinberg's principle; adaptive radiation; human evolution.
 
                                     </p>
+                                    <?php renderChapterButtons(6, "12", "Biology", $home); ?>
                                 </div>
                             </div>
                         </div>
@@ -165,11 +193,13 @@
                                         ascariasis, typhoid, pneumonia, common cold, amoebiasis, ring worm) and their control; Basic
                                         concepts of immunology - vaccines; cancer, HIV and AIDS; Adolescence - drug and alcohol
                                         abuse.</p>
+                                        <?php renderChapterButtons(7, "12", "Biology", $home); ?>
                                 </div>
                                 <div class="text-start">
                                     <h5 class="h5 text-dark text-start fw-bold">Chapter-8: Microbes in Human Welfare </h5>
                                     <p class="text-dark">Microbes in food processing, industrial production, sewage treatment, energy generation and
                                         microbes as bio-control agents and bio-fertilizers. Antibiotics; production and judicious use.</p>
+                                        <?php renderChapterButtons(8, "12", "Biology", $home); ?>
                                 </div>
                             </div>
                         </div>
@@ -187,6 +217,7 @@
                                     <p class="text-dark">Genetic Engineering (Recombinant DNA Technology)
 
                                     </p>
+                                    <?php renderChapterButtons(9, "12", "Biology", $home); ?>
                                 </div>
                                 <div class="text-start">
                                     <h5 class="h5 text-dark text-start fw-bold">Chapter-10: Biotechnology and its Application </h5>
@@ -194,6 +225,7 @@
                                         stem cell technology, gene therapy; genetically modified organisms - Bt crops; transgenic
                                         animals; biosafety issues, biopiracy and patents.
                                     </p>
+                                    <?php renderChapterButtons(10, "12", "Biology", $home); ?>
                                 </div>
                             </div>
                         </div>
@@ -212,6 +244,7 @@
                                     - growth, birth rate and death rate, age distribution. 
 
                                     </p>
+                                    <?php renderChapterButtons(11, "12", "Biology", $home); ?>
                                 </div>
                                 <div class="text-start">
                                     <h5 class="h5 text-dark text-start fw-bold">Chapter-12: Ecosystem </h5>
@@ -220,6 +253,7 @@
  
 
                                     </p>
+                                    <?php renderChapterButtons(12, "12", "Biology", $home); ?>
                                 </div>
                                 <div class="text-start">
                                     <h5 class="h5 text-dark text-start fw-bold">Chapter-13: Biodiversity and its Conservation </h5>
@@ -228,6 +262,7 @@
                                         national parks, wildlife, sanctuaries and Ramsar sites.
 
                                     </p>
+                                    <?php renderChapterButtons(13, "12", "Biology", $home); ?>
                                 </div>
                             </div>
                         </div>
@@ -236,4 +271,38 @@
             </div>
         </div>
     </div>
+</div>
+<!-- Modal (Only once in the whole page) -->
+<div class="modal fade" id="comingSoonModal1" tabindex="-1" aria-labelledby="comingSoonLabel1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content border-primary shadow">
+      <div class="modal-header bg-primary text-white">
+        <h5 class="modal-title" id="comingSoonLabel1"><i class="fas fa-info-circle"></i> Coming Soon</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body text-dark">
+        Study Material/Notes are not yet available but going to come soon.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-sm btn-outline-primary" data-bs-dismiss="modal">Okay</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="comingSoonModal2" tabindex="-1" aria-labelledby="comingSoonLabel2" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content border-primary shadow">
+      <div class="modal-header bg-primary text-white">
+        <h5 class="modal-title" id="comingSoonLabel2"><i class="fas fa-info-circle"></i> Coming Soon</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body text-dark">
+        Solved Examples are not yet available but going to come soon.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-sm btn-outline-primary" data-bs-dismiss="modal">Okay</button>
+      </div>
+    </div>
+  </div>
 </div>
