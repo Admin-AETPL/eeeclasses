@@ -56,26 +56,36 @@
                 <tbody>
                     <?php
                     $i = 1;
-                    foreach ($data as $det) {
+                    if (!empty($data)) { // Check if $data is not empty
+                        foreach ($data as $det) {
+                    ?>
+                            <tr>
+                                <td><?php echo $i; ?></td>
+                                <td class="text-center">
+                                    <img src="<?php echo $home . $det["stud_photo"]; ?>" alt="Student Photo" class="img-fluid imghover" data-bs-toggle="modal" data-bs-target="#myModal">
+                                </td>
+                                <td><?php echo htmlspecialchars($det["stud_id"]); ?></td>
+                                <td><?php echo htmlspecialchars($det["stud_name"]); ?></td>
+                                <td><?php echo htmlspecialchars($det["stud_class"]); ?></td>
+                                <td><?php echo htmlspecialchars($det["subjects"]); ?></td>
+                                <td><?php echo htmlspecialchars($det["stud_phone"]); ?></td>
+                                <td><?php echo htmlspecialchars($det["stud_mail"]); ?></td>
+                                <td><?php echo htmlspecialchars($det["stud_pass"]); ?></td>
+                                <td>&#8377; <?php echo number_format($det["total_fees"], 2); ?></td>
+                                <td>&#8377; <?php echo number_format($det["paid_fees"], 2); ?></td>
+                                <td>&#8377; <?php echo number_format($det["total_fees"] - $det["paid_fees"], 2); ?></td>
+                                <td><?php echo ucfirst(htmlspecialchars($det["fees_status"])); ?></td>
+                                <td><?php echo htmlspecialchars($det["stud_enroll"]); ?></td>
+                            </tr>
+                    <?php
+                            $i++;
+                        }
+                    } else { // Handle case when $data is empty
                     ?>
                         <tr>
-                            <td><?php echo $i;  ?></td>
-                            <td class="text-center"><img src="<?php echo $home.$det["stud_photo"]; ?>" alt="" class="img-fluid imghover" data-bs-toggle="modal" data-bs-target="#myModal"></td>
-                            <td><?php echo $det["stud_id"]; ?></td>
-                            <td><?php echo $det["stud_name"]; ?></td>
-                            <td><?php echo $det["stud_class"]; ?></td>
-                            <td><?php echo $det["subjects"]; ?></td>
-                            <td><?php echo $det["stud_phone"]; ?></td>
-                            <td><?php echo $det["stud_mail"]; ?></td>
-                            <td><?php echo $det["stud_pass"]; ?></td>
-                            <td>&#8377; <?php echo $det["total_fees"]; ?></td>
-                            <td>&#8377; <?php echo $det["paid_fees"]; ?></td>
-                            <td>&#8377; <?php echo $det["total_fees"] - $det["paid_fees"]; ?></td>
-                            <td><?php echo ucfirst($det["fees_status"]); ?></td>
-                            <td><?php echo $det["stud_enroll"]; ?></td>
+                            <td colspan="14" class="text-center">No student data available.</td>
                         </tr>
                     <?php
-                    $i++;
                     }
                     ?>
                 </tbody>

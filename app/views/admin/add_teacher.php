@@ -76,66 +76,66 @@
         </form>
     </div>
 </div>
-    <script>
-        $(document).ready(function() {
-            $("#inputpasscon").focusout(function() {
-                var spass = $("#inputpass").val();
-                var spasscon = $("#inputpasscon").val();
-                if (spass.trim() != spasscon.trim()) {
-                    alert("Passwords do not match");
-                    $("#inputpasscon").css("border-color", "red");
-                } else {
-                    $("#inputpasscon").css("border-color", "#ced4da");
-                }
-            });
-            $("#sbm").click(function() {
-                var sname = $("#staticname").val();
-                var sphone = $("#inputphone").val();
-                var smail = $("#inputmail").val();
-                var spass = $("#inputpass").val();
-                var spasscon = $("#inputpasscon").val();
-                if (sname.trim() == '' || sphone.trim() == '' || smail.trim() == '' || spass.trim() == '' || spasscon.trim() == '') {
-                    alert("Field(s) cannot be empty");
-                    return false;
-                }
-                if (spass.trim() != spasscon.trim()) {
-                    alert("Passwords do not match");
-                    return false;
-                }
-                
-                $.ajax({
-                    url: "http://localhost/eeeclasses/eeeclasses.info/teacher_exists/index",
-                    method: "post",
-                    data: "stud_mail=" + smail,
-                    success: function(result) {
-                        if (result == 'Exists') {
-                            return false;
-                        } else {
-                            return true;
-                        }
-                    },
-                    error: function(xhr) {
-                        alert(xhr.status + " " + xhr.statusText)
+<script>
+    $(document).ready(function() {
+        $("#inputpasscon").focusout(function() {
+            var spass = $("#inputpass").val();
+            var spasscon = $("#inputpasscon").val();
+            if (spass.trim() != spasscon.trim()) {
+                alert("Passwords do not match");
+                $("#inputpasscon").css("border-color", "red");
+            } else {
+                $("#inputpasscon").css("border-color", "#ced4da");
+            }
+        });
+        $("#sbm").click(function() {
+            var sname = $("#staticname").val();
+            var sphone = $("#inputphone").val();
+            var smail = $("#inputmail").val();
+            var spass = $("#inputpass").val();
+            var spasscon = $("#inputpasscon").val();
+            if (sname.trim() == '' || sphone.trim() == '' || smail.trim() == '' || spass.trim() == '' || spasscon.trim() == '') {
+                alert("Field(s) cannot be empty");
+                return false;
+            }
+            if (spass.trim() != spasscon.trim()) {
+                alert("Passwords do not match");
+                return false;
+            }
+            
+            $.ajax({
+                url: "http://localhost/eeeclasses/eeeclasses.info/teacher_exists/index",
+                method: "post",
+                data: "stud_mail=" + smail,
+                success: function(result) {
+                    if (result == 'Exists') {
+                        return false;
+                    } else {
+                        return true;
                     }
-                })
-            });
-            $("#inputmail").focusout(function() {
-                var smail = $("#inputmail").val();
-                $.ajax({
-                    url: "http://localhost/eeeclasses/eeeclasses.info/teacher_exists/index",
-                    method: "post",
-                    data: "stud_mail=" + smail,
-                    success: function(result) {
-                        if (result == 'exists') {
-                            $("#inputmail").css("border-color", "red");
-                        } else {
-                            $("#inputmail").css("border-color", "#ced4da");
-                        }
-                    },
-                    error: function(xhr) {
-                        alert(xhr.status + " " + xhr.statusText)
+                },
+                error: function(xhr) {
+                    alert(xhr.status + " " + xhr.statusText)
+                }
+            })
+        });
+        $("#inputmail").focusout(function() {
+            var smail = $("#inputmail").val();
+            $.ajax({
+                url: "http://localhost/eeeclasses/eeeclasses.info/teacher_exists/index",
+                method: "post",
+                data: "stud_mail=" + smail,
+                success: function(result) {
+                    if (result == 'exists') {
+                        $("#inputmail").css("border-color", "red");
+                    } else {
+                        $("#inputmail").css("border-color", "#ced4da");
                     }
-                })
+                },
+                error: function(xhr) {
+                    alert(xhr.status + " " + xhr.statusText)
+                }
             })
         })
-    </script>
+    })
+</script>
