@@ -5,9 +5,9 @@ class Admin extends Controller
     {
         if (isset($_SESSION["admin"])) {
             $db = $this->model("select");
-            $qry = "select count(stud_id) as total_students from eee_students";
+            $qry = "select count(stud_id) as total_students from eee_students where account_status='active'";
             $data = $db->sel($qry);
-            $qry1 = "select count(teacher_id) as total_teachers from eee_teachers";
+            $qry1 = "select count(teacher_id) as total_teachers from eee_teachers where account_status='active'";
             $data1 = $db->sel($qry1);
             $qry = "select count(sno) as total_quest from eee_question where status='unanswered'";
             $extra = $db->sel($qry);
