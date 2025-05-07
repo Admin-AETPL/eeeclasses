@@ -4,11 +4,11 @@
             <div class="col-md-2">
                 <!-- Dashboard link -->
                 <div class="text-center mb-2">
-                    <a style="border-radius: 20px; background-color: white; border-color: #FF7F50; color: #FF7F50; transition: all 0.3s;" 
+                    <a style="border-radius: 20px; background-color: white; border-color: #F88379; color: #F88379; transition: all 0.3s;" 
                     href="<?php echo $home ?>admin" 
                     class="btn w-100"
-                    onmouseover="this.style.backgroundColor='#FF7F50'; this.style.color='white';" 
-                    onmouseout="this.style.backgroundColor='white'; this.style.color='#FF7F50';">
+                    onmouseover="this.style.backgroundColor='#F88379'; this.style.color='white';" 
+                    onmouseout="this.style.backgroundColor='white'; this.style.color='#F88379';">
                     DASHBOARD
                     </a>
                 </div>
@@ -67,20 +67,20 @@
 
                 <!-- Additional Links -->
                 <div class="text-center mt-3 mb-2">
-                    <a style="border-radius: 20px; background-color: white; border-color: #FF7F50; color: #FF7F50; transition: all 0.3s;" 
+                    <a style="border-radius: 20px; background-color: white; border-color: #F88379; color: #F88379; transition: all 0.3s;" 
                     href="<?php echo $home ?>admin/feedback" 
                     class="btn w-100"
-                    onmouseover="this.style.backgroundColor='#FF7F50'; this.style.color='white';" 
-                    onmouseout="this.style.backgroundColor='white'; this.style.color='#FF7F50';">
+                    onmouseover="this.style.backgroundColor='#F88379'; this.style.color='white';" 
+                    onmouseout="this.style.backgroundColor='white'; this.style.color='#F88379';">
                     User's Feedback
                     </a>
                 </div>
                 <div class="text-center mb-2">
-                    <a style="border-radius: 20px; background-color: white; border-color: #FF7F50; color: #FF7F50; transition: all 0.3s;" 
+                    <a style="border-radius: 20px; background-color: white; border-color: #F88379; color: #F88379; transition: all 0.3s;" 
                     href="<?php echo $home ?>admin/question" 
                     class="btn w-100"
-                    onmouseover="this.style.backgroundColor='#FF7F50'; this.style.color='white';" 
-                    onmouseout="this.style.backgroundColor='white'; this.style.color='#FF7F50';">
+                    onmouseover="this.style.backgroundColor='#F88379'; this.style.color='white';" 
+                    onmouseout="this.style.backgroundColor='white'; this.style.color='#F88379';">
                     Questions
                     </a>
                 </div>
@@ -91,11 +91,11 @@
                 
                 <!-- Logout -->
                 <div class="text-center">
-                    <a style="border-radius: 20px; background-color: white; border-color: #FF7F50; color: #FF7F50; transition: all 0.3s;" 
+                    <a style="border-radius: 20px; background-color: white; border-color: #F88379; color: #F88379; transition: all 0.3s;" 
                     href="<?php echo $home ?>admin_users/logout" 
                     class="btn w-100"
-                    onmouseover="this.style.backgroundColor='#FF7F50'; this.style.color='white';" 
-                    onmouseout="this.style.backgroundColor='white'; this.style.color='#FF7F50';">
+                    onmouseover="this.style.backgroundColor='#F88379'; this.style.color='white';" 
+                    onmouseout="this.style.backgroundColor='white'; this.style.color='#F88379';">
                     Logout
                     </a>
                 </div>
