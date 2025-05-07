@@ -99,14 +99,12 @@
                     <a style="border-radius: 20px; background-color: white; border-color: #F88379; color: #F88379; transition: all 0.3s;" 
                     href="<?php echo $home ?>admin/upload_photos" 
                     class="btn w-100"
-                    onmouseover="this.style.backgroundColor='#FF7F50'; this.style.color='white';" 
-                    onmouseout="this.style.backgroundColor='white'; this.style.color='#FF7F50';">
+                    onmouseover="this.style.backgroundColor='#F88379'; this.style.color='white';" 
+                    onmouseout="this.style.backgroundColor='white'; this.style.color='#F88379';">
                     Upload Photos
                     </a>
                 </div>
             
-                <!-- <a class="h5 text-coral bg-white border border-1 py-2 my-2 px-3 d-block" style="border-radius: 20px;" href="<?php echo $home ?>admin/feedback">User's Feedback</a> -->
-                <!-- <a class="h5 text-coral bg-white border border-1 py-2 my-2 px-3 d-block" style="border-radius: 20px;" href="<?php echo $home ?>admin/question">Questions</a> -->
                 
                 <!-- Logout -->
                 <div class="text-center">
@@ -124,3 +122,4 @@
 
             <div class="col-md-10">
                 <!-- Main content goes here -->
+

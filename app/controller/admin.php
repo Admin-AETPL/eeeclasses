@@ -188,7 +188,7 @@ class Admin extends Controller
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             // Check if a file was uploaded
             if (isset($_FILES['photo']) && $_FILES['photo']['error'] == 0) {
-                $uploadDir = 'uploads/'; // Directory to store uploaded files
+                $uploadDir = 'img/notice_board/'; // Directory to store uploaded files
                 $allowedTypes = ['image/jpeg', 'image/png', 'image/gif']; // Allowed file types
                 $fileType = $_FILES['photo']['type'];
                 $fileName = basename($_FILES['photo']['name']);
