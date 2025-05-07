@@ -46,19 +46,20 @@ class Admin extends Controller
             $this->view("admin/footer");
         }
     }
-    public function students($cls = '')
+    public function students()
     {
+        $cls = $_GET['cls'] ?? 'all'; // Get selected class or 'all' as default
         if (isset($_SESSION["admin"])) {
             if ($cls == '' || $cls == 'all') {
-                $qry = "select * from eee_students where account_status='active'";
+                $qry = "SELECT * FROM eee_students WHERE account_status='active'";
             } else {
-                $qry = "select * from eee_students where stud_class='" . $cls . "' AND account_status='active'";
+                $qry = "SELECT * FROM eee_students WHERE stud_class='" . $cls . "' AND account_status='active'";
             }
             $db = $this->model("select");
             $data = $db->sel($qry);
             $this->view("admin/header", $title = "EEE Classes - View Students");
             $this->view('admin/sidebar');
-            $this->view("admin/view_student", $title = '', $data);
+            $this->view("admin/view_student", $title = '', $data); // Pass data to the view
             $this->view("admin/footer");
         } else {
             $this->view("admin/header", $title = "EEE Class - Admin Portal");
@@ -66,6 +67,7 @@ class Admin extends Controller
             $this->view("admin/footer");
         }
     }
+
     public function delete_student($cls = '')
     {
         if (isset($_SESSION["admin"])) {
