@@ -70,7 +70,6 @@
         }
     </script>
 </head>
-
 <body>
     <div class="container">
         <h1>Upload Photos</h1>
