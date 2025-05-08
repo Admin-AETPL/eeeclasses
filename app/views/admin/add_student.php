@@ -6,6 +6,9 @@
     #inputsubj {
         display: none
     }
+    #subject-options {
+        min-height: 100px; /* Just to give the section a consistent height */
+    }
 </style>
 <div class="admin-view bg-white p-3 border border-1" style="border-radius:20px">
     <div class="addstudent p-2">
@@ -42,12 +45,16 @@
                     <input type="number" class="form-control" id="inputclass" min="7" max="12" name="studclass" required placeholder="e.g. 10">
                 </div>
             </div>
-            <div class="mb-3 row">
-                <label for="inputsubj" id="subj" class="col-sm-2 col-form-label">Subjects<sup class="text-danger">*</sup></label>
-                <div class="col-sm-10">
-                    <input type="text" class="form-control" id="inputsubj" name="subj" required placeholder="e.g. Physics, Chemistry, etc.">
+            <div class="mb-3 row" id="subject-section">
+                <label class="col-sm-2 col-form-label">Subjects<sup class="text-danger">*</sup></label>
+                <div class="col-sm-10" id="subject-options">
+                    <!-- Placeholder or empty block initially -->
+                    <div class="form-control text-muted" style="border: 1px solid #ced4da;">
+                        Please select a class to view subjects
+                    </div>
                 </div>
             </div>
+
             <div class="mb-3 row">
                 <label for="inputphone" class="col-sm-2 col-form-label">Phone<sup class="text-danger">*</sup></label>
                 <div class="col-sm-10">
@@ -108,21 +115,40 @@
 </div>
     <script>
         $(document).ready(function() {
-            $("#inputclass").change(function() {
+            $("#inputclass").change(function () {
                 var cls = Number($("#inputclass").val());
+                var subjectOptions = $("#subject-options");
+                subjectOptions.empty(); // Clear previous options
+
                 if (!cls || cls < 7 || cls > 12) {
                     alert("Please enter a valid class between 7 and 12.");
+                    // Show a message or keep the placeholder visible
+                    subjectOptions.append(`
+                        <div class="form-control" style="border: 1px solid #ced4da;">
+                            Please select a class to view subjects
+                        </div>
+                    `);
                     return;
                 }
+
+                let subjects = [];
                 if (cls <= 10) {
-                    $("#subj").css("display", "none");
-                    $("#inputsubj").css("display", "none");
-                    $("#inputsubj").val("all");
+                    subjects = ["Mathematics", "Science"];
                 } else {
-                    $("#subj").css("display", "block");
-                    $("#inputsubj").css("display", "block");
-                    $("#inputsubj").val("");
+                    subjects = ["Physics", "Chemistry", "Mathematics", "Biology"];
                 }
+
+                // Add checkboxes dynamically
+                subjects.forEach(function (subj) {
+                    subjectOptions.append(`
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" name="subj[]" value="${subj}" id="subj_${subj}">
+                            <label class="form-check-label" for="subj_${subj}">
+                                ${subj}
+                            </label>
+                        </div>
+                    `);
+                });
             });
             $("#inputpaid").focusout(function() {
                 var sfees = Number($("#inputfees").val());
