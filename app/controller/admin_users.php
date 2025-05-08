@@ -38,14 +38,7 @@ class Admin_users extends Controller{
             $sname=isset($_POST["studname"])?($_POST["studname"]):'';
             $sclass=isset($_POST["studclass"])?($_POST["studclass"]):'';
             $phone=isset($_POST["phone"])?($_POST["phone"]):'';
-            if(isset($_POST["subj"]))
-            {
-                $subj=$_POST["subj"];
-            }
-            else
-            {
-                $subj='';
-            }
+            $subj = isset($_POST["subj"]) ? implode(",", $_POST["subj"]) : '';
             $smail=isset($_POST["studmail"])?($_POST["studmail"]):'';
             $pass=isset($_POST["password"])?($_POST["password"]):'';
             $passcon=isset($_POST["passwordcon"])?($_POST["passwordcon"]):'';
@@ -55,17 +48,43 @@ class Admin_users extends Controller{
             $fstat=$frem!=0?"partial":"fully paid";
             $stud_enroll=isset($_POST["enroll_date"])?$_POST["enroll_date"]:'';
             $stud_id=substr($sname,0,4).rand(10000,99999)."eee";
+            //NEW CODE CHANGES STARTS HERE
             if ($_FILES["studphoto"]["error"] == 0) {
-                $o=$_FILES["studphoto"]["tmp_name"];
-                $newname="img/users/students/".$stud_id . $_FILES["studphoto"]["name"];
-                $n = $_SERVER["DOCUMENT_ROOT"] . "http://localhost/eeeclasses/eeeclasses.info/".$newname;
-                move_uploaded_file($o, $n);
+                $tmpName = $_FILES["studphoto"]["tmp_name"];
+                $filename = $stud_id . "_" . basename($_FILES["studphoto"]["name"]); // Safer filename
+                $relativePath = "img/users/students/" . $filename; // Path for DB storage
+                
+                // Absolute path to save the image on the server
+                $fullPath = "C:/xampp/htdocs/eeeclasses/eeeclasses.info/" . $relativePath;
+            
+                // Create the folder if it doesn't exist
+                if (!file_exists(dirname($fullPath))) {
+                    mkdir(dirname($fullPath), 0777, true);
+                }
+            
+                // Move the uploaded file to the target location
+                move_uploaded_file($tmpName, $fullPath);
             } else {
-                $n = "img/users/user.png";
+                // Fallback to a default image if no file is uploaded
+                $relativePath = "img/users/user.png"; // Default fallback image
             }
-            $db=$this->model("nonselect");
-            $qry="insert into eee_students(stud_id,stud_name,stud_class,subjects,stud_mail,stud_pass,total_fees,paid_fees,fees_status,stud_enroll,stud_phone,account_status,stud_photo) values('".$stud_id."','".$sname."','".$sclass."','".$subj."','".$smail."','".$pass."','".$sfees."','".$spaid."','".$fstat."','".$stud_enroll."','".$phone."','active','".$newname."')";
-            $res=$db->nonsel($qry);
+            
+            // Insert the student record into the database
+            $db = $this->model("nonselect");
+            $qry = "INSERT INTO eee_students (
+                stud_id, stud_name, stud_class, subjects, stud_mail, stud_pass,
+                total_fees, paid_fees, fees_status, stud_enroll, stud_phone,
+                account_status, stud_photo
+            ) VALUES (
+                '$stud_id', '$sname', '$sclass', '$subj', '$smail', '$pass',
+                '$sfees', '$spaid', '$fstat', '$stud_enroll', '$phone',
+                'active', '$relativePath'
+            )";
+            
+            // Execute the query
+            $res = $db->nonsel($qry);
+//CODE CHANGES END HERE
+
             if($res==1)
             {
                 echo "<script>alert('Added')</script>";
