@@ -87,11 +87,11 @@
                 <!-- Notice Board -->
                 <div class="text-center mb-2">
                     <a style="border-radius: 20px; background-color: white; border-color: #F88379; color: #F88379; transition: all 0.3s;" 
-                    href="<?php echo $home ?>admin/notice_board" 
+                    href="<?php echo $home ?>admin/gallery_upload" 
                     class="btn w-100"
                     onmouseover="this.style.backgroundColor='#F88379'; this.style.color='white';" 
                     onmouseout="this.style.backgroundColor='white'; this.style.color='#F88379';">
-                    Notice Board
+                    Gallery Uploads
                     </a>
                 </div>
 
@@ -101,7 +101,7 @@
                     class="btn w-100"
                     onmouseover="this.style.backgroundColor='#F88379'; this.style.color='white';" 
                     onmouseout="this.style.backgroundColor='white'; this.style.color='#F88379';">
-                    Upload Photos
+                    Notice Board Uploads
                     </a>
                 </div>
             

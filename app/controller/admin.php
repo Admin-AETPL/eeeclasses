@@ -183,6 +183,56 @@ class Admin extends Controller
             $this->view("admin/footer");
         }
     }
+    public function gallery_upload()
+    {
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+            // Check if a file was uploaded
+            if (isset($_FILES['photo']) && $_FILES['photo']['error'] == 0) {
+                $uploadDir = 'img/classroom/'; // Directory to store uploaded files
+                $allowedTypes = ['image/jpeg', 'image/png', 'image/gif']; // Allowed file types
+                $fileType = $_FILES['photo']['type'];
+                $fileName = basename($_FILES['photo']['name']);
+                $targetFile = $uploadDir . $fileName;
+
+                // Check if the file type is allowed
+                if (in_array($fileType, $allowedTypes)) {
+                    // Check if the upload directory exists, create it if not
+                    if (!is_dir($uploadDir)) {
+                        mkdir($uploadDir, 0777, true);
+                    }
+
+                    // Move the uploaded file to the target directory
+                    if (move_uploaded_file($_FILES['photo']['tmp_name'], $targetFile)) {
+                        $message = [
+                            'text' => "Photo uploaded successfully: $fileName",
+                            'color' => 'green'
+                        ];
+                    } else {
+                        $message = [
+                            'text' => "Error uploading the photo.",
+                            'color' => 'red'
+                        ];
+                    }
+                } else {
+                    $message = [
+                        'text' => "Invalid file type. Only JPEG, PNG, and GIF are allowed.",
+                        'color' => 'red'
+                    ];
+                }
+            } else {
+                $message = [
+                    'text' => "No file uploaded or an error occurred.",
+                    'color' => 'red'
+                ];
+            }
+
+            // Pass the message to the view
+            $this->view('admin/gallery_upload', ['message' => $message]);
+        } else {
+            // Display the upload form
+            $this->view('admin/gallery_upload');
+        }
+    }
     public function upload_photos()
     {
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
