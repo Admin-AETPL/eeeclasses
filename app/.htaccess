@@ -1,1 +1,9 @@
 Options -Indexes
+<FilesMatch "\.(jpg|jpeg|png|gif)$">
+    Allow from all
+</FilesMatch>
+<Directory "/C:\xampp\htdocs\eeeclasses\eeeclasses.info/img/users/teachers">
+    Require all granted
+    Options +Indexes
+    AllowOverride All
+</Directory>
