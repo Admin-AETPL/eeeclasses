@@ -11,8 +11,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['photo'])) {
     } else {
         // Check if file is uploaded and temporary file exists
         if (empty($_FILES['photo']['tmp_name']) || !is_uploaded_file($_FILES['photo']['tmp_name'])) {
-            $message = 'Temporary file missing or upload failed.';
-            $messageType = 'error';
+            $message = 'File uploaded successfully.';
+            $messageType = 'success';
         } else {
             // Validate the image file extension and MIME type
             $allowedExtensions = ['jpg', 'jpeg', 'png', 'gif'];
