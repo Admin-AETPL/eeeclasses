@@ -14,7 +14,7 @@ class Admin_users extends Controller{
         }
         else
         {
-            $_SESSION["admin"]=$uid;
+            $_SESSION["admin"]=$uid;  
             echo "<script>window.location.href='http://localhost/eeeclasses/eeeclasses.info/admin/'</script>";
         }
     }
