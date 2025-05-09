@@ -58,7 +58,7 @@
             <div class="mb-3 row">
                 <label for="inputphone" class="col-sm-2 col-form-label">Phone<sup class="text-danger">*</sup></label>
                 <div class="col-sm-10">
-                    <input type="tel" class="form-control" id="inputphone" minlength="10" maxlength="10" name="phone" aria-describedby="phoneHelp" required placeholder="e.g. 9876543210">
+                    <input type="number" class="form-control" id="inputphone" minlength="10" maxlength="10" name="phone" aria-describedby="phoneHelp" required placeholder="e.g. 9876543210">
                     <div id="phoneHelp" class="form-text">Please do not add 0 or +91 before number unless its a landline with citycode</div>
                 </div>
             </div>
@@ -96,7 +96,7 @@
             <div class="mb-3 row">
                 <label for="inputfile" class="col-sm-2 col-form-label">Student Photo<sup class="text-danger">*</sup></label>
                 <div class="col-sm-10">
-                    <input type="file" class="form-control" id="inputfile" name="studphoto" required>
+                <input type="file" name="studphoto" id="studphoto" accept=".jpg, .jpeg, .png" class="form-control" required>
                 </div>
             </div>
             <div class="mb-3 row">
@@ -113,134 +113,207 @@
         </form>
     </div>
 </div>
-    <script>
-        $(document).ready(function() {
-            $("#inputclass").change(function () {
-                var cls = Number($("#inputclass").val());
-                var subjectOptions = $("#subject-options");
-                subjectOptions.empty(); // Clear previous options
+<script>
+    $(document).ready(function () {
+        function showError(input, message, errorId) {
+            $("#" + errorId).remove();
+            input.css("border-color", "red");
+            input.after(`<div id="${errorId}" class="text-danger mt-1">${message}</div>`);
+        }
 
-                if (!cls || cls < 7 || cls > 12) {
-                    alert("Please enter a valid class between 7 and 12.");
-                    // Show a message or keep the placeholder visible
-                    subjectOptions.append(`
-                        <div class="form-control" style="border: 1px solid #ced4da;">
-                            Please select a class to view subjects
-                        </div>
-                    `);
-                    return;
-                }
+        function clearError(input, errorId) {
+            $("#" + errorId).remove();
+            input.css("border-color", "#ced4da");
+        }
 
-                let subjects = [];
-                if (cls <= 10) {
-                    subjects = ["Mathematics", "Science"];
-                } else {
-                    subjects = ["Physics", "Chemistry", "Mathematics", "Biology"];
-                }
+        $("#staticname").on("input", function () {
+            const input = $(this);
+            const name = input.val().trim();
+            if (!name) {
+                showError(input, "Name cannot be empty.", "name-error");
+            } else {
+                clearError(input, "name-error");
+            }
+        });
 
-                // Add checkboxes dynamically
-                subjects.forEach(function (subj) {
-                    subjectOptions.append(`
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" name="subj[]" value="${subj}" id="subj_${subj}">
-                            <label class="form-check-label" for="subj_${subj}">
-                                ${subj}
-                            </label>
-                        </div>
-                    `);
-                });
+        $("#inputclass").on("change input", function () {
+            const cls = parseInt($(this).val().trim());
+            const subjectOptions = $("#subject-options");
+            subjectOptions.empty(); // Clear previous options
+
+            if (isNaN(cls) || cls < 7 || cls > 12) {
+                subjectOptions.append(`
+                    <div class="form-control" style="border: 1px solid #ced4da;">
+                        Please select a class between 7 and 12 to view subjects.
+                    </div>
+                `);
+                return;
+            }
+
+            let subjects = [];
+            if (cls <= 10) {
+                subjects = ["Mathematics", "Science"];
+            } else {
+                subjects = ["Physics", "Chemistry", "Mathematics", "Biology"];
+            }
+
+            subjects.forEach(function (subj) {
+                subjectOptions.append(`
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="subj[]" value="${subj}" id="subj_${subj}">
+                        <label class="form-check-label" for="subj_${subj}">
+                            ${subj}
+                        </label>
+                    </div>
+                `);
             });
-            $("#inputpaid").focusout(function() {
-                var sfees = Number($("#inputfees").val());
-                var spaid = Number($("#inputpaid").val());
-                if (!sfees || !spaid) {
-                    alert("Please enter valid fees amounts.");
-                    $("#inputpaid").css("border-color", "red");
-                    return;
-                }
-                if (spaid > sfees) {
-                    alert("Paid Fees cannot be greater than total fees");
-                    $("#inputpaid").css("border-color", "red");
-                } else {
-                    $("#inputpaid").css("border-color", "#ced4da");
+        });
+
+
+        $("#inputphone").on("input", function () {
+            const input = $(this);
+            const phone = input.val().trim();
+            if (!/^\d{10}$/.test(phone)) {
+                showError(input, "Phone number must be 10 digits.", "phone-error");
+            } else {
+                clearError(input, "phone-error");
+            }
+        });
+
+        $("#inputmail").on("input", function () {
+            const input = $(this);
+            const email = input.val().trim();
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            if (!emailRegex.test(email)) {
+                showError(input, "Please enter a valid email address.", "email-error");
+                return;
+            }
+
+            clearError(input, "email-error");
+
+            $.ajax({
+                url: "http://localhost/eeeclasses/eeeclasses.info/stud_exists/index",
+                method: "post",
+                data: { stud_mail: email },
+                success: function (result) {
+                    if (result === 'Exists') {
+                        showError(input, "Email already exists.", "email-exists");
+                    } else {
+                        clearError(input, "email-exists");
+                    }
                 }
             });
-            $("#inputpasscon").focusout(function() {
-                var spass = $("#inputpass").val();
-                var spasscon = $("#inputpasscon").val();
-                if (!spass || !spasscon) {
-                    alert("Password fields cannot be empty.");
-                    $("#inputpasscon").css("border-color", "red");
-                    return;
-                }
-                if (spass !== spasscon) {
-                    alert("Passwords do not match");
-                    $("#inputpasscon").css("border-color", "red");
-                } else {
-                    $("#inputpasscon").css("border-color", "#ced4da");
-                }
-            });
-            $("#sbm").click(function(e) {
-                e.preventDefault(); // Prevent form submission
-                var sname = $("#staticname").val();
-                var sclass = Number($("#inputclass").val());
-                var sphone = $("#inputphone").val();
-                var smail = $("#inputmail").val();
-                var spass = $("#inputpass").val();
-                var spasscon = $("#inputpasscon").val();
-                var sfees = Number($("#inputfees").val());
-                var spaid = Number($("#inputpaid").val());
-                var sdate = $("#inputdate").val();
+        });
 
-                if (!sname || !sclass || !sphone || !smail || !spass || !spasscon || !sfees || !spaid) {
-                    alert("Field(s) cannot be empty");
-                    return false;
-                }
-                if (spass !== spasscon) {
-                    alert("Passwords do not match");
-                    return false;
-                }
-                if (spaid > sfees) {
-                    alert("Paid Fees cannot be greater than Total Fees");
-                    return false;
-                }
+        $("#inputpass").on("input", function () {
+            const input = $(this);
+            const pass = input.val();
+            if (pass.length < 8 || pass.length > 15) {
+                showError(input, "Password must be between 8 and 15 characters.", "pass-error");
+            } else {
+                clearError(input, "pass-error");
+            }
+        });
 
+        $("#inputpasscon").on("input", function () {
+            const input = $(this);
+            const confirmPass = input.val();
+            const pass = $("#inputpass").val();
+
+            if (!confirmPass) {
+                showError(input, "Confirm Password cannot be empty.", "confpass-error");
+            } else if (confirmPass !== pass) {
+                showError(input, "Passwords do not match.", "confpass-error");
+            } else {
+                clearError(input, "confpass-error");
+            }
+        });
+
+        $("#inputfees").on("input", function () {
+            const input = $(this);
+            const fees = Number(input.val());
+            if (!fees || fees < 0) {
+                showError(input, "Total Fees must be a positive number.", "fees-error");
+            } else {
+                clearError(input, "fees-error");
+            }
+        });
+
+        $("#inputpaid").on("input", function () {
+            const paidInput = $(this);
+            const paid = Number(paidInput.val());
+            const fees = Number($("#inputfees").val());
+
+            if (!paid || paid < 0) {
+                showError(paidInput, "Paid Fees must be a positive number.", "paid-error");
+            } else if (paid > fees) {
+                showError(paidInput, "Paid Fees cannot exceed Total Fees.", "paid-error");
+            } else {
+                clearError(paidInput, "paid-error");
+            }
+        });
+
+        $("#inputdate").on("input", function () {
+            const input = $(this);
+            if (!input.val()) {
+                showError(input, "Date must be selected.", "date-error");
+            } else {
+                clearError(input, "date-error");
+            }
+        });
+
+        $("#sbm").click(function (e) {
+            e.preventDefault(); // Prevent form submission
+            $("#staticname").trigger("input");
+            $("#inputclass").trigger("input");
+            $("#inputphone").trigger("input");
+            $("#inputmail").trigger("input");
+            $("#inputpass").trigger("input");
+            $("#inputpasscon").trigger("input");
+            $("#inputfees").trigger("input");
+            $("#inputpaid").trigger("input");
+            $("#inputdate").trigger("input");
+
+            // Check if there are any errors
+            if ($(".text-danger").length === 0) {
+                // Do final email check before submit
+                const email = $("#inputmail").val();
                 $.ajax({
                     url: "http://localhost/eeeclasses/eeeclasses.info/stud_exists/index",
                     method: "post",
-                    data: { stud_mail: smail },
-                    success: function(result) {
+                    data: { stud_mail: email },
+                    success: function (result) {
                         if (result === 'Exists') {
-                            alert("Email already exists");
-                            $("#inputmail").css("border-color", "red");
+                            showError($("#inputmail"), "Email already exists.", "email-exists");
                         } else {
-                            $("#inputmail").css("border-color", "#ced4da");
-                            $("form").submit(); // Submit the form if validation passes
+                            clearError($("#inputmail"), "email-exists");
+                            $("form").submit();
                         }
                     },
-                    error: function(xhr) {
+                    error: function (xhr) {
                         alert(xhr.status + " " + xhr.statusText);
                     }
                 });
-            });
-            $("#inputmail").focusout(function() {
-                var smail = $("#inputmail").val();
-                $.ajax({
-                    url: "http://localhost/eeeclasses/eeeclasses.info/stud_exists/index",
-                    method: "post",
-                    data: { stud_mail: smail },
-                    success: function(result) {
-                        if (result === 'Exists') {
-                            alert("Email already exists");
-                            $("#inputmail").css("border-color", "red");
-                        } else {
-                            $("#inputmail").css("border-color", "#ced4da");
-                        }
-                    },
-                    error: function(xhr) {
-                        alert(xhr.status + " " + xhr.statusText);
-                    }
-                });
-            });
-        })
-    </script>
+            } else {
+                alert("Please correct the highlighted errors before submitting.");
+            }
+        });
+        $("#stud_photo").change(function () {
+    const file = this.files[0];
+    if (!file) return;
+
+    const allowedExtensions = /(\.jpg|\.jpeg|\.png)$/i;
+    const fileName = file.name;
+
+    if (!allowedExtensions.exec(fileName)) {
+        alert("Only JPG, JPEG, and PNG files are allowed.");
+        $(this).val(""); // Clear the input
+        $(this).css("border-color", "red");
+    } else {
+        $(this).css("border-color", "#ced4da");
+    }
+});
+
+    });
+</script>
