@@ -2,15 +2,15 @@
     <div class="view_student p-2">
         <nav class="navbar navbar-expand-sm navbar-light">
             <h4 class="h4 text-sencondary text-start">Delete Student - &nbsp;</h4>
-            <form action="<?php echo $home ?>admin/delete_student/" id="uniqcls" method="POST">
-                <select name="cls" id="cls" class="form-select">
-                    <option value="all" selected>All</option>
-                    <option value="7">Class 7</option>
-                    <option value="8">Class 8</option>
-                    <option value="9">Class 9</option>
-                    <option value="10">Class 10</option>
-                    <option value="11">Class 11</option>
-                    <option value="12">Class 12</option>
+            <form action="<?php echo $home ?>admin/delete_student/" id="uniqcls" method="GET">
+                <select name="cls" id="cls" class="form-select" onchange="this.form.submit()">
+                    <option value="all" <?php echo ($_GET['cls'] ?? '') == 'all' ? 'selected' : ''; ?>>All</option>
+                    <option value="7" <?php echo ($_GET['cls'] ?? '') == '7' ? 'selected' : ''; ?>>Class 7</option>
+                    <option value="8" <?php echo ($_GET['cls'] ?? '') == '8' ? 'selected' : ''; ?>>Class 8</option>
+                    <option value="9" <?php echo ($_GET['cls'] ?? '') == '9' ? 'selected' : ''; ?>>Class 9</option>
+                    <option value="10" <?php echo ($_GET['cls'] ?? '') == '10' ? 'selected' : ''; ?>>Class 10</option>
+                    <option value="11" <?php echo ($_GET['cls'] ?? '') == '11' ? 'selected' : ''; ?>>Class 11</option>
+                    <option value="12" <?php echo ($_GET['cls'] ?? '') == '12' ? 'selected' : ''; ?>>Class 12</option>
                 </select>
             </form>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

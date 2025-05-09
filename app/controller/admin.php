@@ -70,11 +70,12 @@ class Admin extends Controller
 
     public function delete_student($cls = '')
     {
+        $cls = $_GET['cls'] ?? 'all';
         if (isset($_SESSION["admin"])) {
             if ($cls == '' || $cls == 'all') {
                 $qry = "select * from eee_students where account_status='active'";
             } else {
-                $qry = "select * from eee_students where stud_class='" . $cls . "' account_status='active'";
+                $qry = "select * from eee_students where stud_class='" . $cls . "'AND account_status='active'";
             }
             $db = $this->model("select");
             $data = $db->sel($qry);
@@ -90,11 +91,12 @@ class Admin extends Controller
     }
     public function update_student($cls = '')
     {
+        $cls = $_GET['cls'] ?? 'all';
         if (isset($_SESSION["admin"])) {
             if ($cls == '' || $cls == 'all') {
                 $qry = "select * from eee_students where account_status='active'";
             } else {
-                $qry = "select * from eee_students where stud_class='" . $cls . "' account_status='active'";
+                $qry = "select * from eee_students where stud_class='" . $cls . "'AND account_status='active'";
             }
             $db = $this->model("select");
             $data = $db->sel($qry);
