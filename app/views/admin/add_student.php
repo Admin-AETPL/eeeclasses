@@ -314,5 +314,6 @@
                 $(this).css("border-color", "#ced4da");
             }
         });
+
     });
 </script>
