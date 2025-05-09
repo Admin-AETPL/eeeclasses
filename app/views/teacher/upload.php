@@ -75,52 +75,16 @@
     $(document).ready(function() {
         $("#sbm").click(function(){
             var fname=$("#inputfile").val();
-            $.ajax({
-                url: "http://localhost/eeeclasses/eeeclasses.info/app/controller/extcheck.php",
-                method: "post",
-                data:"fname="+fname,
-                success:function(result)
-                {
-                    if(result=='okay')
-                    {
-                        return true;
-                    }
-                    else
-                    {
-                        alert("File should in pdf format only");
-                        return false;
-                    }
-                },
-                error:function(xhr)
-                {
-                    alert(xhr.status+" "+xhr.statusText);
-                }
-            })
         });
-        $("#inputfile").change(function(){
-            var fname=$(this).val();
-            $.ajax({
-                url: "http://localhost/eeeclasses/eeeclasses.info/app/controller/extcheck.php",
-                method: "post",
-                data:"fname="+fname,
-                success:function(result)
-                {
-                    if(result=='okay')
-                    {
-                        return true;
-                    }
-                    else
-                    {
-                        alert("File should in pdf format only");
-                        return false;
-                    }
-                },
-                error:function(xhr)
-                {
-                    alert(xhr.status+" "+xhr.statusText);
-                }
-            })
-        })
+        $("#inputfile").change(function() {
+    var fname = $(this).val();
+    var ext = fname.split('.').pop().toLowerCase();
+    if (ext !== 'pdf') {
+        alert("File should be in pdf format only");
+        $(this).val(''); // optional: clear input field
+    }
+});
+
         $("#inputclass").change(function() {
             var cls = $("#inputclass").val();
             if (cls < 11) {
@@ -142,48 +106,64 @@
             }
         });
         $("#inputsubj").change(function() {
-            var cls = $("#inputsubj").val();
-                 $("#chapt").css("display", "block");
-                $("#inputchapt").css("display", "block");
-        });
-        $("#inputsubj1").change(function() {
-            var cls = $("#inputsubj1").val();
-                 $("#chapt").css("display", "block");
-                $("#inputchapt").css("display", "block");
-        });
-        $("#inputsubj").change(function() {
-            var chap=$(this).val();
-            var cls=$("#inputclass").val();
-            $.ajax({
-                url: "<?php echo $home.'chapter/index/' ?>",
-                method: "post",
-                data:"cls="+cls+"&chap="+chap,
-                success:function(result)
-                {
-                    $("#inputchapt").html(result);
-                },
-                error:function(xhr)
-                {
-                    alert(xhr.status+" "+xhr.statusText);
-                }
-            });
-        })
-        $("#inputsubj1").change(function() {
-            var chap=$(this).val();
-            var cls=$("#inputclass").val();
-            $.ajax({
-                url: "<?php echo $home.'chapter/index/' ?>",
-                method: "post",
-                data:"cls="+cls+"&chap="+chap,
-                success:function(result)
-                {
-                    $("#inputchapt").html(result);
-                },
-                error:function(xhr)
-                {
-                    alert(xhr.status+" "+xhr.statusText);
-                }
-            });
-        })
+    var cls = $("#inputsubj").val();
+    $("#chapt").css("display", "block");
+    $("#inputchapt").css("display", "block");
+
+    // Populate chapters 1 to 20
+    var options = '<option selected disabled>Select</option>';
+    for (var i = 1; i <= 20; i++) {
+        options += '<option value="Chapter ' + i + '">Chapter ' + i + '</option>';
+    }
+    $("#inputchapt").html(options);
+});
+
+$("#inputsubj1").change(function() {
+    var cls = $("#inputsubj1").val();
+    $("#chapt").css("display", "block");
+    $("#inputchapt").css("display", "block");
+
+    // Populate chapters 1 to 20
+    var options = '<option selected disabled>Select</option>';
+    for (var i = 1; i <= 20; i++) {
+        options += '<option value="Chapter ' + i + '">Chapter ' + i + '</option>';
+    }
+    $("#inputchapt").html(options);
+});
+
+        // $("#inputsubj").change(function() {
+        //     var chap=$(this).val();
+        //     var cls=$("#inputclass").val();
+        //     $.ajax({
+        //         url: "<?php echo $home.'chapter/index/' ?>",
+        //         method: "post",
+        //         data:"cls="+cls+"&chap="+chap,
+        //         success:function(result)
+        //         {
+        //             $("#inputchapt").html(result);
+        //         },
+        //         error:function(xhr)
+        //         {
+        //             alert(xhr.status+" "+xhr.statusText);
+        //         }
+        //     });
+        // })
+        // $("#inputsubj1").change(function() {
+        //     var chap=$(this).val();
+        //     var cls=$("#inputclass").val();
+        //     $.ajax({
+        //         url: "<?php echo $home.'chapter/index/' ?>",
+        //         method: "post",
+        //         data:"cls="+cls+"&chap="+chap,
+        //         success:function(result)
+        //         {
+        //             $("#inputchapt").html(result);
+        //         },
+        //         error:function(xhr)
+        //         {
+        //             alert(xhr.status+" "+xhr.statusText);
+        //         }
+        //     });
+        // })
     })
 </script>

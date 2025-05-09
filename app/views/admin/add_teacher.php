@@ -65,7 +65,7 @@
             <div class="mb-3 row">
                 <label for="inputfile" class="col-sm-2 col-form-label">Teacher's Photo<sup class="text-danger">*</sup></label>
                 <div class="col-sm-10">
-                    <input type="file" class="form-control" id="inputfile" name="studphoto" required>
+                    <input type="file" name="studphoto" id="studphoto" accept=".jpg, .jpeg, .png" class="form-control" required>
                 </div>
             </div>
             <div class="mb-3 row">
