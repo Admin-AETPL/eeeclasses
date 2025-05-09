@@ -39,7 +39,7 @@
             <div class="mb-3 row">
                 <label for="inputphone" class="col-sm-2 col-form-label">Phone<sup class="text-danger">*</sup></label>
                 <div class="col-sm-10">
-                    <input type="tel" class="form-control" id="inputphone" minlength="10" maxlength="10" name="phone" aria-describedby="phoneHelp" required placeholder="e.g. 9876543210">
+                    <input type="number" class="form-control" id="inputphone" minlength="10" maxlength="10" name="phone" aria-describedby="phoneHelp" required placeholder="e.g. 9876543210">
                     <div id="phoneHelp" class="form-text">Please do not add 0 or +91 before number unless its a landline with citycode</div>
                 </div>
             </div>
@@ -78,64 +78,135 @@
 </div>
 <script>
     $(document).ready(function() {
-        $("#inputpasscon").focusout(function() {
-            var spass = $("#inputpass").val();
-            var spasscon = $("#inputpasscon").val();
-            if (spass.trim() != spasscon.trim()) {
-                alert("Passwords do not match");
-                $("#inputpasscon").css("border-color", "red");
+        function showError(input, message, errorId) {
+            $("#" + errorId).remove();
+            input.css("border-color", "red");
+            input.after(`<div id="${errorId}" class="text-danger mt-1">${message}</div>`);
+        }
+
+        function clearError(input, errorId) {
+            $("#" + errorId).remove();
+            input.css("border-color", "#ced4da");
+        }
+
+        $("#staticname").on("input", function () {
+            const input = $(this);
+            const name = input.val().trim();
+            if (!name) {
+                showError(input, "Name cannot be empty.", "name-error");
             } else {
-                $("#inputpasscon").css("border-color", "#ced4da");
+                clearError(input, "name-error");
+            }
+        });
+
+        $("#inputphone").on("input", function () {
+            const input = $(this);
+            const phone = input.val().trim();
+            if (!/^\d{10}$/.test(phone)) {
+                showError(input, "Phone number must be 10 digits.", "phone-error");
+            } else {
+                clearError(input, "phone-error");
+            }
+        });
+        $("#inputpass").on("input", function () {
+            const input = $(this);
+            const pass = input.val();
+            if (pass.length < 8 || pass.length > 15) {
+                showError(input, "Password must be between 8 and 15 characters.", "pass-error");
+            } else {
+                clearError(input, "pass-error");
+            }
+        });
+
+        $("#inputpasscon").on("input", function () {
+            const input = $(this);
+            const confirmPass = input.val();
+            const pass = $("#inputpass").val();
+
+            if (!confirmPass) {
+                showError(input, "Confirm Password cannot be empty.", "confpass-error");
+            } else if (confirmPass !== pass) {
+                showError(input, "Passwords do not match.", "confpass-error");
+            } else {
+                clearError(input, "confpass-error");
             }
         });
         $("#sbm").click(function() {
-            var sname = $("#staticname").val();
-            var sphone = $("#inputphone").val();
-            var smail = $("#inputmail").val();
-            var spass = $("#inputpass").val();
-            var spasscon = $("#inputpasscon").val();
-            if (sname.trim() == '' || sphone.trim() == '' || smail.trim() == '' || spass.trim() == '' || spasscon.trim() == '') {
-                alert("Field(s) cannot be empty");
-                return false;
-            }
-            if (spass.trim() != spasscon.trim()) {
-                alert("Passwords do not match");
-                return false;
-            }
-            
-            $.ajax({
-                url: "http://localhost/eeeclasses/eeeclasses.info/teacher_exists/index",
-                method: "post",
-                data: "stud_mail=" + smail,
-                success: function(result) {
-                    if (result == 'Exists') {
-                        return false;
-                    } else {
-                        return true;
+            e.preventDefault(); // Prevent form submission
+            $("#staticname").trigger("input");
+            $("#inputclass").trigger("input");
+            $("#inputphone").trigger("input");
+            $("#inputmail").trigger("input");
+            $("#inputpass").trigger("input");
+            $("#inputpasscon").trigger("input");
+            $("#inputfees").trigger("input");
+            $("#inputpaid").trigger("input");
+            $("#inputdate").trigger("input");
+
+            // Check if there are any errors
+            if ($(".text-danger").length === 0) {
+                // Do final email check before submit
+                const email = $("#inputmail").val();
+                $.ajax({
+                    url: "http://localhost/eeeclasses/eeeclasses.info/teacher_exists/index",
+                    method: "post",
+                    data: { stud_mail: email},
+                    success: function(result) {
+                        if (result === 'Exists') {
+                            showError($("#inputmail"), "Email already exists.", "email-exists");
+                        } else {
+                            clearError($("#inputmail"), "email-exists");
+                            $("form").submit();
+                        }
+                    },
+                    error: function(xhr) {
+                        alert(xhr.status + " " + xhr.statusText)
                     }
-                },
-                error: function(xhr) {
-                    alert(xhr.status + " " + xhr.statusText)
-                }
-            })
+                });
+            } else {
+                alert("Please correct the highlighted errors before submitting.");
+            }
         });
-        $("#inputmail").focusout(function() {
-            var smail = $("#inputmail").val();
+        $("#studphoto").change(function () {
+            const file = this.files[0];
+            if (!file) return;
+
+            const allowedExtensions = /(\.jpg|\.jpeg|\.png)$/i;
+            const fileName = file.name;
+
+            if (!allowedExtensions.exec(fileName)) {
+                alert("Only JPG, JPEG, and PNG files are allowed.");
+                $(this).val(""); // Clear the input
+                $(this).css("border-color", "red");
+            } else {
+                $(this).css("border-color", "#ced4da");
+            }
+        });
+
+        $("#inputmail").on("input", function () {
+            const input = $(this);
+            const email = input.val().trim();
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            if (!emailRegex.test(email)) {
+                showError(input, "Please enter a valid email address.", "email-error");
+                return;
+            }
+
+            clearError(input, "email-error");
+
             $.ajax({
-                url: "http://localhost/eeeclasses/eeeclasses.info/teacher_exists/index",
+                url: "http://localhost/eeeclasses/eeeclasses.info/stud_exists/index",
                 method: "post",
-                data: "stud_mail=" + smail,
-                success: function(result) {
-                    if (result == 'exists') {
-                        $("#inputmail").css("border-color", "red");
+                data: { stud_mail: email },
+                success: function (result) {
+                    if (result === 'Exists') {
+                        showError(input, "Email already exists.", "email-exists");
                     } else {
-                        $("#inputmail").css("border-color", "#ced4da");
+                        clearError(input, "email-exists");
                     }
-                },
-                error: function(xhr) {
-                    alert(xhr.status + " " + xhr.statusText)
                 }
-            })
-        })
+            });
+        });
     })
 </script>
