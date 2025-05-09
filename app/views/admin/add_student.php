@@ -299,21 +299,20 @@
                 alert("Please correct the highlighted errors before submitting.");
             }
         });
-        $("#stud_photo").change(function () {
-    const file = this.files[0];
-    if (!file) return;
+        $("#studphoto").change(function () {
+            const file = this.files[0];
+            if (!file) return;
 
-    const allowedExtensions = /(\.jpg|\.jpeg|\.png)$/i;
-    const fileName = file.name;
+            const allowedExtensions = /(\.jpg|\.jpeg|\.png)$/i;
+            const fileName = file.name;
 
-    if (!allowedExtensions.exec(fileName)) {
-        alert("Only JPG, JPEG, and PNG files are allowed.");
-        $(this).val(""); // Clear the input
-        $(this).css("border-color", "red");
-    } else {
-        $(this).css("border-color", "#ced4da");
-    }
-});
-
+            if (!allowedExtensions.exec(fileName)) {
+                alert("Only JPG, JPEG, and PNG files are allowed.");
+                $(this).val(""); // Clear the input
+                $(this).css("border-color", "red");
+            } else {
+                $(this).css("border-color", "#ced4da");
+            }
+        });
     });
 </script>
